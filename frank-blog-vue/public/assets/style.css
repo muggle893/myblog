@@ -150,3 +150,17 @@ body[data-page="login"] .login-visual:before{
 .owner-quick-link svg{width:15px;height:15px}.owner-quick-link b{position:absolute;right:5px;top:4px;min-width:17px;height:17px;padding:0 4px;border-radius:999px;background:var(--blue);color:white;font-size:9px;display:grid;place-items:center}
 @media(max-width:1150px){.owner-state{display:none}.nav-actions{gap:9px}.draftbox-btn,.write-btn{padding:8px 12px}}
 @media(max-width:760px){.draftbox-btn{padding:7px 9px}.draftbox-btn span{display:none}.draftbox-btn .draft-count-badge{min-width:18px;height:18px}.header-logout{display:none}.editor-buttons{flex-wrap:wrap;justify-content:flex-end}.draftbox-editor-btn{padding:8px 10px}}
+
+/* 个人主页：可编辑封面与自我介绍，沿用原有卡片布局。 */
+.profile-about{min-width:0;overflow-wrap:anywhere}
+.profile-grid .profile-about-paragraph{white-space:pre-wrap}
+.profile-form-fields{border:0;padding:0;margin:0;min-width:0}
+.profile-editor-heading{font-size:15px;margin:26px 0 12px;padding-top:16px;border-top:1px solid var(--line)}
+.profile-cover-preview{height:150px;border-radius:12px;background-color:var(--bg);background-size:cover;background-repeat:no-repeat}
+.profile-image-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.profile-image-actions .btn{min-height:38px;padding:8px 13px;font-size:12px}
+.profile-dialog input[type="file"][hidden]{display:none}
+.profile-dialog input[type="range"]{padding:0;border:0;accent-color:var(--blue);cursor:pointer}
+.profile-edit-hint{display:block;font-size:12px;line-height:1.8;color:var(--muted);font-weight:400}
+.profile-dialog{overflow-y:auto}
+@media(max-width:700px){.profile-cover-preview{height:120px}}
