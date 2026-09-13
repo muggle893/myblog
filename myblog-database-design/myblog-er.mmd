@@ -1,0 +1,82 @@
+erDiagram
+    direction TB
+    blog_user {
+        BIGINT id PK
+        VARCHAR username
+        VARCHAR role_code
+    }
+    blog_asset {
+        BIGINT id PK
+        BIGINT uploader_id FK
+        CHAR public_id
+    }
+    blog_user_profile {
+        BIGINT user_id PK, FK
+        BIGINT avatar_asset_id FK
+        BIGINT cover_asset_id FK
+    }
+    blog_profile_tag {
+        BIGINT user_id PK, FK
+        VARCHAR tag_name PK
+    }
+    blog_site {
+        TINYINT id PK
+        BIGINT owner_user_id FK
+    }
+    blog_category {
+        BIGINT id PK
+        VARCHAR name
+    }
+    blog_tag {
+        BIGINT id PK
+        VARCHAR name
+    }
+    blog_article {
+        BIGINT id PK
+        BIGINT author_id FK
+        BIGINT category_id FK
+    }
+    blog_article_tag {
+        BIGINT article_id PK, FK
+        BIGINT tag_id PK, FK
+    }
+    blog_draft {
+        BIGINT id PK
+        BIGINT owner_id FK
+        BIGINT article_id FK
+        BIGINT published_article_id FK
+    }
+    blog_draft_tag {
+        BIGINT draft_id PK, FK
+        BIGINT tag_id PK, FK
+    }
+    blog_article_asset {
+        BIGINT article_id PK, FK
+        BIGINT asset_id PK, FK
+        VARCHAR usage_type PK
+    }
+    blog_draft_asset {
+        BIGINT draft_id PK, FK
+        BIGINT asset_id PK, FK
+        VARCHAR usage_type PK
+    }
+    blog_user ||--o{ blog_asset : "uploader_id"
+    blog_user ||--o| blog_user_profile : "user_id"
+    blog_asset |o--o{ blog_user_profile : "avatar_asset_id"
+    blog_asset |o--o{ blog_user_profile : "cover_asset_id"
+    blog_user_profile ||--o{ blog_profile_tag : "user_id"
+    blog_user ||--o| blog_site : "owner_user_id"
+    blog_user ||--o{ blog_article : "author_id"
+    blog_category |o--o{ blog_article : "category_id"
+    blog_article ||--o{ blog_article_tag : "article_id"
+    blog_tag ||--o{ blog_article_tag : "tag_id"
+    blog_user ||--o{ blog_draft : "owner_id"
+    blog_article |o--o{ blog_draft : "article_id, owner_id"
+    blog_article |o--o{ blog_draft : "published_article_id, owner_id"
+    blog_category |o--o{ blog_draft : "category_id"
+    blog_draft ||--o{ blog_draft_tag : "draft_id"
+    blog_tag ||--o{ blog_draft_tag : "tag_id"
+    blog_article ||--o{ blog_article_asset : "article_id"
+    blog_asset ||--o{ blog_article_asset : "asset_id"
+    blog_draft ||--o{ blog_draft_asset : "draft_id"
+    blog_asset ||--o{ blog_draft_asset : "asset_id"
