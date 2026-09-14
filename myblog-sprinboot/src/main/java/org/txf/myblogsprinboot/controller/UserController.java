@@ -10,6 +10,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.txf.myblogsprinboot.Utils.SessionUtils;
+import org.txf.myblogsprinboot.advice.Result;
 import org.txf.myblogsprinboot.model.User;
 import org.txf.myblogsprinboot.service.UserService;
 
@@ -26,20 +27,20 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("/login")
-    public String login(String username, String password, HttpServletRequest request) {
+    public Result login(String username, String password, HttpServletRequest request) {
         log.info("用户登录.");
         // 1.校验用户名和密码
         if (!StringUtils.hasText(username) || !StringUtils.hasText(password)) {
             log.info("用户登录：参数校验失败.");
-            return "用户名和密码不能为空!!!";
+            return Result.paramError("用户名或者密码不能为空！！！");
         }
         log.info("用户登录：校验参数成功.");
 
         // 2.调用service，查询用户
         User user = userService.getUserByUserName(username);
-        if (user == null) {
+        if (user == null || user.getId() < 0) {
             log.info("用户登录：查不到此用户.");
-            return "用户不存在.";
+            return Result.fail("用户登录失败，用户不存在.");
         }
 
         // 3.校验用户密码哈希值
@@ -48,7 +49,7 @@ public class UserController {
         if (!StringUtils.hasText(storedPasswordHash)
                 || !passwordEncoder.matches(password, storedPasswordHash)) {
             log.info("密码错误.");
-            return "用户名或密码错误";
+            return Result.fail("用户名或者密码错误.");
         }
 
         // 4.将用户信息存到session中
@@ -58,6 +59,6 @@ public class UserController {
         session.setAttribute(SessionUtils.USER_SESSION_KEY, user);
         log.info("用户登录成功.");
 
-        return "用户登录成功.";
+        return Result.success("用户登录成功.");
     }
 }
