@@ -1,77 +1,112 @@
-2026-09-13T10:55:53.632+08:00  INFO 23832 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Starting UserMapperTest using Java 17.0.5 with PID 23832 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T10:55:53.634+08:00  INFO 23832 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T10:55:54.747+08:00  INFO 23832 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T10:55:55.309+08:00  INFO 23832 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Started UserMapperTest in 2.026 seconds (process running for 3.421)
-2026-09-13T10:56:21.873+08:00  INFO 23752 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Starting UserMapperTest using Java 17.0.5 with PID 23752 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T10:56:21.875+08:00  INFO 23752 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T10:56:22.703+08:00  INFO 23752 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T10:56:23.029+08:00  INFO 23752 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Started UserMapperTest in 1.4 seconds (process running for 2.238)
-2026-09-13T10:57:42.113+08:00  INFO 32212 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Starting UserMapperTest using Java 17.0.5 with PID 32212 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T10:57:42.114+08:00  INFO 32212 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T10:57:43.075+08:00  INFO 32212 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T10:57:43.411+08:00  INFO 32212 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Started UserMapperTest in 1.587 seconds (process running for 2.547)
-2026-09-13T11:02:01.046+08:00  INFO 25056 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Starting UserMapperTest using Java 17.0.5 with PID 25056 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T11:02:01.047+08:00  INFO 25056 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T11:02:01.971+08:00  INFO 25056 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T11:02:02.328+08:00  INFO 25056 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Started UserMapperTest in 1.6 seconds (process running for 2.596)
-2026-09-13T11:02:15.889+08:00  INFO 1520 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Starting UserMapperTest using Java 17.0.5 with PID 1520 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T11:02:15.890+08:00  INFO 1520 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T11:02:16.808+08:00  INFO 1520 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T11:02:17.199+08:00  INFO 1520 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Started UserMapperTest in 1.577 seconds (process running for 2.514)
-2026-09-13T11:19:06.443+08:00  INFO 23756 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Starting UserMapperTest using Java 17.0.5 with PID 23756 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T11:19:06.444+08:00  INFO 23756 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T11:19:07.268+08:00  INFO 23756 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T11:19:07.633+08:00  INFO 23756 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Started UserMapperTest in 1.447 seconds (process running for 2.382)
-2026-09-13T11:19:08.048+08:00  INFO 23756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-13T11:19:08.247+08:00  INFO 23756 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27d98bef
-2026-09-13T11:19:08.251+08:00  INFO 23756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-13T11:19:08.360+08:00  INFO 23756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-13T11:19:08.386+08:00  INFO 23756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-13T11:27:21.455+08:00  INFO 2076 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Starting UserMapperTest using Java 17.0.5 with PID 2076 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T11:27:21.457+08:00  INFO 2076 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T11:27:22.547+08:00  INFO 2076 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T11:27:22.692+08:00  INFO 2076 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Started UserMapperTest in 1.495 seconds (process running for 2.372)
-2026-09-13T11:27:56.201+08:00  INFO 8204 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Starting UserMapperTest using Java 17.0.5 with PID 8204 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T11:27:56.202+08:00  INFO 8204 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T11:27:57.189+08:00  INFO 8204 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T11:27:57.323+08:00  INFO 8204 --- [main] o.t.myblogsprinboot.dao.UserMapperTest   : Started UserMapperTest in 1.378 seconds (process running for 2.239)
-2026-09-13T11:27:57.685+08:00  INFO 8204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-13T11:27:57.800+08:00  INFO 8204 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5beb6be2
-2026-09-13T11:27:57.801+08:00  INFO 8204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-13T11:27:57.878+08:00  INFO 8204 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-13T11:27:57.885+08:00  INFO 8204 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-13T11:48:35.891+08:00  INFO 1912 --- [main] o.t.m.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.5 with PID 1912 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T11:48:35.893+08:00  INFO 1912 --- [main] o.t.m.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T11:48:36.957+08:00  INFO 1912 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T11:48:37.121+08:00  INFO 1912 --- [main] o.t.m.controller.UserControllerTest      : Started UserControllerTest in 1.526 seconds (process running for 2.446)
-2026-09-13T11:50:18.391+08:00  INFO 19812 --- [main] o.t.m.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.5 with PID 19812 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T11:50:18.393+08:00  INFO 19812 --- [main] o.t.m.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T11:50:19.507+08:00  INFO 19812 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T11:50:19.655+08:00  INFO 19812 --- [main] o.t.m.controller.UserControllerTest      : Started UserControllerTest in 1.564 seconds (process running for 2.446)
-2026-09-13T11:50:56.748+08:00  INFO 27324 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 27324 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
-2026-09-13T11:50:56.752+08:00  INFO 27324 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-09-13T11:50:57.415+08:00  INFO 27324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-13T11:50:57.424+08:00  INFO 27324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-13T11:50:57.424+08:00  INFO 27324 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-13T11:50:57.506+08:00  INFO 27324 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-13T11:50:57.507+08:00  INFO 27324 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 727 ms
-2026-09-13T11:50:57.774+08:00  INFO 27324 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-13T11:50:57.894+08:00  INFO 27324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-13T11:50:57.901+08:00  INFO 27324 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.515 seconds (process running for 2.255)
-2026-09-13T11:52:11.241+08:00  INFO 27324 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-13T11:52:11.241+08:00  INFO 27324 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-13T11:52:11.242+08:00  INFO 27324 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-13T11:52:11.264+08:00  WARN 27324 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
-2026-09-13T11:52:11.268+08:00  INFO 27324 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录.
-2026-09-13T11:52:11.269+08:00  INFO 27324 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-13T11:52:11.282+08:00  INFO 27324 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-13T11:52:11.395+08:00  INFO 27324 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@231db2be
-2026-09-13T11:52:11.397+08:00  INFO 27324 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-13T11:52:11.772+08:00  INFO 27324 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录成功.
-2026-09-13T11:52:21.610+08:00  INFO 27324 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录.
-2026-09-13T11:52:21.610+08:00  INFO 27324 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-13T11:52:21.895+08:00  INFO 27324 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 密码错误.
-2026-09-13T11:52:27.188+08:00  INFO 27324 --- [http-nio-8080-exec-4] o.t.m.controller.UserController          : 用户登录.
-2026-09-13T11:52:27.189+08:00  INFO 27324 --- [http-nio-8080-exec-4] o.t.m.controller.UserController          : 用户登录：参数校验失败.
-2026-09-13T13:48:29.162+08:00  INFO 27324 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-13T13:48:29.164+08:00  INFO 27324 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T08:14:28.761+08:00  INFO 18356 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 18356 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T08:14:28.768+08:00  INFO 18356 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T08:14:29.524+08:00  INFO 18356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-15T08:14:29.532+08:00  INFO 18356 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-15T08:14:29.532+08:00  INFO 18356 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-15T08:14:29.605+08:00  INFO 18356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-15T08:14:29.606+08:00  INFO 18356 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 801 ms
+2026-09-15T08:14:29.977+08:00  INFO 18356 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T08:14:30.098+08:00  INFO 18356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-15T08:14:30.105+08:00  INFO 18356 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.813 seconds (process running for 2.489)
+2026-09-15T08:17:39.768+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-15T08:17:39.768+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-15T08:17:39.769+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-15T08:17:39.797+08:00  WARN 18356 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-15T08:17:39.806+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录.
+2026-09-15T08:17:39.806+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-15T08:17:39.824+08:00  INFO 18356 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T08:17:39.977+08:00  INFO 18356 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ad99b03
+2026-09-15T08:17:39.978+08:00  INFO 18356 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T08:17:40.397+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-15T08:18:28.467+08:00  INFO 18356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T08:18:28.477+08:00  INFO 18356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T10:59:40.928+08:00  INFO 24844 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 24844 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T10:59:40.930+08:00  INFO 24844 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T10:59:42.326+08:00  INFO 24844 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T10:59:42.516+08:00  INFO 24844 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.87 seconds (process running for 3.087)
+2026-09-15T10:59:42.979+08:00  INFO 24844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T10:59:43.139+08:00  INFO 24844 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b691611
+2026-09-15T10:59:43.141+08:00  INFO 24844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T10:59:43.249+08:00  INFO 24844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T10:59:43.256+08:00  INFO 24844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T12:54:54.518+08:00  INFO 5616 --- [main] o.t.m.dao.TagArticleMapperTest           : Starting TagArticleMapperTest using Java 17.0.5 with PID 5616 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T12:54:54.520+08:00  INFO 5616 --- [main] o.t.m.dao.TagArticleMapperTest           : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T12:54:56.169+08:00  INFO 5616 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T12:54:56.333+08:00  INFO 5616 --- [main] o.t.m.dao.TagArticleMapperTest           : Started TagArticleMapperTest in 2.306 seconds (process running for 4.582)
+2026-09-15T12:54:56.790+08:00  INFO 5616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T12:54:56.963+08:00  INFO 5616 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5bb7a59
+2026-09-15T12:54:56.965+08:00  INFO 5616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T12:54:57.049+08:00  INFO 5616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T12:54:57.056+08:00  INFO 5616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T12:57:36.980+08:00  INFO 11568 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Starting TagMapperTest using Java 17.0.5 with PID 11568 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T12:57:36.981+08:00  INFO 11568 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T12:57:38.176+08:00  INFO 11568 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T12:57:38.345+08:00  INFO 11568 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Started TagMapperTest in 1.656 seconds (process running for 2.571)
+2026-09-15T12:57:38.713+08:00  INFO 11568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T12:57:38.864+08:00  INFO 11568 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66715ca9
+2026-09-15T12:57:38.866+08:00  INFO 11568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T12:57:39.032+08:00  INFO 11568 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T12:57:39.041+08:00  INFO 11568 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T12:58:38.907+08:00  INFO 14124 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Starting TagMapperTest using Java 17.0.5 with PID 14124 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T12:58:38.908+08:00  INFO 14124 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T12:58:40.015+08:00  INFO 14124 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T12:58:40.166+08:00  INFO 14124 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Started TagMapperTest in 1.527 seconds (process running for 2.472)
+2026-09-15T12:58:40.569+08:00  INFO 14124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T12:58:40.709+08:00  INFO 14124 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12c76d6e
+2026-09-15T12:58:40.711+08:00  INFO 14124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T12:58:40.826+08:00  INFO 14124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T12:58:40.841+08:00  INFO 14124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T13:03:07.903+08:00  INFO 28972 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Starting TagMapperTest using Java 17.0.5 with PID 28972 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T13:03:07.904+08:00  INFO 28972 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T13:03:09.025+08:00  INFO 28972 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T13:03:09.173+08:00  INFO 28972 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Started TagMapperTest in 1.529 seconds (process running for 2.399)
+2026-09-15T13:03:09.548+08:00  INFO 28972 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T13:03:09.659+08:00  INFO 28972 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ab8589a
+2026-09-15T13:03:09.662+08:00  INFO 28972 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T13:03:09.742+08:00  INFO 28972 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T13:03:09.750+08:00  INFO 28972 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T13:05:49.599+08:00  INFO 16696 --- [main] o.t.m.service.ArticleServiceTest         : Starting ArticleServiceTest using Java 17.0.5 with PID 16696 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T13:05:49.601+08:00  INFO 16696 --- [main] o.t.m.service.ArticleServiceTest         : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T13:05:50.806+08:00  INFO 16696 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T13:05:50.952+08:00  INFO 16696 --- [main] o.t.m.service.ArticleServiceTest         : Started ArticleServiceTest in 1.625 seconds (process running for 2.504)
+2026-09-15T13:05:51.356+08:00  INFO 16696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T13:05:51.523+08:00  INFO 16696 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f1f9515
+2026-09-15T13:05:51.525+08:00  INFO 16696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T13:05:51.605+08:00  INFO 16696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T13:05:51.612+08:00  INFO 16696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T13:06:09.526+08:00  INFO 19940 --- [main] o.t.m.service.ArticleServiceTest         : Starting ArticleServiceTest using Java 17.0.5 with PID 19940 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T13:06:09.528+08:00  INFO 19940 --- [main] o.t.m.service.ArticleServiceTest         : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T13:06:10.642+08:00  INFO 19940 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T13:06:10.789+08:00  INFO 19940 --- [main] o.t.m.service.ArticleServiceTest         : Started ArticleServiceTest in 1.522 seconds (process running for 2.411)
+2026-09-15T13:06:11.164+08:00  INFO 19940 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T13:06:11.303+08:00  INFO 19940 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b3518e1
+2026-09-15T13:06:11.306+08:00  INFO 19940 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T13:06:11.379+08:00  INFO 19940 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T13:06:11.386+08:00  INFO 19940 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T13:06:28.538+08:00  INFO 7064 --- [main] o.t.m.service.ArticleServiceTest         : Starting ArticleServiceTest using Java 17.0.5 with PID 7064 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T13:06:28.540+08:00  INFO 7064 --- [main] o.t.m.service.ArticleServiceTest         : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T13:06:29.634+08:00  INFO 7064 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T13:06:29.771+08:00  INFO 7064 --- [main] o.t.m.service.ArticleServiceTest         : Started ArticleServiceTest in 1.496 seconds (process running for 2.38)
+2026-09-15T13:06:30.113+08:00  INFO 7064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T13:06:30.242+08:00  INFO 7064 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33e50ff2
+2026-09-15T13:06:30.245+08:00  INFO 7064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T13:06:30.419+08:00  INFO 7064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T13:06:30.428+08:00  INFO 7064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T13:28:11.547+08:00  INFO 18368 --- [main] o.t.m.dao.CategoryMapperTest             : Starting CategoryMapperTest using Java 17.0.5 with PID 18368 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T13:28:11.548+08:00  INFO 18368 --- [main] o.t.m.dao.CategoryMapperTest             : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T13:28:12.858+08:00  INFO 18368 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T13:28:13.008+08:00  INFO 18368 --- [main] o.t.m.dao.CategoryMapperTest             : Started CategoryMapperTest in 1.741 seconds (process running for 2.658)
+2026-09-15T13:28:13.410+08:00  INFO 18368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T13:28:13.539+08:00  INFO 18368 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@191f4d65
+2026-09-15T13:28:13.543+08:00  INFO 18368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T13:28:13.628+08:00  INFO 18368 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T13:28:13.636+08:00  INFO 18368 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-15T13:30:23.545+08:00  INFO 3876 --- [main] o.t.m.service.ArticleServiceTest         : Starting ArticleServiceTest using Java 17.0.5 with PID 3876 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-15T13:30:23.546+08:00  INFO 3876 --- [main] o.t.m.service.ArticleServiceTest         : No active profile set, falling back to 1 default profile: "default"
+2026-09-15T13:30:24.851+08:00  INFO 3876 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-15T13:30:24.997+08:00  INFO 3876 --- [main] o.t.m.service.ArticleServiceTest         : Started ArticleServiceTest in 1.754 seconds (process running for 2.705)
+2026-09-15T13:30:25.383+08:00  INFO 3876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-15T13:30:25.518+08:00  INFO 3876 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a2a7492
+2026-09-15T13:30:25.521+08:00  INFO 3876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-15T13:30:25.688+08:00  INFO 3876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-15T13:30:25.702+08:00  INFO 3876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

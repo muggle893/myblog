@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.txf.myblogsprinboot.Utils.SessionUtils;
@@ -26,7 +27,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @RequestMapping("/login")
+    @PostMapping("/login")
     public Result login(String username, String password, HttpServletRequest request) {
         log.info("用户登录.");
         // 1.校验用户名和密码
@@ -38,7 +39,7 @@ public class UserController {
 
         // 2.调用service，查询用户
         User user = userService.getUserByUserName(username);
-        if (user == null || user.getId() < 0) {
+        if (user == null || user.getId() == null || user.getId() < 0) {
             log.info("用户登录：查不到此用户.");
             return Result.fail("用户登录失败，用户不存在.");
         }
