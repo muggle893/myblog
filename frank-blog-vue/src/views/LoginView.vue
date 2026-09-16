@@ -4,6 +4,8 @@ import { RouterLink, useRouter } from 'vue-router'
 import Icon from '../components/Icon.vue'
 import { appState, loginOwner } from '../services/state'
 
+// ref 用于声明基本类型的响应式数据；模板中可以直接使用 username，
+// 在 JavaScript 中修改它时需要使用 username.value。
 const username = ref('')
 const password = ref('')
 const error = ref('')
@@ -16,7 +18,7 @@ const router = useRouter()
 const SUCCESS_CODE = 200
 
 async function submit() {
-  // 防止重复提交
+  // submit 由表单触发；loading 为 true 时直接返回，防止重复发送登录请求。
   if (loading.value) return
 
   error.value = ''
@@ -26,6 +28,7 @@ async function submit() {
     return
   }
 
+  // 进入异步请求前设置 loading，模板会据此禁用按钮并显示“登录中”。
   loading.value = true
 
   try {
@@ -35,11 +38,13 @@ async function submit() {
     formData.set('username', username.value.trim())
     formData.set('password', password.value)
 
+    // fetch 返回 Promise<Response>；await 会等待服务器响应。
     const response = await fetch('/api/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
+      // 登录接口成功后通常会通过 Set-Cookie 写入会话 Cookie。
       credentials: 'include',
       body: formData
     })
@@ -50,7 +55,7 @@ async function submit() {
       return
     }
 
-    // 解析后端返回的 { code, msg, data }
+    // response.json() 把响应体解析成 JavaScript 对象：{ code, msg, data }。
     const result = await response.json()
 
     // HTTP 请求成功，不代表账号密码验证成功
@@ -59,8 +64,9 @@ async function submit() {
       return
     }
 
-    // 后端确认登录成功后，再更新前端导航栏等显示状态
-    if (!loginOwner()) {
+    // 后端确认登录成功后，保存用户名并更新前端导航栏等显示状态。
+    // loginOwner 同时修改 sessionStorage 和 reactive 的 appState。
+    if (!loginOwner(username.value.trim())) {
       // 浏览器不允许使用 sessionStorage 时，
       // 仍然更新当前页面的响应式状态
       appState.owner = true
@@ -71,8 +77,10 @@ async function submit() {
     // 跳转到博客首页
     await router.replace({ name: 'home' })
   } catch {
+    // fetch 遇到网络不可达、代理未启动等异常时会进入 catch。
     error.value = '登录请求未完成，请检查后端是否启动及代理配置'
   } finally {
+    // finally 无论成功、失败还是提前 return 后的异常流程都会执行。
     loading.value = false
   }
 }
