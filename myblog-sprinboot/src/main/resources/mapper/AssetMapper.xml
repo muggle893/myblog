@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.txf.myblogsprinboot.dao.AssetMapper">
+<!--    asset表的字段-->
+    <sql id = "assetFields" >
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test = "id != null">id,</if>
+            <if test = "publicId != null">public_id,</if>
+            <if test = "uploaderId != null">uploader_id,</if>
+            <if test = "originalName != null">original_name,</if>
+            <if test = "mediaType != null">media_type,</if>
+            <if test = "assetKind != null">asset_kind,</if>
+            <if test = "sizeBytes != null">size_bytes,</if>
+            <if test = "storageProvider != null">storage_provider,</if>
+            <if test = "bucket != null">bucket,</if>
+            <if test = "objectKey != null">object_key,</if>
+            <if test = "sha256 != null">`sha256`,</if>
+            <if test = "status != null">status,</if>
+            <if test = "rowVersion != null">row_version,</if>
+            <if test = "createdAt != null">created_at,</if>
+            <if test = "updatedAt != null">updated_at,</if>
+        </trim>
+    </sql>
+
+    <sql id = "assetFieldsValues">
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test = "id != null">#{id},</if>
+            <if test = "publicId != null">#{publicId},</if>
+            <if test = "uploaderId != null">#{uploaderId},</if>
+            <if test = "originalName != null">#{originalName},</if>
+            <if test = "mediaType != null">#{mediaType},</if>
+            <if test = "assetKind != null">#{assetKind},</if>
+            <if test = "sizeBytes != null">#{sizeBytes},</if>
+            <if test = "storageProvider != null">#{storageProvider},</if>
+            <if test = "bucket != null">#{bucket},</if>
+            <if test = "objectKey != null">#{objectKey},</if>
+            <if test = "sha256 != null">#{sha256},</if>
+            <if test = "status != null">#{status},</if>
+            <if test = "rowVersion != null">#{rowVersion},</if>
+            <if test = "createdAt != null">#{createdAt},</if>
+            <if test = "updatedAt != null">#{updatedAt},</if>
+        </trim>
+    </sql>
+
+    <insert id = "insert" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into blog_asset<include refid="assetFields"></include>
+        values<include refid="assetFieldsValues"></include>
+    </insert>
+</mapper>
