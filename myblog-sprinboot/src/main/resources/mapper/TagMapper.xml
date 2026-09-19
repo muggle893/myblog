@@ -16,4 +16,18 @@
             #{tagId}
         </foreach>
     </select>
+
+    <select id = "getTagsByArticleIds" resultType="java.lang.Long">
+        select tag_id
+        from blog_article_tag
+        where `article_id`
+        in <foreach collection="articleIds" item = "articleId" open = "(" separator="," close=")">
+                #{articleId}
+            </foreach>
+    </select>
+
+    <insert id="insertTag" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into blog_tag(name)
+        values(#{name})
+    </insert>
 </mapper>
