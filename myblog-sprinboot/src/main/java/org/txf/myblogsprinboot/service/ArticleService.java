@@ -2,12 +2,13 @@ package org.txf.myblogsprinboot.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.txf.myblogsprinboot.Utils.ArticleConstans;
-import org.txf.myblogsprinboot.dao.ArticleMapper;
-import org.txf.myblogsprinboot.dao.CategoryMapper;
-import org.txf.myblogsprinboot.dao.TagArticleMapper;
-import org.txf.myblogsprinboot.dao.TagMapper;
+import org.txf.myblogsprinboot.constant.ArticleAssetUsageType;
+import org.txf.myblogsprinboot.dao.*;
 import org.txf.myblogsprinboot.enums.UserType;
+import org.txf.myblogsprinboot.model.Article;
+import org.txf.myblogsprinboot.model.ArticleAsset;
+import org.txf.myblogsprinboot.model.ArticleTag;
+import org.txf.myblogsprinboot.utils.ArticleConstans;
 import org.txf.myblogsprinboot.vo.ArticleListVO;
 import org.txf.myblogsprinboot.vo.CategoryListVO;
 import org.txf.myblogsprinboot.vo.TagVO;
@@ -28,6 +29,65 @@ public class ArticleService {
     TagMapper tagMapper;
     @Autowired
     CategoryMapper categoryMapper;
+    @Autowired
+    ArticleAssetMapper articleAssetMapper;
+    @Autowired
+    ArticleTagMapper articleTagMapper;
+
+    /**
+     *
+     * @param articleId 文章的id
+     * @param tagIds    标签的id集合
+     * @return 返回文章关联的标签数量, 0表示关联没有资源需要关联
+     */
+    public int connectArticleTags(long articleId, List<Long> tagIds) {
+        if (tagIds == null || tagIds.size() == 0) {
+            return 0;
+        }
+        // 先把数据处理成ArticleTag对象
+        List<ArticleTag> articleTagList = new ArrayList<>();
+        for (Long tagId : tagIds) {
+            ArticleTag articleTag = new ArticleTag();
+            articleTag.setArticleId(articleId);
+            articleTag.setTagId(tagId);
+            articleTag.setSortOrder(0);
+            articleTagList.add(articleTag);
+        }
+
+        // 插入到数据库中
+        return articleTagMapper.batchInsertArticleTag(articleTagList);
+    }
+
+    /**
+     * 关联文章对应的资源
+     * @param articleId     文章的id
+     * @param assetIds      资源的id集合
+     * @return  返回文章关联的资源数量, 0表示关联没有资源需要关联
+     */
+    public int connectArticleAssets(long articleId, List<Long> assetIds) {
+        if (assetIds == null || assetIds.size() == 0) {
+            return 0;
+        }
+        // 先把数据处理成ArticleAsset对象
+        List<ArticleAsset> articleAssets = new ArrayList<ArticleAsset>();
+
+        for (Long assetId : assetIds) {
+            ArticleAsset articleAsset = new ArticleAsset();
+            articleAsset.setArticleId(articleId);
+            articleAsset.setAssetId(assetId);
+            // 这里的usageType先随便设置一个，这里的usageType需要根据资源的类型来判断的
+            articleAsset.setUsageType(ArticleAssetUsageType.ATTACHMENT);
+            articleAssets.add(articleAsset);
+        }
+
+        // 插入数据库中
+        return articleAssetMapper.batchInsertArticleAsset(articleAssets);
+    }
+
+    public int insertArticle(Article article) {
+        return articleMapper.insertArticle(article);
+    }
+
     /**
      * 查询作者对应的文章并根据，用户类型返回对应的结果
      * 只有作者自己访问自己的文章才可以返回私有类型的文章，其他用户只能访问公开的文章

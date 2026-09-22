@@ -15,4 +15,9 @@ class CategoryMapperTest {
         CategoryListVO categoryListVO = categoryMapper.selectCategoryVO(1L);
         System.out.println(categoryListVO);
     }
+
+    @Test
+    void selectAllCategory() {
+        categoryMapper.selectAllCategory().forEach(System.out::println);
+    }
 }

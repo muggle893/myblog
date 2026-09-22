@@ -48,7 +48,7 @@ public class TagController {
          log.error("插入标签时标签的名字为空.");
          throw new IllegalArgumentException("标签名不能为空.");
       }
-
+      log.info("添加标签.");
       // 2.添加到数据库中
       TagVO tagVO = new TagVO();
       tagVO.setName(tagName);

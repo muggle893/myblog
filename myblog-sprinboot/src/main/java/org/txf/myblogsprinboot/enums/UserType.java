@@ -3,10 +3,12 @@ package org.txf.myblogsprinboot.enums;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public enum UserType {
     VISITOR_NOLOGIN(1,"未登录的普通游客"),
     VISITOR_LOGIN(2, "已经登录的用户，但是还不是文章的作者"),

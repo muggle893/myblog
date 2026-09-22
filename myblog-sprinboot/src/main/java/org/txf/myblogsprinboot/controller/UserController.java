@@ -10,7 +10,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.txf.myblogsprinboot.Utils.SessionUtils;
+import org.txf.myblogsprinboot.utils.SessionUtils;
 import org.txf.myblogsprinboot.advice.Result;
 import org.txf.myblogsprinboot.model.User;
 import org.txf.myblogsprinboot.service.UserService;

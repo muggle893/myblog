@@ -4,6 +4,11 @@
     <select id = "selectCategoryVO" resultType="org.txf.myblogsprinboot.vo.CategoryListVO">
         select id, name
         from blog_category
-        where id = #{id}
+        where id = #{id};
+    </select>
+
+    <select id = "selectAllCategory" resultType="org.txf.myblogsprinboot.vo.CategoryListVO">
+        select id, name
+        from blog_category;
     </select>
 </mapper>

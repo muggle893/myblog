@@ -8,4 +8,43 @@
             ON a.author_id = u.id
         WHERE u.username = #{author};
     </select>
+
+    <insert id = "insertArticle" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into blog_article
+        <trim prefix="(" suffix = ")"  suffixOverrides=",">
+            <if test = "authorId != null">author_id,</if>
+            <if test = "categoryId != null">category_id,</if>
+            <if test = "slug != null">slug,</if>
+            <if test = "title != null">title,</if>
+            <if test = "summary != null">summary,</if>
+            <if test = "contentMarkdown != null">content_markdown,</if>
+            <if test = "visibility != null">visibility,</if>
+            <if test = "status != null">status,</if>
+            <if test = "wordCount != null">word_count,</if>
+            <if test = "readingMinutes != null">reading_minutes,</if>
+            <if test = "publishedAt != null">published_at,</if>
+            <if test = "rowVersion != null">row_version,</if>
+            <if test = "deletedAt != null">deleted_at,</if>
+            <if test = "createdAt != null">created_at,</if>
+            <if test = "updatedAt != null">updated_at,</if>
+        </trim>
+        values
+        <trim prefix="(" suffix = ")"  suffixOverrides=",">
+            <if test = "authorId != null">#{authorId},</if>
+            <if test = "categoryId != null">#{categoryId},</if>
+            <if test = "slug != null">#{slug},</if>
+            <if test = "title != null">#{title},</if>
+            <if test = "summary != null">#{summary},</if>
+            <if test = "contentMarkdown != null">#{contentMarkdown},</if>
+            <if test = "visibility != null">#{visibility},</if>
+            <if test = "status != null">#{status},</if>
+            <if test = "wordCount != null">#{wordCount},</if>
+            <if test = "readingMinutes != null">#{readingMinutes},</if>
+            <if test = "publishedAt != null">#{publishedAt},</if>
+            <if test = "rowVersion != null">#{rowVersion},</if>
+            <if test = "deletedAt != null">#{deletedAt},</if>
+            <if test = "createdAt != null">#{createdAt},</if>
+            <if test = "updatedAt != null">#{updatedAt},</if>
+        </trim>
+    </insert>
 </mapper>

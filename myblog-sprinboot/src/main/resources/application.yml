@@ -14,6 +14,15 @@ spring:
     url: jdbc:mysql://localhost:3306/myblog?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+  servlet:
+    multipart:
+      max-file-size: 20MB
+
 logging:
   file:
     name : logger/springboot.log
+
+storage:
+  local:
+    root-path: E:/myblog/uploads
+  bucket: ""

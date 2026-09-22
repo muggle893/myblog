@@ -1,112 +1,782 @@
-2026-09-15T08:14:28.761+08:00  INFO 18356 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 18356 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T08:14:28.768+08:00  INFO 18356 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T08:14:29.524+08:00  INFO 18356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-15T08:14:29.532+08:00  INFO 18356 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-15T08:14:29.532+08:00  INFO 18356 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-15T08:14:29.605+08:00  INFO 18356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-15T08:14:29.606+08:00  INFO 18356 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 801 ms
-2026-09-15T08:14:29.977+08:00  INFO 18356 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T08:14:30.098+08:00  INFO 18356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-15T08:14:30.105+08:00  INFO 18356 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.813 seconds (process running for 2.489)
-2026-09-15T08:17:39.768+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-15T08:17:39.768+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-15T08:17:39.769+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-15T08:17:39.797+08:00  WARN 18356 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
-2026-09-15T08:17:39.806+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录.
-2026-09-15T08:17:39.806+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-15T08:17:39.824+08:00  INFO 18356 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T08:17:39.977+08:00  INFO 18356 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ad99b03
-2026-09-15T08:17:39.978+08:00  INFO 18356 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T08:17:40.397+08:00  INFO 18356 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录成功.
-2026-09-15T08:18:28.467+08:00  INFO 18356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T08:18:28.477+08:00  INFO 18356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-15T10:59:40.928+08:00  INFO 24844 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 24844 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T10:59:40.930+08:00  INFO 24844 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T10:59:42.326+08:00  INFO 24844 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T10:59:42.516+08:00  INFO 24844 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.87 seconds (process running for 3.087)
-2026-09-15T10:59:42.979+08:00  INFO 24844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T10:59:43.139+08:00  INFO 24844 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b691611
-2026-09-15T10:59:43.141+08:00  INFO 24844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T10:59:43.249+08:00  INFO 24844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T10:59:43.256+08:00  INFO 24844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-15T12:54:54.518+08:00  INFO 5616 --- [main] o.t.m.dao.TagArticleMapperTest           : Starting TagArticleMapperTest using Java 17.0.5 with PID 5616 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T12:54:54.520+08:00  INFO 5616 --- [main] o.t.m.dao.TagArticleMapperTest           : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T12:54:56.169+08:00  INFO 5616 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T12:54:56.333+08:00  INFO 5616 --- [main] o.t.m.dao.TagArticleMapperTest           : Started TagArticleMapperTest in 2.306 seconds (process running for 4.582)
-2026-09-15T12:54:56.790+08:00  INFO 5616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T12:54:56.963+08:00  INFO 5616 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5bb7a59
-2026-09-15T12:54:56.965+08:00  INFO 5616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T12:54:57.049+08:00  INFO 5616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T12:54:57.056+08:00  INFO 5616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-15T12:57:36.980+08:00  INFO 11568 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Starting TagMapperTest using Java 17.0.5 with PID 11568 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T12:57:36.981+08:00  INFO 11568 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T12:57:38.176+08:00  INFO 11568 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T12:57:38.345+08:00  INFO 11568 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Started TagMapperTest in 1.656 seconds (process running for 2.571)
-2026-09-15T12:57:38.713+08:00  INFO 11568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T12:57:38.864+08:00  INFO 11568 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66715ca9
-2026-09-15T12:57:38.866+08:00  INFO 11568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T12:57:39.032+08:00  INFO 11568 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T12:57:39.041+08:00  INFO 11568 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-15T12:58:38.907+08:00  INFO 14124 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Starting TagMapperTest using Java 17.0.5 with PID 14124 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T12:58:38.908+08:00  INFO 14124 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T12:58:40.015+08:00  INFO 14124 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T12:58:40.166+08:00  INFO 14124 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Started TagMapperTest in 1.527 seconds (process running for 2.472)
-2026-09-15T12:58:40.569+08:00  INFO 14124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T12:58:40.709+08:00  INFO 14124 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12c76d6e
-2026-09-15T12:58:40.711+08:00  INFO 14124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T12:58:40.826+08:00  INFO 14124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T12:58:40.841+08:00  INFO 14124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-15T13:03:07.903+08:00  INFO 28972 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Starting TagMapperTest using Java 17.0.5 with PID 28972 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T13:03:07.904+08:00  INFO 28972 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T13:03:09.025+08:00  INFO 28972 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T13:03:09.173+08:00  INFO 28972 --- [main] o.txf.myblogsprinboot.dao.TagMapperTest  : Started TagMapperTest in 1.529 seconds (process running for 2.399)
-2026-09-15T13:03:09.548+08:00  INFO 28972 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T13:03:09.659+08:00  INFO 28972 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ab8589a
-2026-09-15T13:03:09.662+08:00  INFO 28972 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T13:03:09.742+08:00  INFO 28972 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T13:03:09.750+08:00  INFO 28972 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-15T13:05:49.599+08:00  INFO 16696 --- [main] o.t.m.service.ArticleServiceTest         : Starting ArticleServiceTest using Java 17.0.5 with PID 16696 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T13:05:49.601+08:00  INFO 16696 --- [main] o.t.m.service.ArticleServiceTest         : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T13:05:50.806+08:00  INFO 16696 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T13:05:50.952+08:00  INFO 16696 --- [main] o.t.m.service.ArticleServiceTest         : Started ArticleServiceTest in 1.625 seconds (process running for 2.504)
-2026-09-15T13:05:51.356+08:00  INFO 16696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T13:05:51.523+08:00  INFO 16696 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f1f9515
-2026-09-15T13:05:51.525+08:00  INFO 16696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T13:05:51.605+08:00  INFO 16696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T13:05:51.612+08:00  INFO 16696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-15T13:06:09.526+08:00  INFO 19940 --- [main] o.t.m.service.ArticleServiceTest         : Starting ArticleServiceTest using Java 17.0.5 with PID 19940 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T13:06:09.528+08:00  INFO 19940 --- [main] o.t.m.service.ArticleServiceTest         : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T13:06:10.642+08:00  INFO 19940 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T13:06:10.789+08:00  INFO 19940 --- [main] o.t.m.service.ArticleServiceTest         : Started ArticleServiceTest in 1.522 seconds (process running for 2.411)
-2026-09-15T13:06:11.164+08:00  INFO 19940 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T13:06:11.303+08:00  INFO 19940 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b3518e1
-2026-09-15T13:06:11.306+08:00  INFO 19940 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T13:06:11.379+08:00  INFO 19940 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T13:06:11.386+08:00  INFO 19940 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-15T13:06:28.538+08:00  INFO 7064 --- [main] o.t.m.service.ArticleServiceTest         : Starting ArticleServiceTest using Java 17.0.5 with PID 7064 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T13:06:28.540+08:00  INFO 7064 --- [main] o.t.m.service.ArticleServiceTest         : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T13:06:29.634+08:00  INFO 7064 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T13:06:29.771+08:00  INFO 7064 --- [main] o.t.m.service.ArticleServiceTest         : Started ArticleServiceTest in 1.496 seconds (process running for 2.38)
-2026-09-15T13:06:30.113+08:00  INFO 7064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T13:06:30.242+08:00  INFO 7064 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33e50ff2
-2026-09-15T13:06:30.245+08:00  INFO 7064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T13:06:30.419+08:00  INFO 7064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T13:06:30.428+08:00  INFO 7064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-15T13:28:11.547+08:00  INFO 18368 --- [main] o.t.m.dao.CategoryMapperTest             : Starting CategoryMapperTest using Java 17.0.5 with PID 18368 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T13:28:11.548+08:00  INFO 18368 --- [main] o.t.m.dao.CategoryMapperTest             : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T13:28:12.858+08:00  INFO 18368 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T13:28:13.008+08:00  INFO 18368 --- [main] o.t.m.dao.CategoryMapperTest             : Started CategoryMapperTest in 1.741 seconds (process running for 2.658)
-2026-09-15T13:28:13.410+08:00  INFO 18368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T13:28:13.539+08:00  INFO 18368 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@191f4d65
-2026-09-15T13:28:13.543+08:00  INFO 18368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T13:28:13.628+08:00  INFO 18368 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T13:28:13.636+08:00  INFO 18368 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-15T13:30:23.545+08:00  INFO 3876 --- [main] o.t.m.service.ArticleServiceTest         : Starting ArticleServiceTest using Java 17.0.5 with PID 3876 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-15T13:30:23.546+08:00  INFO 3876 --- [main] o.t.m.service.ArticleServiceTest         : No active profile set, falling back to 1 default profile: "default"
-2026-09-15T13:30:24.851+08:00  INFO 3876 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-15T13:30:24.997+08:00  INFO 3876 --- [main] o.t.m.service.ArticleServiceTest         : Started ArticleServiceTest in 1.754 seconds (process running for 2.705)
-2026-09-15T13:30:25.383+08:00  INFO 3876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-15T13:30:25.518+08:00  INFO 3876 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a2a7492
-2026-09-15T13:30:25.521+08:00  INFO 3876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-15T13:30:25.688+08:00  INFO 3876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-15T13:30:25.702+08:00  INFO 3876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T09:46:49.867+08:00  INFO 27264 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 27264 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T09:46:49.873+08:00  INFO 27264 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T09:46:51.755+08:00  INFO 27264 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T09:46:51.962+08:00  INFO 27264 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 2.416 seconds (process running for 3.685)
+2026-09-22T09:46:52.633+08:00  INFO 27264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T09:46:52.835+08:00  INFO 27264 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6785c9fa
+2026-09-22T09:46:52.839+08:00  INFO 27264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T09:46:53.011+08:00  INFO 27264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T09:46:53.034+08:00  INFO 27264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T09:48:04.244+08:00  INFO 23844 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 23844 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T09:48:04.246+08:00  INFO 23844 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T09:48:05.521+08:00  INFO 23844 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T09:48:05.661+08:00  INFO 23844 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.672 seconds (process running for 2.638)
+2026-09-22T09:48:06.072+08:00  INFO 23844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T09:48:06.192+08:00  INFO 23844 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@455da438
+2026-09-22T09:48:06.195+08:00  INFO 23844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T09:48:06.289+08:00  INFO 23844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T09:48:06.295+08:00  INFO 23844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T10:16:40.417+08:00  INFO 704 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 704 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:16:40.418+08:00  INFO 704 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:16:41.730+08:00  INFO 704 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:16:41.891+08:00  INFO 704 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.739 seconds (process running for 2.697)
+2026-09-22T10:17:44.157+08:00  INFO 17448 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 17448 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:17:44.159+08:00  INFO 17448 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:17:45.358+08:00  INFO 17448 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:17:45.501+08:00  INFO 17448 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.607 seconds (process running for 2.471)
+2026-09-22T10:18:48.630+08:00  INFO 20128 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 20128 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:18:48.631+08:00  INFO 20128 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:18:49.830+08:00  INFO 20128 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:18:49.974+08:00  INFO 20128 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.618 seconds (process running for 2.499)
+2026-09-22T10:18:50.389+08:00  INFO 20128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T10:18:50.529+08:00  INFO 20128 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@249b54af
+2026-09-22T10:18:50.532+08:00  INFO 20128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T10:18:50.597+08:00  INFO 20128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T10:18:50.604+08:00  INFO 20128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T10:24:26.589+08:00  INFO 22288 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 22288 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:24:26.591+08:00  INFO 22288 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:24:27.812+08:00  INFO 22288 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:24:27.966+08:00  INFO 22288 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.648 seconds (process running for 2.684)
+2026-09-22T10:24:28.382+08:00  INFO 22288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T10:24:28.521+08:00  INFO 22288 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f26b992
+2026-09-22T10:24:28.525+08:00  INFO 22288 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T10:24:28.648+08:00  INFO 22288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T10:24:28.664+08:00  INFO 22288 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T10:24:58.307+08:00  INFO 27264 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 27264 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:24:58.309+08:00  INFO 27264 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:24:59.609+08:00  INFO 27264 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:24:59.876+08:00  INFO 27264 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.866 seconds (process running for 2.858)
+2026-09-22T10:25:00.379+08:00  INFO 27264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T10:25:00.520+08:00  INFO 27264 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@678586f0
+2026-09-22T10:25:00.523+08:00  INFO 27264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T10:25:00.664+08:00  INFO 27264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T10:25:00.675+08:00  INFO 27264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T10:25:28.987+08:00  INFO 24588 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 24588 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:25:28.988+08:00  INFO 24588 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:25:30.165+08:00  INFO 24588 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:25:30.318+08:00  INFO 24588 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.632 seconds (process running for 2.623)
+2026-09-22T10:25:30.719+08:00  INFO 24588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T10:25:30.841+08:00  INFO 24588 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@642c72cf
+2026-09-22T10:25:30.843+08:00  INFO 24588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T10:25:30.950+08:00  INFO 24588 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T10:25:30.963+08:00  INFO 24588 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T10:25:43.626+08:00  INFO 23660 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 23660 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:25:43.627+08:00  INFO 23660 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:25:44.851+08:00  INFO 23660 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:25:45.013+08:00  INFO 23660 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.723 seconds (process running for 2.705)
+2026-09-22T10:25:45.413+08:00  INFO 23660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T10:25:45.545+08:00  INFO 23660 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e6cbdf1
+2026-09-22T10:25:45.547+08:00  INFO 23660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T10:25:45.654+08:00  INFO 23660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T10:25:45.680+08:00  INFO 23660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T10:40:43.974+08:00  INFO 15012 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 15012 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:40:43.976+08:00  INFO 15012 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:40:45.151+08:00  INFO 15012 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:40:45.297+08:00  INFO 15012 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.609 seconds (process running for 2.531)
+2026-09-22T10:45:38.710+08:00  INFO 15596 --- [main] o.t.m.dao.ArticleAssetMapperTest         : Starting ArticleAssetMapperTest using Java 17.0.5 with PID 15596 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:45:38.712+08:00  INFO 15596 --- [main] o.t.m.dao.ArticleAssetMapperTest         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:45:39.918+08:00  INFO 15596 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:45:40.053+08:00  INFO 15596 --- [main] o.t.m.dao.ArticleAssetMapperTest         : Started ArticleAssetMapperTest in 1.601 seconds (process running for 2.435)
+2026-09-22T10:46:19.428+08:00  INFO 4864 --- [main] o.t.m.dao.ArticleAssetMapperTest         : Starting ArticleAssetMapperTest using Java 17.0.5 with PID 4864 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:46:19.430+08:00  INFO 4864 --- [main] o.t.m.dao.ArticleAssetMapperTest         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:46:20.590+08:00  INFO 4864 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:46:20.727+08:00  INFO 4864 --- [main] o.t.m.dao.ArticleAssetMapperTest         : Started ArticleAssetMapperTest in 1.552 seconds (process running for 2.389)
+2026-09-22T10:46:21.134+08:00  INFO 4864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T10:46:21.275+08:00  INFO 4864 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@481ed95c
+2026-09-22T10:46:21.278+08:00  INFO 4864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T10:46:21.385+08:00  INFO 4864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T10:46:21.393+08:00  INFO 4864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T10:47:13.034+08:00  INFO 2684 --- [main] o.t.m.dao.ArticleAssetMapperTest         : Starting ArticleAssetMapperTest using Java 17.0.5 with PID 2684 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:47:13.036+08:00  INFO 2684 --- [main] o.t.m.dao.ArticleAssetMapperTest         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:47:14.300+08:00  INFO 2684 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:47:14.436+08:00  INFO 2684 --- [main] o.t.m.dao.ArticleAssetMapperTest         : Started ArticleAssetMapperTest in 1.702 seconds (process running for 2.582)
+2026-09-22T10:47:14.823+08:00  INFO 2684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T10:47:14.959+08:00  INFO 2684 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f06ebe0
+2026-09-22T10:47:14.961+08:00  INFO 2684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T10:47:15.069+08:00  INFO 2684 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T10:47:15.082+08:00  INFO 2684 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T10:47:29.333+08:00  INFO 25072 --- [main] o.t.m.dao.ArticleAssetMapperTest         : Starting ArticleAssetMapperTest using Java 17.0.5 with PID 25072 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:47:29.334+08:00  INFO 25072 --- [main] o.t.m.dao.ArticleAssetMapperTest         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:47:30.552+08:00  INFO 25072 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:47:30.691+08:00  INFO 25072 --- [main] o.t.m.dao.ArticleAssetMapperTest         : Started ArticleAssetMapperTest in 1.659 seconds (process running for 2.632)
+2026-09-22T10:47:31.101+08:00  INFO 25072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T10:47:31.229+08:00  INFO 25072 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@297bd171
+2026-09-22T10:47:31.232+08:00  INFO 25072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T10:47:31.335+08:00  INFO 25072 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T10:47:31.349+08:00  INFO 25072 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T10:50:51.608+08:00  INFO 12744 --- [main] o.t.m.dao.ArticleAssetMapperTest         : Starting ArticleAssetMapperTest using Java 17.0.5 with PID 12744 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T10:50:51.610+08:00  INFO 12744 --- [main] o.t.m.dao.ArticleAssetMapperTest         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T10:50:52.861+08:00  INFO 12744 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T10:50:53.001+08:00  INFO 12744 --- [main] o.t.m.dao.ArticleAssetMapperTest         : Started ArticleAssetMapperTest in 1.664 seconds (process running for 2.711)
+2026-09-22T10:50:53.386+08:00  INFO 12744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T10:50:53.506+08:00  INFO 12744 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7198ab9a
+2026-09-22T10:50:53.510+08:00  INFO 12744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T10:50:53.563+08:00  INFO 12744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T10:50:53.571+08:00  INFO 12744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T12:03:20.282+08:00  INFO 23420 --- [main] o.t.m.dao.ArticleTagMapperTest           : Starting ArticleTagMapperTest using Java 17.0.5 with PID 23420 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:03:20.285+08:00  INFO 23420 --- [main] o.t.m.dao.ArticleTagMapperTest           : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:03:21.971+08:00  INFO 23420 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:03:22.123+08:00  INFO 23420 --- [main] o.t.m.dao.ArticleTagMapperTest           : Started ArticleTagMapperTest in 2.297 seconds (process running for 3.429)
+2026-09-22T12:03:22.148+08:00  INFO 23420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T12:03:22.312+08:00  INFO 23420 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@256bb5be
+2026-09-22T12:03:22.315+08:00  INFO 23420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T12:03:22.816+08:00  INFO 23420 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T12:03:22.823+08:00  INFO 23420 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T12:07:24.196+08:00  INFO 5528 --- [main] o.t.m.dao.ArticleTagMapperTest           : Starting ArticleTagMapperTest using Java 17.0.5 with PID 5528 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:07:24.199+08:00  INFO 5528 --- [main] o.t.m.dao.ArticleTagMapperTest           : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:07:25.442+08:00  INFO 5528 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:07:25.588+08:00  INFO 5528 --- [main] o.t.m.dao.ArticleTagMapperTest           : Started ArticleTagMapperTest in 1.692 seconds (process running for 2.602)
+2026-09-22T12:07:25.613+08:00  INFO 5528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T12:07:25.749+08:00  INFO 5528 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d294ddc
+2026-09-22T12:07:25.752+08:00  INFO 5528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T12:07:26.244+08:00  INFO 5528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T12:07:26.254+08:00  INFO 5528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T12:08:55.983+08:00  INFO 20880 --- [main] o.t.m.dao.ArticleTagMapperTest           : Starting ArticleTagMapperTest using Java 17.0.5 with PID 20880 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:08:55.984+08:00  INFO 20880 --- [main] o.t.m.dao.ArticleTagMapperTest           : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:08:57.190+08:00  INFO 20880 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:08:57.343+08:00  INFO 20880 --- [main] o.t.m.dao.ArticleTagMapperTest           : Started ArticleTagMapperTest in 1.647 seconds (process running for 2.678)
+2026-09-22T12:08:57.375+08:00  INFO 20880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T12:08:57.527+08:00  INFO 20880 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4270b142
+2026-09-22T12:08:57.532+08:00  INFO 20880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T12:08:57.995+08:00  INFO 20880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T12:08:58.002+08:00  INFO 20880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T12:25:51.202+08:00  INFO 28340 --- [main] o.t.m.dao.ArticleTagMapperTest           : Starting ArticleTagMapperTest using Java 17.0.5 with PID 28340 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:25:51.204+08:00  INFO 28340 --- [main] o.t.m.dao.ArticleTagMapperTest           : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:25:52.477+08:00  INFO 28340 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:25:52.625+08:00  INFO 28340 --- [main] o.t.m.dao.ArticleTagMapperTest           : Started ArticleTagMapperTest in 1.734 seconds (process running for 2.698)
+2026-09-22T12:25:52.648+08:00  INFO 28340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T12:25:52.781+08:00  INFO 28340 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f6cce7f
+2026-09-22T12:25:52.784+08:00  INFO 28340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T12:25:53.246+08:00  INFO 28340 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T12:25:53.255+08:00  INFO 28340 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T12:26:02.068+08:00  INFO 8176 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 8176 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:26:02.071+08:00  INFO 8176 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:26:02.934+08:00  INFO 8176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-22T12:26:02.942+08:00  INFO 8176 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-22T12:26:02.942+08:00  INFO 8176 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-22T12:26:03.027+08:00  INFO 8176 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-22T12:26:03.027+08:00  INFO 8176 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 911 ms
+2026-09-22T12:26:03.377+08:00  INFO 8176 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:26:03.507+08:00  INFO 8176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-22T12:26:03.514+08:00  INFO 8176 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.959 seconds (process running for 2.646)
+2026-09-22T12:30:30.752+08:00  INFO 8176 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-22T12:30:30.753+08:00  INFO 8176 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-22T12:30:30.755+08:00  INFO 8176 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-22T12:30:30.772+08:00  INFO 8176 --- [http-nio-8080-exec-1] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:30:30.853+08:00  INFO 8176 --- [http-nio-8080-exec-1] o.t.m.interceptor.LoginInterceptor       : 拦截：用户未登录
+2026-09-22T12:30:37.339+08:00  WARN 8176 --- [http-nio-8080-exec-3] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-22T12:30:37.350+08:00  INFO 8176 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录.
+2026-09-22T12:30:37.350+08:00  INFO 8176 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-22T12:30:37.375+08:00  INFO 8176 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T12:30:37.526+08:00  INFO 8176 --- [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27a5a421
+2026-09-22T12:30:37.528+08:00  INFO 8176 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T12:30:37.928+08:00  INFO 8176 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-22T12:30:40.259+08:00  INFO 8176 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:30:40.260+08:00  INFO 8176 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-22T12:30:40.436+08:00 ERROR 8176 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "assetIds" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "assetIds" is null
+	at org.txf.myblogsprinboot.service.ArticleService.connectArticleAssets(ArticleService.java:65) ~[classes/:na]
+	at org.txf.myblogsprinboot.controller.ArticleController.createArticle(ArticleController.java:125) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.txf.myblogsprinboot.controller.ArticleController$$SpringCGLIB$$0.createArticle(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-09-22T12:30:40.446+08:00  INFO 8176 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:30:40.446+08:00  INFO 8176 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/error
+2026-09-22T12:33:24.406+08:00  INFO 8176 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T12:33:24.411+08:00  INFO 8176 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T12:33:28.111+08:00  INFO 6600 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 6600 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:33:28.113+08:00  INFO 6600 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:33:28.782+08:00  INFO 6600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-22T12:33:28.789+08:00  INFO 6600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-22T12:33:28.789+08:00  INFO 6600 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-22T12:33:28.869+08:00  INFO 6600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-22T12:33:28.870+08:00  INFO 6600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 728 ms
+2026-09-22T12:33:29.222+08:00  INFO 6600 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:33:29.384+08:00  INFO 6600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-22T12:33:29.395+08:00  INFO 6600 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.595 seconds (process running for 1.994)
+2026-09-22T12:33:35.094+08:00  INFO 6600 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-22T12:33:35.095+08:00  INFO 6600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-22T12:33:35.095+08:00  INFO 6600 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-22T12:33:35.119+08:00  WARN 6600 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-22T12:33:35.123+08:00  INFO 6600 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录.
+2026-09-22T12:33:35.123+08:00  INFO 6600 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-22T12:33:35.135+08:00  INFO 6600 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T12:33:35.253+08:00  INFO 6600 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fdb1688
+2026-09-22T12:33:35.254+08:00  INFO 6600 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T12:33:35.631+08:00  INFO 6600 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-22T12:33:38.711+08:00  INFO 6600 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:33:38.711+08:00  INFO 6600 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-22T12:33:38.737+08:00  INFO 6600 --- [http-nio-8080-exec-3] o.t.m.controller.ArticleController       : Article created:Article(id=null, authorId=1, categoryId=null, slug=null, title=Postman测试文章, summary=Postman 测试文章
+这是一篇接口测试文章。, contentMarkdown=# Postman 测试文章
+
+这是一篇接口测试文章。, visibility=PUBLIC, status=PUBLISHED, wordCount=22, readingMinutes=22, publishedAt=2026-09-22T12:33:38.737662200, rowVersion=0, deletedAt=null, createdAt=null, updatedAt=2026-09-22T12:33:38.737662200)
+2026-09-22T12:33:38.768+08:00 ERROR 6600 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "assetIds" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "assetIds" is null
+	at org.txf.myblogsprinboot.service.ArticleService.connectArticleAssets(ArticleService.java:65) ~[classes/:na]
+	at org.txf.myblogsprinboot.controller.ArticleController.createArticle(ArticleController.java:125) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.txf.myblogsprinboot.controller.ArticleController$$SpringCGLIB$$0.createArticle(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-09-22T12:33:38.775+08:00  INFO 6600 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:33:38.775+08:00  INFO 6600 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/error
+2026-09-22T12:35:45.696+08:00  INFO 6600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T12:35:45.701+08:00  INFO 6600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T12:35:49.354+08:00  INFO 23332 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 23332 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:35:49.356+08:00  INFO 23332 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:35:50.012+08:00  INFO 23332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-22T12:35:50.018+08:00  INFO 23332 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-22T12:35:50.019+08:00  INFO 23332 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-22T12:35:50.087+08:00  INFO 23332 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-22T12:35:50.087+08:00  INFO 23332 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 699 ms
+2026-09-22T12:35:50.422+08:00  INFO 23332 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:35:50.530+08:00  INFO 23332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-22T12:35:50.536+08:00  INFO 23332 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.533 seconds (process running for 2.007)
+2026-09-22T12:35:55.751+08:00  INFO 23332 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-22T12:35:55.752+08:00  INFO 23332 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-22T12:35:55.752+08:00  INFO 23332 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-22T12:35:55.771+08:00  WARN 23332 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-22T12:35:55.775+08:00  INFO 23332 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录.
+2026-09-22T12:35:55.775+08:00  INFO 23332 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-22T12:35:55.787+08:00  INFO 23332 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T12:35:55.904+08:00  INFO 23332 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3205599a
+2026-09-22T12:35:55.905+08:00  INFO 23332 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T12:35:56.281+08:00  INFO 23332 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-22T12:35:57.614+08:00  INFO 23332 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:35:57.614+08:00  INFO 23332 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-22T12:35:57.640+08:00  INFO 23332 --- [http-nio-8080-exec-3] o.t.m.controller.ArticleController       : Article created:Article(id=null, authorId=1, categoryId=null, slug=null, title=Postman测试文章, summary=Postman 测试文章
+这是一篇接口测试文章。, contentMarkdown=# Postman 测试文章
+
+这是一篇接口测试文章。, visibility=PUBLIC, status=PUBLISHED, wordCount=22, readingMinutes=22, publishedAt=2026-09-22T12:35:57.640361, rowVersion=0, deletedAt=null, createdAt=null, updatedAt=2026-09-22T12:35:57.640361)
+2026-09-22T12:35:57.672+08:00 ERROR 23332 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.size()" because "assetIds" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.size()" because "assetIds" is null
+	at org.txf.myblogsprinboot.service.ArticleService.connectArticleAssets(ArticleService.java:66) ~[classes/:na]
+	at org.txf.myblogsprinboot.controller.ArticleController.createArticle(ArticleController.java:125) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.txf.myblogsprinboot.controller.ArticleController$$SpringCGLIB$$0.createArticle(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-09-22T12:35:57.678+08:00  INFO 23332 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:35:57.678+08:00  INFO 23332 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/error
+2026-09-22T12:36:38.622+08:00  INFO 23332 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T12:36:38.630+08:00  INFO 23332 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T12:36:42.172+08:00  INFO 22952 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 22952 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:36:42.174+08:00  INFO 22952 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:36:42.883+08:00  INFO 22952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-22T12:36:42.890+08:00  INFO 22952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-22T12:36:42.890+08:00  INFO 22952 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-22T12:36:42.965+08:00  INFO 22952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-22T12:36:42.966+08:00  INFO 22952 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 762 ms
+2026-09-22T12:36:43.304+08:00  INFO 22952 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:36:43.439+08:00  INFO 22952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-22T12:36:43.446+08:00  INFO 22952 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.628 seconds (process running for 2.046)
+2026-09-22T12:36:48.022+08:00  INFO 22952 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-22T12:36:48.023+08:00  INFO 22952 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-22T12:36:48.023+08:00  INFO 22952 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-22T12:36:48.043+08:00  WARN 22952 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-22T12:36:48.047+08:00  INFO 22952 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录.
+2026-09-22T12:36:48.047+08:00  INFO 22952 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-22T12:36:48.060+08:00  INFO 22952 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T12:36:48.173+08:00  INFO 22952 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ef04b34
+2026-09-22T12:36:48.175+08:00  INFO 22952 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T12:36:48.564+08:00  INFO 22952 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-22T12:36:49.985+08:00  INFO 22952 --- [http-nio-8080-exec-5] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:36:49.986+08:00  INFO 22952 --- [http-nio-8080-exec-5] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-22T12:36:50.014+08:00  INFO 22952 --- [http-nio-8080-exec-5] o.t.m.controller.ArticleController       : Article created:Article(id=null, authorId=1, categoryId=null, slug=null, title=Postman测试文章, summary=Postman 测试文章
+这是一篇接口测试文章。, contentMarkdown=# Postman 测试文章
+
+这是一篇接口测试文章。, visibility=PUBLIC, status=PUBLISHED, wordCount=22, readingMinutes=22, publishedAt=2026-09-22T12:36:50.014957400, rowVersion=0, deletedAt=null, createdAt=null, updatedAt=2026-09-22T12:36:50.014957400)
+2026-09-22T12:40:15.725+08:00  INFO 22952 --- [http-nio-8080-exec-6] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:40:15.726+08:00  INFO 22952 --- [http-nio-8080-exec-6] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-22T12:40:15.730+08:00  WARN 22952 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'articleCreateRequest' on field 'tagIds': rejected value [[1, 2]]; codes [typeMismatch.articleCreateRequest.tagIds,typeMismatch.tagIds,typeMismatch.java.util.List,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [articleCreateRequest.tagIds,tagIds]; arguments []; default message [tagIds]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.List' for property 'tagIds'; For input string: "[1,2]"]]
+2026-09-22T12:40:15.734+08:00  INFO 22952 --- [http-nio-8080-exec-6] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:40:15.734+08:00  INFO 22952 --- [http-nio-8080-exec-6] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/error
+2026-09-22T12:40:48.036+08:00  INFO 22952 --- [http-nio-8080-exec-8] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:40:48.036+08:00  INFO 22952 --- [http-nio-8080-exec-8] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-22T12:40:48.037+08:00  WARN 22952 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'articleCreateRequest' on field 'tagIds': rejected value [{1, 2}]; codes [typeMismatch.articleCreateRequest.tagIds,typeMismatch.tagIds,typeMismatch.java.util.List,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [articleCreateRequest.tagIds,tagIds]; arguments []; default message [tagIds]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.List' for property 'tagIds'; For input string: "{1,2}"]]
+2026-09-22T12:40:48.042+08:00  INFO 22952 --- [http-nio-8080-exec-8] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:40:48.042+08:00  INFO 22952 --- [http-nio-8080-exec-8] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/error
+2026-09-22T12:41:52.352+08:00  INFO 22952 --- [http-nio-8080-exec-10] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:41:52.353+08:00  INFO 22952 --- [http-nio-8080-exec-10] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-22T12:41:52.354+08:00  INFO 22952 --- [http-nio-8080-exec-10] o.t.m.controller.ArticleController       : Article created:Article(id=null, authorId=1, categoryId=null, slug=null, title=Postman测试文章2, summary=Postman 测试文章
+这是一篇接口测试文章。, contentMarkdown=# Postman 测试文章
+
+这是一篇接口测试文章。, visibility=PUBLIC, status=PUBLISHED, wordCount=22, readingMinutes=22, publishedAt=2026-09-22T12:41:52.354512400, rowVersion=0, deletedAt=null, createdAt=null, updatedAt=2026-09-22T12:41:52.354512400)
+2026-09-22T12:41:52.393+08:00 ERROR 22952 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+### The error may exist in file [E:\myblog\myblog-sprinboot\target\classes\mapper\ArticleTagMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: insert into blog_article_tag(article_id, tag_id, sort_order)         values
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+; bad SQL grammar []] with root cause
+
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58) ~[mybatis-3.5.13.jar:3.5.13]
+	at jdk.proxy3/jdk.proxy3.$Proxy82.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.13.jar:3.5.13]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-3.0.2.jar:3.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy65.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272) ~[mybatis-spring-3.0.2.jar:3.0.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.13.jar:3.5.13]
+	at jdk.proxy2/jdk.proxy2.$Proxy71.batchInsertArticleTag(Unknown Source) ~[na:na]
+	at org.txf.myblogsprinboot.service.ArticleService.connectArticleTags(ArticleService.java:56) ~[classes/:na]
+	at org.txf.myblogsprinboot.controller.ArticleController.createArticle(ArticleController.java:128) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.txf.myblogsprinboot.controller.ArticleController$$SpringCGLIB$$0.createArticle(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-09-22T12:41:52.399+08:00  INFO 22952 --- [http-nio-8080-exec-10] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:41:52.400+08:00  INFO 22952 --- [http-nio-8080-exec-10] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/error
+2026-09-22T12:43:16.849+08:00  INFO 22952 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T12:43:16.855+08:00  INFO 22952 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T12:43:20.333+08:00  INFO 24256 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 24256 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:43:20.335+08:00  INFO 24256 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:43:21.043+08:00  INFO 24256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-22T12:43:21.050+08:00  INFO 24256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-22T12:43:21.050+08:00  INFO 24256 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-22T12:43:21.125+08:00  INFO 24256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-22T12:43:21.125+08:00  INFO 24256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 764 ms
+2026-09-22T12:43:21.557+08:00  INFO 24256 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:43:21.673+08:00  INFO 24256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-22T12:43:21.679+08:00  INFO 24256 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.668 seconds (process running for 2.083)
+2026-09-22T12:43:47.669+08:00  INFO 26488 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 26488 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:43:47.671+08:00  INFO 26488 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:43:48.454+08:00  INFO 26488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-22T12:43:48.461+08:00  INFO 26488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-22T12:43:48.462+08:00  INFO 26488 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-22T12:43:48.540+08:00  INFO 26488 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-22T12:43:48.540+08:00  INFO 26488 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 840 ms
+2026-09-22T12:43:48.923+08:00  INFO 26488 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:43:49.049+08:00  INFO 26488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-22T12:43:49.056+08:00  INFO 26488 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.723 seconds (process running for 2.13)
+2026-09-22T12:45:53.414+08:00  INFO 26488 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-22T12:45:53.414+08:00  INFO 26488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-22T12:45:53.415+08:00  INFO 26488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-22T12:45:53.434+08:00  WARN 26488 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-22T12:45:53.438+08:00  INFO 26488 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录.
+2026-09-22T12:45:53.439+08:00  INFO 26488 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-22T12:45:53.451+08:00  INFO 26488 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T12:45:53.560+08:00  INFO 26488 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5452a3f8
+2026-09-22T12:45:53.561+08:00  INFO 26488 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T12:45:53.935+08:00  INFO 26488 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-22T12:45:55.908+08:00  INFO 26488 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:45:55.909+08:00  INFO 26488 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-22T12:45:55.937+08:00  INFO 26488 --- [http-nio-8080-exec-3] o.t.m.controller.ArticleController       : Article created:Article(id=null, authorId=1, categoryId=null, slug=null, title=Postman测试文章2, summary=Postman 测试文章
+这是一篇接口测试文章。, contentMarkdown=# Postman 测试文章
+
+这是一篇接口测试文章。, visibility=PUBLIC, status=PUBLISHED, wordCount=22, readingMinutes=22, publishedAt=2026-09-22T12:45:55.937464200, rowVersion=0, deletedAt=null, createdAt=null, updatedAt=2026-09-22T12:45:55.937464200)
+2026-09-22T12:45:56.077+08:00 ERROR 26488 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'sort_order' cannot be null
+### The error may exist in file [E:\myblog\myblog-sprinboot\target\classes\mapper\ArticleTagMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: insert into blog_article_tag(article_id, tag_id, sort_order)         values                        (?,  ?, ?)          ,              (?,  ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'sort_order' cannot be null
+; Column 'sort_order' cannot be null] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Column 'sort_order' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58) ~[mybatis-3.5.13.jar:3.5.13]
+	at jdk.proxy3/jdk.proxy3.$Proxy82.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.13.jar:3.5.13]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-3.0.2.jar:3.0.2]
+	at jdk.proxy2/jdk.proxy2.$Proxy65.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272) ~[mybatis-spring-3.0.2.jar:3.0.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.13.jar:3.5.13]
+	at jdk.proxy2/jdk.proxy2.$Proxy71.batchInsertArticleTag(Unknown Source) ~[na:na]
+	at org.txf.myblogsprinboot.service.ArticleService.connectArticleTags(ArticleService.java:57) ~[classes/:na]
+	at org.txf.myblogsprinboot.controller.ArticleController.createArticle(ArticleController.java:128) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.4.jar:6.0.4]
+	at org.txf.myblogsprinboot.controller.ArticleController$$SpringCGLIB$$0.createArticle(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-09-22T12:45:56.318+08:00  INFO 26488 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:45:56.318+08:00  INFO 26488 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/error
+2026-09-22T12:47:20.064+08:00  INFO 26488 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T12:47:20.075+08:00  INFO 26488 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-22T12:47:23.706+08:00  INFO 7368 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 7368 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-22T12:47:23.708+08:00  INFO 7368 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T12:47:24.441+08:00  INFO 7368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-22T12:47:24.449+08:00  INFO 7368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-22T12:47:24.449+08:00  INFO 7368 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-22T12:47:24.533+08:00  INFO 7368 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-22T12:47:24.534+08:00  INFO 7368 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 795 ms
+2026-09-22T12:47:24.967+08:00  INFO 7368 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-22T12:47:25.115+08:00  INFO 7368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-22T12:47:25.124+08:00  INFO 7368 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.772 seconds (process running for 2.191)
+2026-09-22T12:47:29.226+08:00  INFO 7368 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-22T12:47:29.227+08:00  INFO 7368 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-22T12:47:29.230+08:00  INFO 7368 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-22T12:47:29.255+08:00  WARN 7368 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-22T12:47:29.259+08:00  INFO 7368 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录.
+2026-09-22T12:47:29.259+08:00  INFO 7368 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-22T12:47:29.272+08:00  INFO 7368 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T12:47:29.384+08:00  INFO 7368 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48d0263f
+2026-09-22T12:47:29.385+08:00  INFO 7368 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T12:47:29.756+08:00  INFO 7368 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-22T12:47:32.437+08:00  INFO 7368 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-22T12:47:32.438+08:00  INFO 7368 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-22T12:47:32.464+08:00  INFO 7368 --- [http-nio-8080-exec-4] o.t.m.controller.ArticleController       : Article created:Article(id=null, authorId=1, categoryId=null, slug=null, title=Postman测试文章2, summary=Postman 测试文章
+这是一篇接口测试文章。, contentMarkdown=# Postman 测试文章
+
+这是一篇接口测试文章。, visibility=PUBLIC, status=PUBLISHED, wordCount=22, readingMinutes=22, publishedAt=2026-09-22T12:47:32.464653500, rowVersion=0, deletedAt=null, createdAt=null, updatedAt=2026-09-22T12:47:32.464653500)
+2026-09-22T12:48:04.902+08:00  INFO 7368 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-22T12:48:04.909+08:00  INFO 7368 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
