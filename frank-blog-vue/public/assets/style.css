@@ -76,20 +76,21 @@ body[data-page="home"] .hero:before{inset:0;transform:none;background:linear-gra
 .tags-builder .option-label{padding-top:6px;white-space:nowrap}
 .tags-builder-main{min-width:0;flex:1}
 .selected-tags{display:flex;flex-wrap:wrap;gap:7px;min-height:30px;align-items:center;margin-bottom:7px}
+.selected-tags-label{width:100%;font-size:12px;color:var(--muted);font-weight:600}
 .tag-empty{font-size:12px;color:var(--muted);opacity:.85}
-.editable-tag,.suggestion-tag{border:1px solid var(--line);background:var(--soft);color:var(--blue);border-radius:8px;font-size:12px;line-height:1;padding:6px 9px;display:inline-flex;align-items:center;gap:7px}
-.editable-tag:hover,.suggestion-tag:hover{border-color:var(--blue);background:var(--surface)}
+.editable-tag{border:1px solid var(--line);background:var(--soft);color:var(--blue);border-radius:8px;font-size:12px;line-height:1;padding:6px 9px;display:inline-flex;align-items:center;gap:7px}
+.editable-tag:hover{border-color:var(--blue);background:var(--surface)}
 .editable-tag b{font-size:15px;font-weight:500;line-height:.8;opacity:.65}
 .tag-entry{display:flex;align-items:center;gap:7px;max-width:390px}
 .post-options .tag-entry input{max-width:none;flex:1;min-width:170px;padding:7px 10px}
 .tag-add-button{border:1px solid var(--line);border-radius:7px;background:var(--soft);color:var(--blue);padding:6px 12px;font-size:12px;font-weight:600;white-space:nowrap}
 .tag-add-button:hover{border-color:var(--blue)}
 .tag-help{font-size:11px;margin-top:6px;color:var(--muted)}
-.tag-suggestions{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:8px}
-.suggestion-label{font-size:11px;color:var(--muted)}
-.suggestion-tag{background:var(--bg);color:var(--muted);padding:5px 8px}
-.suggestion-tag:hover{color:var(--blue)}
-.theme-dark .editable-tag{background:#284157}.theme-dark .suggestion-tag{background:var(--bg)}
+.tag-picker{display:flex;align-items:center;gap:8px;margin-top:8px}
+.tag-picker label{font-size:11px;color:var(--muted);white-space:nowrap}
+.tag-picker select{min-width:220px;padding:7px 30px 7px 10px;border:1px solid var(--line);border-radius:7px;background:var(--soft);color:var(--text);font-size:12px}
+.tag-picker select:focus{border-color:var(--blue);outline:2px solid color-mix(in srgb,var(--blue) 20%,transparent)}
+.theme-dark .editable-tag{background:#284157}
 @media(max-width:700px){.avatar-editor{align-items:flex-start}.avatar-editor .avatar-preview{width:86px;height:86px}.tags-builder{min-width:100%;display:block}.tags-builder .option-label{display:block;margin-bottom:7px}.tag-entry{max-width:none}.post-options .tag-entry input{min-width:0}}
 
 

@@ -94,6 +94,29 @@ export async function loadPosts(author) {
   return remotePosts
 }
 
+// 创建文章，后端只返回新文章的 ID。
+export async function createArticle(data) {
+  const response = await fetch('/api/article/create', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+    credentials: 'include',
+  })
+
+  if (!response.ok) throw new Error(`文章创建失败（HTTP ${response.status}）`)
+
+  const result = await response.json()
+  if (result.code !== 200) throw new Error(result.msg || '文章创建失败')
+
+  const value = result.data
+  const id = typeof value === 'object' ? (value?.id ?? value?.articleId ?? value?.article_id) : value
+  if (id === null || id === undefined || id === '') {
+    throw new Error('文章创建接口未返回文章 ID')
+  }
+
+  return String(id)
+}
+
 export function saveNewPost(data) {
   const post = { ...data, id: 'local-' + Date.now(), date: new Date().toLocaleDateString('sv-SE') }
   const ok = storage.set('frank-posts', [post, ...storage.get('frank-posts', [])])

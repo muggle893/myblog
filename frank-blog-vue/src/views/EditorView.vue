@@ -3,9 +3,12 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 import Icon from '../components/Icon.vue'
 import { appState, toast } from '../services/state'
-import { allPosts, findPost, saveNewPost, updatePost } from '../services/posts'
+import { allPosts, createArticle, findPost, updatePost } from '../services/posts'
 import { findEditDraft, getDraftRecord, removeDraftRecord, upsertDraftRecord } from '../services/drafts'
 import { enhanceContent, renderMarkdown } from '../services/markdown'
+import { uploadAsset } from '../services/assets'
+import { createTag, loadTags } from '../services/tags'
+import { loadCategories } from '../services/categories'
 
 const route = useRoute()
 const router = useRouter()
@@ -33,7 +36,16 @@ const selectedTags = ref(
     ),
   ].slice(0, 10)
 )
+// 文章正文里的图片和附件都由这些数据库主键关联，提交文章时一并传给后端。
+const assetIds = ref(
+  Array.isArray(source?.assetIds)
+    ? [...new Set(source.assetIds.map((id) => Number(id)).filter((id) => Number.isInteger(id) && id > 0))]
+    : []
+)
 const tagInput = ref('')
+const tagPicker = ref('')
+const availableTags = ref([])
+const availableCategories = ref([])
 const wordCount = ref(String(source?.body || '').replace(/\s/g, '').length)
 const saveState = ref(
   draftRecord
@@ -56,21 +68,27 @@ let publishing = false
 let dirty = false
 const pending = ref(0)
 
-const categories = computed(() =>
-  [...new Set(['Java 学习', '学习笔记', '生活日常', category.value].filter(Boolean))]
-)
-const suggestions = computed(() => {
+const categories = computed(() => {
+  const fallback = ['Java 学习', '学习笔记', '生活日常']
+  const names = availableCategories.value.length
+    ? availableCategories.value.map((item) => item.name)
+    : fallback
+
+  return [...new Set([...names, category.value].filter(Boolean))]
+})
+const allTags = computed(() => {
   void appState.postsRevision
-  const base = ['Java', 'Spring', 'SpringBoot', 'MyBatis', 'Redis', 'Vue', 'SSM', '后端开发', '学习笔记']
   const fromPosts = allPosts().flatMap((p) => (Array.isArray(p.tags) ? p.tags : []))
 
-  return [...new Set([...fromPosts, ...base].map((v) => String(v).trim()).filter(Boolean))]
-    .filter((t) => !selectedTags.value.some((s) => s.toLowerCase() === t.toLowerCase()))
-    .slice(0, 10)
+  return [...new Set([
+    ...availableTags.value.map((tag) => tag.name),
+    ...fromPosts.map((v) => String(v).trim()),
+  ].filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b, 'zh-CN'))
 })
 const isBusy = computed(() => pending.value > 0)
 
-function addTags(raw, notify = true) {
+async function addTags(raw, notify = true) {
   const incoming = String(raw || '')
     .split(/[,，]/)
     .map((v) => v.trim().replace(/^#+/, ''))
@@ -93,7 +111,23 @@ function addTags(raw, notify = true) {
       break
     }
 
-    selectedTags.value.push(tag)
+    const knownTag = availableTags.value.find((item) => item.name.toLowerCase() === tag.toLowerCase())
+    if (knownTag) {
+      selectedTags.value.push(knownTag.name)
+      added++
+      continue
+    }
+
+    try {
+      const created = await createTag(tag)
+      if (!availableTags.value.some((item) => item.name.toLowerCase() === created.name.toLowerCase())) {
+        availableTags.value.push(created)
+      }
+      selectedTags.value.push(created.name)
+    } catch (error) {
+      if (notify) toast(error.message || '标签添加失败')
+      continue
+    }
     added++
   }
 
@@ -101,10 +135,18 @@ function addTags(raw, notify = true) {
   return added > 0
 }
 
-function commitTagInput(notify = true) {
-  if (!tagInput.value.trim()) return
-  addTags(tagInput.value, notify)
+async function commitTagInput(notify = true) {
+  const raw = tagInput.value.trim()
+  if (!raw) return
   tagInput.value = ''
+  await addTags(raw, notify)
+}
+
+async function pickTag() {
+  if (!tagPicker.value) return
+  await addTags(tagPicker.value)
+  // 清空选择值后，再次选择同一个标签也能触发 change 事件。
+  tagPicker.value = ''
 }
 
 function tagKeydown(e) {
@@ -131,6 +173,7 @@ function getDraft() {
     category: category.value,
     tags: [...selectedTags.value],
     visibility: visibility.value,
+    assetIds: [...assetIds.value],
   }
 }
 
@@ -365,17 +408,16 @@ async function addFiles(files, attachmentOnly = false) {
     let replacement = ''
 
     try {
-      await (job.image
-        ? window.blogImages.put(job.file, job.id)
-        : window.blogImages.putAttachment(job.file, job.id))
+      const asset = await uploadAsset(job.file)
+      assetIds.value.push(asset.assetId)
 
-      const name = (job.file.name || '截图.png')
+      const name = (asset.originalName || job.file.name || '未命名文件')
         .replace(/[\[\]\\\r\n<>]/g, ' ')
         .slice(0, 120)
 
       replacement = job.image
-        ? `![${name}](blog-image:${job.id})`
-        : `[附件：${name}](blog-file:${job.id})`
+        ? `![${name}](${asset.url || 'asset:' + asset.publicId})`
+        : `[附件：${name}](${asset.url || 'asset:' + asset.publicId})`
       ok++
     } catch (error) {
       toast(error.message || '文件添加失败')
@@ -395,7 +437,7 @@ async function addFiles(files, attachmentOnly = false) {
   }
 
   changed()
-  if (ok) toast(`已添加 ${ok} 个文件`)
+  if (ok) toast(`已上传 ${ok} 个文件`)
 }
 
 function imageChanged(e) {
@@ -448,9 +490,9 @@ function exportMarkdown() {
   }
 }
 
-function publish() {
+async function publish() {
   if (pending.value || !editor) return
-  commitTagInput(false)
+  await commitTagInput(false)
 
   const data = getDraft()
   if (!data.title) {
@@ -465,31 +507,44 @@ function publish() {
     return
   }
 
-  data.read = Math.max(1, Math.ceil(data.body.length / 350)) + ' 分钟'
-  data.excerpt = data.body
-    .replace(/!?\[[^\]]*\]\([^)]*\)/g, '')
-    .replace(/[#*>`\n]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .slice(0, 110)
+  const categoryItem = availableCategories.value.find((item) => item.name === data.category)
+  const tagIds = data.tags
+    .map((name) => availableTags.value.find((item) => item.name === name)?.id)
+    .map((id) => Number(id))
+    .filter((id) => Number.isInteger(id) && id > 0)
 
-  const saved = editingPost ? updatePost(editingPost, data) : saveNewPost(data)
+  try {
+    const articleId = editingPost
+      ? updatePost(editingPost, data)?.id
+      : await createArticle({
+          title: data.title,
+          categoryId: categoryItem?.id ? Number(categoryItem.id) : null,
+          tagIds,
+          visibility: data.visibility === 'private' ? 'PRIVATE' : 'PUBLIC',
+          contentMarkdown: data.body,
+          assetIds: [...new Set(data.assetIds)].map(Number).filter((id) => Number.isInteger(id) && id > 0),
+        })
 
-  if (saved) {
+    if (!articleId) throw new Error('文章保存成功但未获得文章 ID')
+
     publishing = true
     clearTimeout(timer)
     if (currentDraftId.value) removeDraftRecord(currentDraftId.value)
-    router.push({ name: 'article', params: { id: saved.id } })
-  } else {
-    toast('文章保存失败，请检查浏览器本地存储')
+    router.push({ name: 'article', params: { id: String(articleId) } })
+  } catch (error) {
+    toast(error.message || '文章保存失败')
   }
 }
 
-function keyHandler(e) {
+async function saveDraftWithTag(notify = true) {
+  await commitTagInput(false)
+  saveDraft(notify)
+}
+
+async function keyHandler(e) {
   if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
     e.preventDefault()
-    commitTagInput(false)
-    saveDraft(true)
+    await saveDraftWithTag(true)
   }
 }
 
@@ -502,6 +557,18 @@ onMounted(async () => {
     toast(requestedDraftId && !draftRecord ? '没有找到这篇草稿' : '没有找到要编辑的文章')
     setTimeout(() => router.replace(requestedDraftId ? '/drafts' : '/'), 700)
     return
+  }
+
+  try {
+    availableTags.value = await loadTags()
+  } catch (error) {
+    toast(error.message || '标签加载失败')
+  }
+
+  try {
+    availableCategories.value = await loadCategories()
+  } catch (error) {
+    toast(error.message || '分类加载失败')
   }
 
   try {
@@ -553,7 +620,7 @@ onBeforeUnmount(() => {
           class="btn outline"
           type="button"
           :disabled="isBusy"
-          @click="commitTagInput(false); saveDraft(true)"
+          @click="saveDraftWithTag(true)"
         >
           <Icon name="save" />
           保存草稿
@@ -588,8 +655,9 @@ onBeforeUnmount(() => {
           <span class="option-label">标签</span>
           <div class="tags-builder-main">
             <div class="selected-tags" aria-live="polite">
+              <span class="selected-tags-label">已添加标签</span>
               <span v-if="!selectedTags.length" class="tag-empty">
-                还没有标签，下面可以直接输入你自己的标签
+                还没有标签，请从下方选择或手动添加
               </span>
               <button
                 v-for="(tag, index) in selectedTags"
@@ -620,17 +688,12 @@ onBeforeUnmount(() => {
 
             <div class="tag-help">可以自定义任意标签 · 按 Enter 或逗号添加 · 点击 × 删除 · 最多 10 个</div>
 
-            <div class="tag-suggestions">
-              <span v-if="suggestions.length" class="suggestion-label">快捷添加：</span>
-              <button
-                v-for="tag in suggestions"
-                :key="tag"
-                type="button"
-                class="suggestion-tag"
-                @click="addTags(tag)"
-              >
-                # {{ tag }}
-              </button>
+            <div class="tag-picker">
+              <label for="tag-picker-select">全部标签</label>
+              <select id="tag-picker-select" v-model="tagPicker" @change="pickTag">
+                <option value="">请选择要添加的标签</option>
+                <option v-for="tag in allTags" :key="tag" :value="tag"># {{ tag }}</option>
+              </select>
             </div>
           </div>
         </div>
@@ -689,7 +752,7 @@ onBeforeUnmount(() => {
     </section>
 
     <p class="form-note">
-      Vue 前端阶段：文章、图片与附件仍仅保存在当前浏览器。私有文章权限也是前端演示；正式上线接后端后必须由后端鉴权。
+      图片与附件会通过 /asset/upload 上传，并在文章数据的 assetIds 中关联；文章权限由后端鉴权。
     </p>
   </main>
 </template>
