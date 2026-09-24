@@ -7,4 +7,6 @@ import org.txf.myblogsprinboot.model.Asset;
 public interface AssetMapper {
 
     int insert(Asset asset);
+
+    Asset selectAssetByPublicId(String publicId);
 }

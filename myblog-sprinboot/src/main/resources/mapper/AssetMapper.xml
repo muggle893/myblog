@@ -46,4 +46,13 @@
         insert into blog_asset<include refid="assetFields"></include>
         values<include refid="assetFieldsValues"></include>
     </insert>
+
+    <select id = "selectAssetByPublicId" resultType="org.txf.myblogsprinboot.model.Asset">
+        select id, public_id, uploader_id,original_name, media_type,
+               asset_kind, size_bytes, storage_provider, bucket,
+               object_key, sha256, status, row_version, created_at,
+               updated_at
+        from blog_asset
+        where public_id = #{publicId}
+    </select>
 </mapper>

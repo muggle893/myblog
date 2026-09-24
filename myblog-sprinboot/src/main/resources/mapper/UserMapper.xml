@@ -10,6 +10,12 @@
         from blog_user
         where username = #{username};
     </select>
+
+    <select id="selectUserByUserId" resultType="org.txf.myblogsprinboot.model.User">
+        select <include refid="userTableField"></include>
+        from blog_user
+        where id = #{id};
+    </select>
 </mapper>
 
 

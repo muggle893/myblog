@@ -1,5 +1,6 @@
 package org.txf.myblogsprinboot.service;
 
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.txf.myblogsprinboot.constant.ArticleAssetUsageType;
@@ -8,13 +9,17 @@ import org.txf.myblogsprinboot.enums.UserType;
 import org.txf.myblogsprinboot.model.Article;
 import org.txf.myblogsprinboot.model.ArticleAsset;
 import org.txf.myblogsprinboot.model.ArticleTag;
+import org.txf.myblogsprinboot.model.User;
 import org.txf.myblogsprinboot.utils.ArticleConstans;
+import org.txf.myblogsprinboot.utils.UserUtils;
+import org.txf.myblogsprinboot.vo.ArticleDetailVO;
 import org.txf.myblogsprinboot.vo.ArticleListVO;
 import org.txf.myblogsprinboot.vo.CategoryListVO;
 import org.txf.myblogsprinboot.vo.TagVO;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * 用来处理文章业务的类
@@ -33,6 +38,58 @@ public class ArticleService {
     ArticleAssetMapper articleAssetMapper;
     @Autowired
     ArticleTagMapper articleTagMapper;
+    @Autowired
+    private UserMapper userMapper;
+
+
+    public ArticleDetailVO getArticleDetail(Long articleId, HttpSession session) {
+        ArticleDetailVO articleDetailVO = new ArticleDetailVO();
+        // 查询文章表中的信息
+        Article article = articleMapper.selectArticleById(articleId);
+        if (article == null) {
+            throw new RuntimeException("查询不到文章，文章id为：" + articleId);
+        }
+        articleDetailVO.setArticleId(articleId);
+        articleDetailVO.setTitle(article.getTitle());
+        articleDetailVO.setContentMarkdown(article.getContentMarkdown());
+        articleDetailVO.setVisibility(article.getVisibility());
+        articleDetailVO.setReadingMinutes(article.getReadingMinutes());
+        articleDetailVO.setPublishedAt(article.getPublishedAt());
+
+        // 查询作者
+        User author = userMapper.selectUserByUserId(article.getAuthorId());
+        if (author == null) {
+            throw new RuntimeException("查询不到文章作者，文章id为：" + articleId);
+        }
+        articleDetailVO.setAuthorId(author.getId());
+        articleDetailVO.setAuthorName(author.getUsername());
+
+        // 查询标签列表
+        List<Long> articleIds = new ArrayList<>();
+        articleIds.add(article.getId());
+        List<Long> tagIds = tagMapper.getTagsByArticleIds(articleIds);
+        if (tagIds.size() > 0) {
+            List<TagVO> tags = tagMapper.getTagsByIds(tagIds);
+            articleDetailVO.setTags(tags);
+        } else {
+            articleDetailVO.setTags(new ArrayList<>());
+        }
+
+        // 查询分类
+        CategoryListVO categoryListVO = categoryMapper.selectCategoryVO(article.getCategoryId());
+        articleDetailVO.setCategoryId(categoryListVO.getId());
+        articleDetailVO.setCategoryName(categoryListVO.getName());
+
+        // 判断用户有无权限编辑
+        UserType userType = UserUtils.getUserType(articleDetailVO.getAuthorName(), session);
+        if (userType == UserType.AUTHOR) {
+            articleDetailVO.setCanEdit(true);
+        } else {
+            articleDetailVO.setCanEdit(false);
+        }
+
+        return articleDetailVO;
+    }
 
     /**
      *
@@ -117,7 +174,11 @@ public class ArticleService {
 
     private void setArticleCategory(ArticleListVO article) {
         CategoryListVO categoryListVO = categoryMapper.selectCategoryVO(article.getCategoryId());
-        article.setCategoryName(categoryListVO.getName());
+        if (categoryListVO != null) {
+            article.setCategoryName(categoryListVO.getName());
+        } else {
+            article.setCategoryName("");
+        }
     }
 
     /**
@@ -127,8 +188,13 @@ public class ArticleService {
     private void setArticleTags(ArticleListVO article) {
         long articleId = article.getId();
         List<Long> tagList = tagArticleMapper.getTagIdListByArticleId(articleId);
-        // 根据标签列表找到对应的标签
-        List<TagVO> tags = tagMapper.getTagsByIds(tagList);
-        article.setTags(tags);
+        if (tagList != null && tagList.size() > 0) {
+            // 根据标签列表找到对应的标签
+            List<TagVO> tags = tagMapper.getTagsByIds(tagList);
+            article.setTags(tags);
+        } else {
+            article.setTags(new ArrayList<>());
+        }
+
     }
 }

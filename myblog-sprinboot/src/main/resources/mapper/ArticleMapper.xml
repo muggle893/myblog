@@ -47,4 +47,9 @@
             <if test = "updatedAt != null">#{updatedAt},</if>
         </trim>
     </insert>
+
+    <select id = "selectArticleById" resultType="org.txf.myblogsprinboot.model.Article">
+        select * from blog_article
+        where id = #{id};
+    </select>
 </mapper>

@@ -1,8 +1,11 @@
 package org.txf.myblogsprinboot.service;
 
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ContentDisposition;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,6 +20,7 @@ import org.txf.myblogsprinboot.vo.AssetUploadVO;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.UUID;
@@ -109,7 +113,62 @@ public class AssetService {
         vo.setPublicId(publicId);
         vo.setOriginalName(originalName);
         vo.setAssetKind(asset.getAssetKind());
+        if (vo.getAssetKind().equals(AssetKind.IMAGE)) {
+            vo.setUrl("/asset/content/" + asset.getPublicId());
+        } else {
+            vo.setUrl("/asset/download/" + asset.getPublicId());
+        }
         return vo;
     }
 
+    /**
+     * 加载图片或者附件
+     * @param response http响应
+     * @param publicId 资源的公共id
+     */
+    @SneakyThrows
+    public void loadAsset(HttpServletResponse response, String publicId) {
+        log.info("资源公共id：" + publicId);
+        // 从数据库中查找此资源，不存在的话就告诉前端资源不存在
+        Asset asset = assetMapper.selectAssetByPublicId(publicId);
+        if (asset == null || asset.getId() == null) {
+            log.error("资源不存在, 数据库查找失败");
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return;
+        }
+
+        // 根据资源的objectKey拼接路径
+        Path rp = Path.of(rootPath);
+        Path path = rp.resolve(asset.getObjectKey());
+
+        // 判断这个资源是不是正常的文件类型，不能是文件夹
+        if (!Files.isRegularFile(path)) {
+            log.error("资源不存在, 文件类型错误.");
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return;
+        }
+
+        // 根据图片或者附件设置content-type
+        // 再设置Content-disposition
+        // 把Content-disposition放到响应头中
+        if (AssetKind.IMAGE.equals(asset.getAssetKind())) {
+            response.setContentType(asset.getMediaType());
+            response.setHeader("Content-Disposition", "inline");
+        } else {
+            response.setContentType("application/octet-stream");
+            // 提示浏览器下载，并设置用户保存时看到的文件名
+            String disposition = ContentDisposition.attachment()
+                    .filename(asset.getOriginalName(), StandardCharsets.UTF_8)
+                    .build()
+                    .toString();
+            response.setHeader("Content-Disposition", disposition);
+        }
+
+        // 设置contentLengthLong，告诉浏览器这个文件有多少个字节
+        response.setContentLengthLong(Files.size(path));
+
+        // 调用Files的copy方法把文件写入到响应的输出流中
+        Files.copy(path, response.getOutputStream());
+    }
+    
 }

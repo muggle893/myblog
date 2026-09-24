@@ -4,12 +4,10 @@ import com.zaxxer.hikari.HikariConfig;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.txf.myblogsprinboot.advice.Result;
 import org.txf.myblogsprinboot.constant.ArticleStatus;
 import org.txf.myblogsprinboot.enums.UserType;
@@ -23,6 +21,7 @@ import org.txf.myblogsprinboot.service.UserService;
 import org.txf.myblogsprinboot.utils.ArticleContentUtils;
 import org.txf.myblogsprinboot.utils.SessionUtils;
 import org.txf.myblogsprinboot.utils.UserUtils;
+import org.txf.myblogsprinboot.vo.ArticleDetailVO;
 import org.txf.myblogsprinboot.vo.ArticleListVO;
 
 import java.time.LocalDateTime;
@@ -41,8 +40,6 @@ public class ArticleController {
     private UserService userService;
     @Autowired
     private HikariConfig hikariConfig;
-
-
 
 
     /**
@@ -84,11 +81,12 @@ public class ArticleController {
      * 创建文章的接口逻辑，先从文章表中插入一篇文章，然后关联标签表，关联资源表
      * @param requestData      文章创建的时候规定的数据传输对象
      * @param session          用户的会话，从会话可以拿到用户登录信息
-     * @return  返回统一返回对象，Result对象的data属性为true或者false
+     * @return  返回统一返回对象，Result对象的data属性为新创建文章的id
      */
     @RequestMapping("/create")
-    @Transactional(rollbackFor = Exception.class)
-    public Result createArticle(ArticleCreateRequest requestData, HttpSession session) {
+    @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED)
+    public Result createArticle(@RequestBody ArticleCreateRequest requestData, HttpSession session) {
+        log.info(requestData.toString());
         // 校验参数
         if (!StringUtils.hasLength(requestData.getTitle())) {
             throw new ParamErrorException("文章标题为空.");
@@ -126,7 +124,19 @@ public class ArticleController {
 
         // 关联文章标签表
         articleService.connectArticleTags(article.getId(), requestData.getTagIds());
-        return Result.success("插入文章成功.", true);
+        return Result.success("插入文章成功.", article.getId());
     }
+
+
+    @RequestMapping("/detail")
+    public Result<ArticleDetailVO> showArticleDetail(@RequestParam(value = "id", required = true)Long articleId, HttpSession session) {
+        // 校验文章id参数
+        if (articleId == null || articleId <= 0) {
+            throw new ParamErrorException("文章id参数错误.");
+        }
+        ArticleDetailVO articleDetail = articleService.getArticleDetail(articleId, session);
+        return Result.success("文章详情页信息获取成功.", articleDetail);
+    }
+
 }
 

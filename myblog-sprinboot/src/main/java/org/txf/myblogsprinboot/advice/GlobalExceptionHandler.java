@@ -16,4 +16,12 @@ public class GlobalExceptionHandler {
     public Result<Void> handleParamException(ParamErrorException exception) {
         return Result.paramError(exception.getMessage());
     }
+
+    /**
+     *  统一处理抛出运行时异常
+     */
+    @ExceptionHandler(RuntimeException.class)
+    public Result handleRuntimeException(RuntimeException exception) {
+        return Result.fail(exception.getMessage());
+    }
 }

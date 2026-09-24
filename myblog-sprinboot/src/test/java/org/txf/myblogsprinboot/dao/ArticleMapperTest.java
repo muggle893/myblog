@@ -31,4 +31,9 @@ class ArticleMapperTest {
         articleMapper.insertArticle(article);
     }
 
+    @Test
+    void selectArticleById() {
+        Article article = articleMapper.selectArticleById(1L);
+        System.out.println(article);
+    }
 }

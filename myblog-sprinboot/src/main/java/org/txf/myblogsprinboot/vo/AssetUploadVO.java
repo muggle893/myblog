@@ -37,7 +37,6 @@ public class AssetUploadVO {
 
     /**
      * 文件访问地址，用于图片预览或附件下载。
-     * 尚未实现文件读取接口时，可以暂时不设置。
      */
     private String url;
 }

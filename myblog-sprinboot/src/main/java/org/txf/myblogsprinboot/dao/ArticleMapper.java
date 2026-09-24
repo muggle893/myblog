@@ -10,7 +10,7 @@ import java.util.List;
 public interface ArticleMapper {
     List<ArticleListVO> selectAllArticle(String author);
 
+    Article selectArticleById(Long id);
+
     int insertArticle(Article article);
-
-
 }

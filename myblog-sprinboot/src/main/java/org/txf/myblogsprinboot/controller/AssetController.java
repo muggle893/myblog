@@ -1,12 +1,11 @@
 package org.txf.myblogsprinboot.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.txf.myblogsprinboot.advice.Result;
 import org.txf.myblogsprinboot.model.User;
@@ -39,4 +38,33 @@ public class AssetController {
         AssetUploadVO asset = assetService.upload(file, user.getId());
         return Result.success("上传成功", asset);
     }
+
+
+    /**
+     * 这个接口用来加载图片
+     * @param httpServletResponse http响应
+     * @param publicId            图片的公共id
+     */
+    @GetMapping("/content/{publicId}")
+    public void loadImage(HttpServletResponse httpServletResponse, @PathVariable("publicId") String publicId) {
+        // 检查参数
+        if (!StringUtils.hasLength(publicId)) {
+            throw new RuntimeException("图片的公共id为空.");
+        }
+        // 下载文件
+        assetService.loadAsset(httpServletResponse, publicId);
+    }
+
+    @GetMapping("/download/{publicId}")
+    public void loadAttachment(HttpServletResponse httpServletResponse, @PathVariable("publicId") String publicId) {
+        // 检查参数
+        if (!StringUtils.hasLength(publicId)) {
+            throw new RuntimeException("附件的公共id为空.");
+        }
+        // 下载附件
+        assetService.loadAsset(httpServletResponse, publicId);
+    }
+
+
+
 }
