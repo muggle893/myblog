@@ -1,3 +1,5 @@
+import { apiFetch } from './api'
+
 function normalizeCategory(category = {}) {
   return {
     id: category.id ?? category.categoryId ?? null,
@@ -6,7 +8,7 @@ function normalizeCategory(category = {}) {
 }
 
 export async function loadCategories() {
-  const response = await fetch('/api/category/list', { credentials: 'include' })
+  const response = await apiFetch('/api/category/list')
   if (!response.ok) throw new Error(`分类加载失败（HTTP ${response.status}）`)
 
   const result = await response.json()

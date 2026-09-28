@@ -1,4 +1,5 @@
 import { storage } from './storage'
+import { apiFetch } from './api'
 import { appState, refreshPosts } from './state'
 import { samplePosts } from '../data/samplePosts'
 
@@ -76,7 +77,7 @@ export async function loadPosts(author) {
   const query = new URLSearchParams({ author: name })
   // credentials: include 让浏览器在跨请求时也携带登录 Cookie。
   // 后端正是通过 Cookie 判断当前用户能否看到私有文章。
-  const response = await fetch(`/api/article/list?${query}`, { credentials: 'include' })
+  const response = await apiFetch(`/api/article/list?${query}`)
 
   // response.ok 只检查 HTTP 层面，例如 200、404、500。
   if (!response.ok) throw new Error(`文章请求失败（HTTP ${response.status}）`)
@@ -94,13 +95,30 @@ export async function loadPosts(author) {
   return remotePosts
 }
 
+export async function loadArticleDetail(articleId) {
+  const id = String(articleId || '').trim()
+  if (!id) throw new Error('缺少文章 ID')
+
+  const query = new URLSearchParams({ id })
+  const response = await apiFetch(`/api/article/detail?${query}`)
+  if (!response.ok) throw new Error(`文章详情请求失败（HTTP ${response.status}）`)
+
+  const result = await response.json()
+  if (result.code !== 200) throw new Error(result.msg || '文章详情加载失败')
+  if (!result.data || typeof result.data !== 'object') throw new Error('文章详情接口返回数据格式不正确')
+
+  return normalizePost({
+    ...result.data,
+    body: result.data.contentMarkdown,
+  })
+}
+
 // 创建文章，后端只返回新文章的 ID。
 export async function createArticle(data) {
-  const response = await fetch('/api/article/create', {
+  const response = await apiFetch('/api/article/create', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
-    credentials: 'include',
   })
 
   if (!response.ok) throw new Error(`文章创建失败（HTTP ${response.status}）`)

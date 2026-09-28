@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-import { RouterLink, useRouter } from 'vue-router'
+import { ref, watch } from 'vue'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 import Icon from '../components/Icon.vue'
 import { appState, loginOwner } from '../services/state'
 
@@ -12,7 +12,12 @@ const error = ref('')
 const showPassword = ref(false)
 const loading = ref(false)
 
+const route = useRoute()
 const router = useRouter()
+
+watch(() => route.query.authMessage, (message) => {
+  if (typeof message === 'string') error.value = message
+}, { immediate: true })
 
 // 必须和后端 CodeEnums.SUCCESS.getCode() 的值一致
 const SUCCESS_CODE = 200
@@ -24,7 +29,7 @@ async function submit() {
   error.value = ''
 
   if (!username.value.trim() || !password.value) {
-    error.value = '请填写账号和密码'
+    error.value = '用户名或者密码不能为空！！！'
     return
   }
 
@@ -32,8 +37,7 @@ async function submit() {
   loading.value = true
 
   try {
-    // 后端接收 String username、String password，
-    // 所以这里发送表单参数
+    // 后端接收 username、password 表单参数。
     const formData = new URLSearchParams()
     formData.set('username', username.value.trim())
     formData.set('password', password.value)
@@ -44,7 +48,6 @@ async function submit() {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      // 登录接口成功后通常会通过 Set-Cookie 写入会话 Cookie。
       credentials: 'include',
       body: formData
     })
@@ -64,18 +67,20 @@ async function submit() {
       return
     }
 
-    // 后端确认登录成功后，保存用户名并更新前端导航栏等显示状态。
-    // loginOwner 同时修改 sessionStorage 和 reactive 的 appState。
-    if (!loginOwner(username.value.trim())) {
-      // 浏览器不允许使用 sessionStorage 时，
-      // 仍然更新当前页面的响应式状态
-      appState.owner = true
+    if (typeof result.data !== 'string' || !result.data) {
+      error.value = '登录接口未返回有效 token'
+      return
+    }
+
+    if (!loginOwner(username.value.trim(), result.data)) {
+      error.value = '浏览器无法保存登录凭证，请检查存储权限'
+      return
     }
 
     password.value = ''
 
-    // 跳转到博客首页
-    await router.replace({ name: 'home' })
+    const next = typeof route.query.next === 'string' ? route.query.next : null
+    await router.replace(next || { name: 'home' })
   } catch {
     // fetch 遇到网络不可达、代理未启动等异常时会进入 catch。
     error.value = '登录请求未完成，请检查后端是否启动及代理配置'

@@ -28,4 +28,18 @@ router.beforeEach((to) => {
   if (to.meta.ownerOnly && !appState.owner) return { name:'login', query:{ next:to.fullPath } }
 })
 
+if (typeof window !== 'undefined') {
+  window.addEventListener('user-auth-expired', (event) => {
+    const current = router.currentRoute.value
+    if (current.name === 'login') return
+    void router.replace({
+      name: 'login',
+      query: {
+        next: current.fullPath,
+        authMessage: String(event.detail || '请先登录后再访问'),
+      },
+    })
+  })
+}
+
 export default router

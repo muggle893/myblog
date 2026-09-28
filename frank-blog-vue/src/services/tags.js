@@ -1,3 +1,5 @@
+import { apiFetch } from './api'
+
 function normalizeTag(tag = {}) {
   return {
     id: tag.id ?? tag.tagId ?? null,
@@ -6,7 +8,7 @@ function normalizeTag(tag = {}) {
 }
 
 export async function loadTags() {
-  const response = await fetch('/api/tag/list', { credentials: 'include' })
+  const response = await apiFetch('/api/tag/list')
   if (!response.ok) throw new Error(`标签加载失败（HTTP ${response.status}）`)
 
   const result = await response.json()
@@ -20,11 +22,10 @@ export async function createTag(tagName) {
   const formData = new URLSearchParams()
   formData.set('tagName', tagName)
 
-  const response = await fetch('/api/tag/add', {
+  const response = await apiFetch('/api/tag/add', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: formData,
-    credentials: 'include',
   })
   if (!response.ok) throw new Error(`标签创建失败（HTTP ${response.status}）`)
 

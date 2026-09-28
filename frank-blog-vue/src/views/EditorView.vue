@@ -416,8 +416,8 @@ async function addFiles(files, attachmentOnly = false) {
         .slice(0, 120)
 
       replacement = job.image
-        ? `![${name}](${asset.url || 'asset:' + asset.publicId})`
-        : `[附件：${name}](${asset.url || 'asset:' + asset.publicId})`
+        ? `![${name}](${asset.url})`
+        : `[附件：${name}](${asset.url})`
       ok++
     } catch (error) {
       toast(error.message || '文件添加失败')

@@ -16,15 +16,21 @@ const defaultProfile = {
 }
 
 function readOwner() {
-  // sessionStorage 只能保存字符串；页面刷新后需要把 "1" 转回布尔值。
-  // 某些浏览器隐私设置可能禁止 sessionStorage，因此使用 try/catch。
-  try { return sessionStorage.getItem('frank-owner-session') === '1' } catch { return false }
+  return Boolean(readUserToken())
+}
+
+function readUserToken() {
+  try { return localStorage.getItem('user-token') || '' } catch { return '' }
 }
 
 // 首页请求文章列表需要知道当前登录用户的用户名。
 // 用户名和登录标记一样，只在当前浏览器标签页会话中保存。
 function readUsername() {
-  try { return sessionStorage.getItem('frank-owner-username') || '' } catch { return '' }
+  try {
+    return sessionStorage.getItem('frank-owner-username') || localStorage.getItem('frank-owner-username') || ''
+  } catch {
+    return ''
+  }
 }
 
 // reactive 会把普通对象变成响应式对象：属性变化时，使用这些属性的模板和 computed 会更新。
@@ -49,18 +55,23 @@ export function toast(message) {
   toastTimer = setTimeout(() => { appState.toastVisible = false }, 3000)
 }
 
-// 登录成功后同时保存会话标记和用户名，刷新页面时可以恢复首页请求参数。
-// 返回 true 表示 sessionStorage 写入成功；失败时由调用方决定是否只更新内存状态。
-export function loginOwner(username = '') {
+// 登录成功后保存 token 和用户名；token 是后续接口鉴权的唯一依据。
+export function loginOwner(username = '', token = '') {
+  if (!token) return false
+  try {
+    localStorage.setItem('user-token', token)
+    localStorage.setItem('frank-owner-username', username)
+  } catch {
+    try { localStorage.removeItem('user-token') } catch {}
+    return false
+  }
   try {
     sessionStorage.setItem('frank-owner-session', '1')
     sessionStorage.setItem('frank-owner-username', username)
-    appState.owner = true
-    appState.username = username
-    return true
-  } catch {
-    return false
-  }
+  } catch {}
+  appState.owner = true
+  appState.username = username
+  return true
 }
 
 // 退出时清理前端权限状态和文章接口所需的用户名。
@@ -70,6 +81,8 @@ export function logoutOwner() {
     sessionStorage.removeItem('frank-owner-session')
     sessionStorage.removeItem('frank-owner-username')
   } catch {}
+  try { localStorage.removeItem('user-token') } catch {}
+  try { localStorage.removeItem('frank-owner-username') } catch {}
   appState.owner = false
   appState.username = ''
 }

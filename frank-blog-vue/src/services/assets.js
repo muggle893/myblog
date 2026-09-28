@@ -1,3 +1,5 @@
+import { apiFetch } from './api'
+
 // 资源上传接口的前端适配层。
 // 开发环境中的 /api 会由 Vite 代理到 Spring Boot，生产环境则由 Nginx 转发。
 export async function uploadAsset(file) {
@@ -7,10 +9,9 @@ export async function uploadAsset(file) {
   // 后端接口约定的 MultipartFile 参数名就是 file，不能改成 files 或 uploadFile。
   formData.append('file', file)
 
-  const response = await fetch('/api/asset/upload', {
+  const response = await apiFetch('/api/asset/upload', {
     method: 'POST',
     body: formData,
-    credentials: 'include',
   })
 
   if (!response.ok) throw new Error(`文件上传失败（HTTP ${response.status}）`)
@@ -28,11 +29,14 @@ export async function uploadAsset(file) {
 
 // 只暴露页面需要的字段，同时兼容后端偶尔返回下划线命名的情况。
 function normalizeAsset(asset = {}) {
+  const rawUrl = String(asset.url ?? '').trim()
+
   return {
     assetId: asset.assetId ?? asset.asset_id ?? null,
     publicId: String(asset.publicId ?? asset.public_id ?? ''),
     originalName: String(asset.originalName ?? asset.original_name ?? ''),
     assetKind: String(asset.assetKind ?? asset.asset_kind ?? '').toUpperCase(),
-    url: String(asset.url ?? '').trim(),
+    // 后端返回 /asset/...，前端统一通过 /api 代理访问 Spring Boot。
+    url: rawUrl.startsWith('/asset/') ? '/api' + rawUrl : rawUrl,
   }
 }
