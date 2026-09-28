@@ -1,5 +1,6 @@
 package org.txf.myblogsprinboot.advice;
 
+import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -23,5 +24,15 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public Result handleRuntimeException(RuntimeException exception) {
         return Result.fail(exception.getMessage());
+    }
+
+    @ExceptionHandler(Exception.class)
+    public Result handleException(Exception exception) {
+        return Result.fail(exception.getMessage());
+    }
+
+    @ExceptionHandler(ExpiredJwtException.class)
+    public Result handleExpiredJwtException(ExpiredJwtException exception) {
+        return Result.nologin();
     }
 }

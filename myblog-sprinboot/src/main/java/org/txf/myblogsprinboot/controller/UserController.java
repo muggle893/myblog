@@ -1,7 +1,6 @@
 package org.txf.myblogsprinboot.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -10,10 +9,13 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.txf.myblogsprinboot.utils.SessionUtils;
 import org.txf.myblogsprinboot.advice.Result;
 import org.txf.myblogsprinboot.model.User;
 import org.txf.myblogsprinboot.service.UserService;
+import org.txf.myblogsprinboot.utils.JwtsTokenUtils;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -53,13 +55,14 @@ public class UserController {
             return Result.fail("用户名或者密码错误.");
         }
 
-        // 4.将用户信息存到session中
-        HttpSession session = request.getSession(true);
-        // 登录后替换sessionId，防止黑客用旧的sessionId攻击
-        request.changeSessionId();
-        session.setAttribute(SessionUtils.USER_SESSION_KEY, user);
-        log.info("用户登录成功.");
+        // 4.为用户生成JwtToken
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("username", username);
+        claims.put("id", user.getId());
+        String jwtToken = JwtsTokenUtils.getJwtToken(claims);
 
-        return Result.success("用户登录成功.");
+        // 5.返回数据
+        log.info("用户登录成功.");
+        return Result.success("用户登录成功.", jwtToken);
     }
 }
