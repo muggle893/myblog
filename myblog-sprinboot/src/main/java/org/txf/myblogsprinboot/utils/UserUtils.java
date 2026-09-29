@@ -1,6 +1,7 @@
 package org.txf.myblogsprinboot.utils;
 
-import jakarta.servlet.http.HttpSession;
+import io.jsonwebtoken.*;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.txf.myblogsprinboot.enums.UserType;
 import org.txf.myblogsprinboot.model.User;
@@ -17,20 +18,35 @@ public class UserUtils {
      * 2.登录了但是不是作者
      * 3.登录了同时也是作者
      * @param username  表示要访问哪个作者的文章列表
-     * @param session   根据session和sessionkey用来判断用户是否登录
+     * @param request 根据请求头中的user-token来判断用户的类型
      * @return
      */
-    public static UserType getUserType(String username, HttpSession session) {
+    public static UserType getUserType(String username, HttpServletRequest request) {
         log.info("用户工具类getUserType方法判断用户类型.");
         // 根据sessionkey拿到用户的登录状态
-        User user = (User)session.getAttribute(SessionUtils.USER_SESSION_KEY);
-        if (user == null) {
-            // 未登录的情况
+        String token = request.getHeader("user-token");
+        JwtParser jwtParser = Jwts.parser().setSigningKey(JwtsTokenUtils.KEY);
+        Claims claims = null;
+        try {
+            claims = jwtParser.parseClaimsJws(token).getBody();
+        } catch(Exception e) {
             return UserType.VISITOR_NOLOGIN;
-        } else if (user.getUsername().equals(username)) {
+        }
+        User user = new User();
+        user.setUsername(claims.get("username", String.class));
+        if (user.getUsername().equals(username)) {
             return UserType.AUTHOR;
         } else {
             return UserType.VISITOR_LOGIN;
         }
+    }
+
+    public static User getUserFromToken(HttpServletRequest request) {
+        String token = request.getHeader("user-token");
+        Claims claims = JwtsTokenUtils.parseJwtToken(token);
+        User user = new User();
+        user.setUsername(claims.get("username", String.class));
+        user.setId(claims.get("id", Long.class));
+        return user;
     }
 }

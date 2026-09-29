@@ -1,6 +1,7 @@
 package org.txf.myblogsprinboot.controller;
 
-import jakarta.servlet.http.HttpSession;
+import io.jsonwebtoken.Claims;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +11,7 @@ import org.txf.myblogsprinboot.advice.Result;
 import org.txf.myblogsprinboot.dao.TagMapper;
 import org.txf.myblogsprinboot.model.User;
 import org.txf.myblogsprinboot.service.TagService;
-import org.txf.myblogsprinboot.utils.SessionUtils;
+import org.txf.myblogsprinboot.utils.JwtsTokenUtils;
 import org.txf.myblogsprinboot.vo.TagVO;
 
 import java.util.List;
@@ -34,9 +35,12 @@ public class TagController {
     * @return        返回Result统一对象，data部分是标签列表
     */
    @GetMapping("/list")
-   public Result<List<TagVO>>  getAuthorTagList(HttpSession session) {
+   public Result<List<TagVO>>  getAuthorTagList(HttpServletRequest request) {
       // 获取sesssion中作者的id
-      User user = (User)session.getAttribute(SessionUtils.USER_SESSION_KEY);
+      Claims claims = JwtsTokenUtils.parseJwtToken(request.getHeader("user-token"));
+      User user = new User();
+      user.setId(claims.get("id", Long.class));
+      user.setUsername(claims.get("username", String.class));
       List<TagVO> list = tagService.getAuthorTags(user);
       return Result.success("标签列表获取成功.", list);
    }

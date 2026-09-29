@@ -13,7 +13,6 @@ import java.util.Map;
 public class JwtsTokenUtils {
     // 设置token的过期时间
     public static final long EXPIRE_TIME = 24 * 60 * 60 * 1000; // 设置成一天后过期
-
     // 密钥
     public static final String SECRET_KEY = "xvPcU/zqoV6mbcbHNTPTyiwlM6ewYU2i9PvJVVsPqxw=";
     public static final Key KEY = Keys.hmacShaKeyFor(Decoders.BASE64.decode(SECRET_KEY));

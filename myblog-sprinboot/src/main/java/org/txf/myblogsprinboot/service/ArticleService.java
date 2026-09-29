@@ -1,6 +1,6 @@
 package org.txf.myblogsprinboot.service;
 
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.txf.myblogsprinboot.constant.ArticleAssetUsageType;
@@ -42,7 +42,44 @@ public class ArticleService {
     private UserMapper userMapper;
 
 
-    public ArticleDetailVO getArticleDetail(Long articleId, HttpSession session) {
+    public int getArticleCnt(long authorId) {
+        return articleMapper.selectArticleCount(authorId);
+    }
+
+
+    public List<ArticleListVO> getArticleListByPage(long authorId, int page, int pageSize, HttpServletRequest request) {
+        // 从数据库查到对应的文章
+        User user = userMapper.selectUserByUserId(authorId);
+        if (user == null) {
+            throw new RuntimeException("文章作者不存在.");
+        }
+        UserType userType = UserUtils.getUserType(user.getUsername(),request);
+
+        // 计算offset
+        int offset = (page - 1) * pageSize;
+        List<ArticleListVO> articleList = articleMapper.selectArticleByPage(authorId, offset, pageSize);
+        if (articleList == null || articleList.size() <= 0) {
+            return new ArrayList<>();
+        }
+
+        List<ArticleListVO> ret = new ArrayList<ArticleListVO>();
+        // 查到作者对应的文章，还需要根据文章id查对应的tags和分类
+        for (ArticleListVO article : articleList) {
+            // 根据用户类型再处理
+            if (article.getVisibility().equals(ArticleConstans.PRIVATE) && userType == UserType.AUTHOR) {
+                setArticleTags(article);
+                setArticleCategory(article);
+                ret.add(article);
+            } else if (article.getVisibility().equals(ArticleConstans.PUBLIC)) {
+                setArticleTags(article);
+                setArticleCategory(article);
+                ret.add(article);
+            }
+        }
+        return ret;
+    }
+
+    public ArticleDetailVO getArticleDetail(Long articleId, HttpServletRequest request) {
         ArticleDetailVO articleDetailVO = new ArticleDetailVO();
         // 查询文章表中的信息
         Article article = articleMapper.selectArticleById(articleId);
@@ -77,11 +114,13 @@ public class ArticleService {
 
         // 查询分类
         CategoryListVO categoryListVO = categoryMapper.selectCategoryVO(article.getCategoryId());
-        articleDetailVO.setCategoryId(categoryListVO.getId());
-        articleDetailVO.setCategoryName(categoryListVO.getName());
+        if (categoryListVO != null) {
+            articleDetailVO.setCategoryId(categoryListVO.getId());
+            articleDetailVO.setCategoryName(categoryListVO.getName());
+        }
 
         // 判断用户有无权限编辑
-        UserType userType = UserUtils.getUserType(articleDetailVO.getAuthorName(), session);
+        UserType userType = UserUtils.getUserType(articleDetailVO.getAuthorName(), request);
         if (userType == UserType.AUTHOR) {
             articleDetailVO.setCanEdit(true);
         } else {

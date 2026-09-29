@@ -2,7 +2,6 @@ package org.txf.myblogsprinboot.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.txf.myblogsprinboot.advice.Result;
 import org.txf.myblogsprinboot.model.User;
 import org.txf.myblogsprinboot.service.AssetService;
-import org.txf.myblogsprinboot.utils.SessionUtils;
+import org.txf.myblogsprinboot.utils.UserUtils;
 import org.txf.myblogsprinboot.vo.AssetUploadVO;
 
 /**
@@ -33,8 +32,7 @@ public class AssetController {
         // 登录检查已经由登录拦截器执行
         // 调用service的文件上传接口
         // 返回约定好的接口
-        HttpSession session = request.getSession();
-        User user = (User)session.getAttribute(SessionUtils.USER_SESSION_KEY);
+        User user = UserUtils.getUserFromToken(request);
         AssetUploadVO asset = assetService.upload(file, user.getId());
         return Result.success("上传成功", asset);
     }

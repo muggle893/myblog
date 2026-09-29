@@ -1,107 +1,315 @@
-2026-09-27T08:16:08.131+08:00  INFO 12228 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Starting JWTUtils using Java 17.0.5 with PID 12228 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T08:16:08.146+08:00  INFO 12228 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T08:16:09.877+08:00  INFO 12228 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T08:16:10.029+08:00  INFO 12228 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Started JWTUtils in 2.226 seconds (process running for 3.477)
-2026-09-27T08:16:18.878+08:00  INFO 5964 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Starting JWTUtils using Java 17.0.5 with PID 5964 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T08:16:18.879+08:00  INFO 5964 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T08:16:20.216+08:00  INFO 5964 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T08:16:20.415+08:00  INFO 5964 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Started JWTUtils in 1.846 seconds (process running for 2.805)
-2026-09-27T08:22:26.932+08:00  INFO 5792 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Starting JWTUtils using Java 17.0.5 with PID 5792 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T08:22:26.935+08:00  INFO 5792 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T08:22:28.194+08:00  INFO 5792 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T08:22:28.338+08:00  INFO 5792 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Started JWTUtils in 1.745 seconds (process running for 2.772)
-2026-09-27T08:24:23.286+08:00  INFO 7792 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Starting JWTUtils using Java 17.0.5 with PID 7792 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T08:24:23.287+08:00  INFO 7792 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T08:24:24.672+08:00  INFO 7792 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T08:24:24.816+08:00  INFO 7792 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Started JWTUtils in 1.793 seconds (process running for 2.737)
-2026-09-27T08:27:14.647+08:00  INFO 20068 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Starting JWTUtils using Java 17.0.5 with PID 20068 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T08:27:14.649+08:00  INFO 20068 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T08:27:15.872+08:00  INFO 20068 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T08:27:16.025+08:00  INFO 20068 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Started JWTUtils in 1.683 seconds (process running for 2.572)
-2026-09-27T08:33:11.129+08:00  INFO 22676 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Starting JWTUtils using Java 17.0.5 with PID 22676 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T08:33:11.131+08:00  INFO 22676 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T08:33:12.402+08:00  INFO 22676 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T08:33:12.543+08:00  INFO 22676 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Started JWTUtils in 1.718 seconds (process running for 2.761)
-2026-09-27T08:33:30.734+08:00  INFO 21560 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Starting JWTUtils using Java 17.0.5 with PID 21560 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T08:33:30.735+08:00  INFO 21560 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T08:33:31.962+08:00  INFO 21560 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T08:33:32.101+08:00  INFO 21560 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Started JWTUtils in 1.632 seconds (process running for 2.49)
-2026-09-27T08:33:41.273+08:00  INFO 22500 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Starting JWTUtils using Java 17.0.5 with PID 22500 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T08:33:41.274+08:00  INFO 22500 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T08:33:42.451+08:00  INFO 22500 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T08:33:42.588+08:00  INFO 22500 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Started JWTUtils in 1.58 seconds (process running for 2.444)
-2026-09-27T08:34:16.352+08:00  INFO 10168 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Starting JWTUtils using Java 17.0.5 with PID 10168 (started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T08:34:16.353+08:00  INFO 10168 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T08:34:17.539+08:00  INFO 10168 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T08:34:17.689+08:00  INFO 10168 --- [main] org.txf.myblogsprinboot.util.JWTUtils    : Started JWTUtils in 1.61 seconds (process running for 2.509)
-2026-09-27T09:17:58.595+08:00  INFO 27400 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 27400 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T09:17:58.604+08:00  INFO 27400 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T09:17:59.418+08:00  INFO 27400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-27T09:17:59.426+08:00  INFO 27400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-27T09:17:59.426+08:00  INFO 27400 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-27T09:17:59.520+08:00  INFO 27400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-27T09:17:59.520+08:00  INFO 27400 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 865 ms
-2026-09-27T09:17:59.970+08:00  INFO 27400 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T09:18:00.105+08:00  INFO 27400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-27T09:18:00.112+08:00  INFO 27400 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.921 seconds (process running for 2.471)
-2026-09-27T09:19:00.798+08:00  INFO 27400 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-27T09:19:00.799+08:00  INFO 27400 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-27T09:19:00.799+08:00  INFO 27400 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-27T09:19:00.827+08:00  WARN 27400 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
-2026-09-27T09:19:00.835+08:00  INFO 27400 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T09:19:00.835+08:00  INFO 27400 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T09:19:00.857+08:00  INFO 27400 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-27T09:19:01.110+08:00  INFO 27400 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@662fbf9d
-2026-09-27T09:19:01.111+08:00  INFO 27400 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-27T09:19:01.576+08:00  INFO 27400 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录成功.
-2026-09-27T09:19:19.413+08:00  INFO 27400 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T09:19:19.415+08:00  INFO 27400 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T09:19:19.709+08:00  INFO 27400 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 密码错误.
-2026-09-27T09:20:08.240+08:00  INFO 27400 --- [http-nio-8080-exec-4] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T09:20:08.241+08:00  INFO 27400 --- [http-nio-8080-exec-4] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T09:20:08.249+08:00  INFO 27400 --- [http-nio-8080-exec-4] o.t.m.controller.UserController          : 用户登录：查不到此用户.
-2026-09-27T09:21:43.643+08:00  INFO 27400 --- [http-nio-8080-exec-7] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T09:21:43.643+08:00  INFO 27400 --- [http-nio-8080-exec-7] o.t.m.controller.UserController          : 用户登录：参数校验失败.
-2026-09-27T09:21:52.823+08:00  INFO 27400 --- [http-nio-8080-exec-8] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T09:21:52.823+08:00  INFO 27400 --- [http-nio-8080-exec-8] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T09:21:53.130+08:00  INFO 27400 --- [http-nio-8080-exec-8] o.t.m.controller.UserController          : 用户登录成功.
-2026-09-27T09:22:23.565+08:00  INFO 27400 --- [http-nio-8080-exec-9] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T09:22:23.565+08:00  INFO 27400 --- [http-nio-8080-exec-9] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T09:22:23.864+08:00  INFO 27400 --- [http-nio-8080-exec-9] o.t.m.controller.UserController          : 密码错误.
-2026-09-27T09:22:35.378+08:00  INFO 27400 --- [http-nio-8080-exec-10] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T09:22:35.378+08:00  INFO 27400 --- [http-nio-8080-exec-10] o.t.m.controller.UserController          : 用户登录：参数校验失败.
-2026-09-27T09:38:26.712+08:00  INFO 27400 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-27T09:38:26.715+08:00  INFO 27400 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-27T09:38:30.581+08:00  INFO 20788 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 20788 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T09:38:30.583+08:00  INFO 20788 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T09:38:31.346+08:00  INFO 20788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-27T09:38:31.354+08:00  INFO 20788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-27T09:38:31.355+08:00  INFO 20788 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-27T09:38:31.444+08:00  INFO 20788 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-27T09:38:31.445+08:00  INFO 20788 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 833 ms
-2026-09-27T09:38:31.795+08:00  INFO 20788 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T09:38:31.917+08:00  INFO 20788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-27T09:38:31.924+08:00  INFO 20788 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.682 seconds (process running for 2.123)
-2026-09-27T09:39:26.372+08:00  INFO 20788 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-27T09:39:26.373+08:00  INFO 20788 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-27T09:39:26.373+08:00  INFO 20788 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-27T09:39:26.392+08:00  WARN 20788 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
-2026-09-27T09:39:26.396+08:00  INFO 20788 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T09:39:26.396+08:00  INFO 20788 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T09:39:26.408+08:00  INFO 20788 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-27T09:39:26.527+08:00  INFO 20788 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c93a654
-2026-09-27T09:39:26.528+08:00  INFO 20788 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-27T09:39:26.950+08:00  INFO 20788 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录成功.
-2026-09-27T09:41:46.933+08:00  INFO 20788 --- [http-nio-8080-exec-5] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
-2026-09-27T09:41:46.955+08:00  INFO 20788 --- [http-nio-8080-exec-5] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/
-2026-09-27T09:41:46.964+08:00  INFO 20788 --- [http-nio-8080-exec-5] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
-2026-09-27T09:41:46.966+08:00  INFO 20788 --- [http-nio-8080-exec-5] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/index.html
-2026-09-27T09:42:36.328+08:00  INFO 20788 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
-2026-09-27T09:42:36.331+08:00 ERROR 20788 --- [http-nio-8080-exec-4] o.t.m.utils.JwtsTokenUtils               : JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2026-09-27T09:42:36.332+08:00 ERROR 20788 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: io.jsonwebtoken.JwtException: JwtToken验证失败, 无效的token.] with root cause
+2026-09-29T10:47:46.722+08:00  INFO 18988 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 18988 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T10:47:46.730+08:00  INFO 18988 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T10:47:47.936+08:00  INFO 18988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T10:47:47.944+08:00  INFO 18988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T10:47:47.945+08:00  INFO 18988 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T10:47:48.026+08:00  INFO 18988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T10:47:48.026+08:00  INFO 18988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1254 ms
+2026-09-29T10:47:48.507+08:00  INFO 18988 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T10:47:48.633+08:00  INFO 18988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T10:47:48.639+08:00  INFO 18988 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 2.442 seconds (process running for 4.693)
+2026-09-29T10:47:52.307+08:00  INFO 18988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T10:47:52.309+08:00  INFO 18988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T10:47:52.310+08:00  INFO 18988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-29T10:47:52.356+08:00  WARN 18988 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T10:47:52.422+08:00  INFO 18988 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T10:47:52.741+08:00  INFO 18988 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66a6ad44
+2026-09-29T10:47:52.743+08:00  INFO 18988 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T10:47:52.888+08:00  INFO 18988 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T10:47:52.889+08:00  INFO 18988 --- [http-nio-8080-exec-1] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
+2026-09-29T10:48:03.450+08:00  WARN 18988 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-29T10:48:03.451+08:00  INFO 18988 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T10:48:03.451+08:00  INFO 18988 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T10:48:03.804+08:00  INFO 18988 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T10:48:03.825+08:00  INFO 18988 --- [http-nio-8080-exec-3] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T10:48:03.826+08:00  INFO 18988 --- [http-nio-8080-exec-3] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
+2026-09-29T10:48:28.104+08:00  INFO 18988 --- [http-nio-8080-exec-4] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T10:48:37.845+08:00  INFO 18988 --- [http-nio-8080-exec-5] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T10:48:37.846+08:00  INFO 18988 --- [http-nio-8080-exec-5] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
+2026-09-29T10:48:46.023+08:00  INFO 18988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T10:48:46.026+08:00  INFO 18988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T11:05:33.518+08:00  INFO 23072 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 23072 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T11:05:33.521+08:00  INFO 23072 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T11:05:34.242+08:00  INFO 23072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T11:05:34.250+08:00  INFO 23072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T11:05:34.251+08:00  INFO 23072 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T11:05:34.344+08:00  INFO 23072 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T11:05:34.344+08:00  INFO 23072 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 798 ms
+2026-09-29T11:05:34.907+08:00  INFO 23072 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T11:05:35.099+08:00  INFO 23072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T11:05:35.108+08:00  INFO 23072 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.928 seconds (process running for 2.406)
+2026-09-29T11:05:46.906+08:00  INFO 23072 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T11:05:46.907+08:00  INFO 23072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T11:05:46.908+08:00  INFO 23072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-29T11:05:46.933+08:00  WARN 23072 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T11:05:46.952+08:00  INFO 23072 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T11:05:47.081+08:00  INFO 23072 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31fa97a8
+2026-09-29T11:05:47.083+08:00  INFO 23072 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T11:05:47.154+08:00  INFO 23072 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:05:47.207+08:00  INFO 23072 --- [http-nio-8080-exec-1] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T11:05:50.506+08:00  INFO 23072 --- [http-nio-8080-exec-2] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:05:50.507+08:00  INFO 23072 --- [http-nio-8080-exec-2] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
+2026-09-29T11:05:57.004+08:00  WARN 23072 --- [http-nio-8080-exec-3] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-29T11:05:57.005+08:00  INFO 23072 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T11:05:57.005+08:00  INFO 23072 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T11:05:57.323+08:00  INFO 23072 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T11:05:57.342+08:00  INFO 23072 --- [http-nio-8080-exec-4] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:05:57.345+08:00  INFO 23072 --- [http-nio-8080-exec-4] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T11:06:08.383+08:00  INFO 23072 --- [http-nio-8080-exec-6] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:06:08.385+08:00  INFO 23072 --- [http-nio-8080-exec-6] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
+2026-09-29T11:06:29.248+08:00  INFO 23072 --- [http-nio-8080-exec-7] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T11:06:29.249+08:00  INFO 23072 --- [http-nio-8080-exec-7] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T11:06:29.552+08:00  INFO 23072 --- [http-nio-8080-exec-7] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T11:06:29.570+08:00  INFO 23072 --- [http-nio-8080-exec-8] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:06:29.572+08:00  INFO 23072 --- [http-nio-8080-exec-8] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T11:06:41.580+08:00  INFO 23072 --- [http-nio-8080-exec-9] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:06:47.144+08:00  INFO 23072 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:06:47.147+08:00  INFO 23072 --- [http-nio-8080-exec-1] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T11:07:43.434+08:00  INFO 23072 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T11:07:43.434+08:00  INFO 23072 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T11:07:43.746+08:00  INFO 23072 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T11:07:56.233+08:00  INFO 23072 --- [http-nio-8080-exec-5] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T11:07:56.233+08:00  INFO 23072 --- [http-nio-8080-exec-5] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T11:07:56.540+08:00  INFO 23072 --- [http-nio-8080-exec-5] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T11:08:27.066+08:00  INFO 23072 --- [http-nio-8080-exec-7] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:08:27.068+08:00  INFO 23072 --- [http-nio-8080-exec-7] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
+2026-09-29T11:08:56.496+08:00  INFO 23072 --- [http-nio-8080-exec-8] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T11:08:56.496+08:00  INFO 23072 --- [http-nio-8080-exec-8] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T11:08:56.800+08:00  INFO 23072 --- [http-nio-8080-exec-8] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T11:08:58.878+08:00  INFO 23072 --- [http-nio-8080-exec-9] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:08:58.881+08:00  INFO 23072 --- [http-nio-8080-exec-9] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T11:11:12.605+08:00  INFO 23072 --- [http-nio-8080-exec-10] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T11:11:12.607+08:00  INFO 23072 --- [http-nio-8080-exec-10] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/tag/list
+2026-09-29T11:13:07.338+08:00  INFO 23072 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T11:13:07.343+08:00  INFO 23072 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T11:15:31.308+08:00  INFO 28256 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 28256 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T11:15:31.310+08:00  INFO 28256 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T11:15:31.981+08:00  INFO 28256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T11:15:31.989+08:00  INFO 28256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T11:15:31.989+08:00  INFO 28256 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T11:15:32.084+08:00  INFO 28256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T11:15:32.084+08:00  INFO 28256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 747 ms
+2026-09-29T11:15:32.477+08:00  INFO 28256 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T11:15:32.598+08:00  INFO 28256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T11:15:32.604+08:00  INFO 28256 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.623 seconds (process running for 2.128)
+2026-09-29T11:15:43.946+08:00  INFO 28256 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T11:15:43.946+08:00  INFO 28256 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T11:15:43.947+08:00  INFO 28256 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-29T11:15:43.964+08:00  WARN 28256 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-29T11:15:43.967+08:00  INFO 28256 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T11:15:43.967+08:00  INFO 28256 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T11:15:43.979+08:00  INFO 28256 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T11:15:44.078+08:00  INFO 28256 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d3364fd
+2026-09-29T11:15:44.079+08:00  INFO 28256 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T11:15:44.450+08:00  INFO 28256 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T11:15:46.521+08:00  INFO 28256 --- [http-nio-8080-exec-2] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T11:15:46.544+08:00  INFO 28256 --- [http-nio-8080-exec-2] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/tag/list
+2026-09-29T11:15:46.546+08:00  INFO 28256 --- [http-nio-8080-exec-2] o.t.myblogsprinboot.service.TagService   : 获取作者的标签列表，作者的名字为：frank
+2026-09-29T11:15:46.578+08:00  INFO 28256 --- [http-nio-8080-exec-2] o.t.myblogsprinboot.service.TagService   : 作者的标签列表获取完成，标签列表为：
+2026-09-29T11:15:46.578+08:00  INFO 28256 --- [http-nio-8080-exec-2] o.t.myblogsprinboot.service.TagService   : [TagVO(id=10, name=Git), TagVO(id=1, name=Java), TagVO(id=14, name=Markdown), TagVO(id=4, name=MyBatis), TagVO(id=12, name=MySQL), TagVO(id=6, name=Session), TagVO(id=2, name=Spring Boot), TagVO(id=8, name=Vue), TagVO(id=9, name=前后端联调), TagVO(id=16, name=博客), TagVO(id=3, name=后端开发), TagVO(id=15, name=学习复盘), TagVO(id=13, name=数据库设计), TagVO(id=11, name=版本管理), TagVO(id=17, name=生活记录), TagVO(id=7, name=登录认证), TagVO(id=5, name=问题排查)]
+2026-09-29T11:16:04.325+08:00  WARN 28256 --- [http-nio-8080-exec-4] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T11:16:04.328+08:00  INFO 28256 --- [http-nio-8080-exec-4] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:16:04.329+08:00  INFO 28256 --- [http-nio-8080-exec-4] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T11:17:34.865+08:00  INFO 28256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T11:17:34.870+08:00  INFO 28256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T11:17:38.670+08:00  INFO 7556 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 7556 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T11:17:38.672+08:00  INFO 7556 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T11:17:39.332+08:00  INFO 7556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T11:17:39.339+08:00  INFO 7556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T11:17:39.339+08:00  INFO 7556 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T11:17:39.414+08:00  INFO 7556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T11:17:39.415+08:00  INFO 7556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 715 ms
+2026-09-29T11:17:39.741+08:00  INFO 7556 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T11:17:39.853+08:00  INFO 7556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T11:17:39.860+08:00  INFO 7556 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.53 seconds (process running for 1.954)
+2026-09-29T11:17:56.617+08:00  INFO 7556 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T11:17:56.617+08:00  INFO 7556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T11:17:56.618+08:00  INFO 7556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-29T11:17:56.637+08:00  WARN 7556 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T11:17:56.658+08:00  INFO 7556 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T11:17:56.780+08:00  INFO 7556 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19f205e
+2026-09-29T11:17:56.781+08:00  INFO 7556 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T11:17:56.847+08:00  INFO 7556 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:17:56.863+08:00  INFO 7556 --- [http-nio-8080-exec-1] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
+2026-09-29T11:18:04.490+08:00  WARN 7556 --- [http-nio-8080-exec-3] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-29T11:18:04.490+08:00  INFO 7556 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T11:18:04.491+08:00  INFO 7556 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T11:18:04.784+08:00  INFO 7556 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T11:18:06.843+08:00  INFO 7556 --- [http-nio-8080-exec-5] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:18:06.860+08:00  INFO 7556 --- [http-nio-8080-exec-5] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T11:21:25.815+08:00  INFO 7556 --- [http-nio-8080-exec-6] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T11:21:25.817+08:00  INFO 7556 --- [http-nio-8080-exec-6] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/tag/list
+2026-09-29T11:21:25.818+08:00  INFO 7556 --- [http-nio-8080-exec-6] o.t.myblogsprinboot.service.TagService   : 获取作者的标签列表，作者的名字为：frank
+2026-09-29T11:21:25.826+08:00  INFO 7556 --- [http-nio-8080-exec-6] o.t.myblogsprinboot.service.TagService   : 作者的标签列表获取完成，标签列表为：
+2026-09-29T11:21:25.827+08:00  INFO 7556 --- [http-nio-8080-exec-6] o.t.myblogsprinboot.service.TagService   : [TagVO(id=10, name=Git), TagVO(id=1, name=Java), TagVO(id=14, name=Markdown), TagVO(id=4, name=MyBatis), TagVO(id=12, name=MySQL), TagVO(id=6, name=Session), TagVO(id=2, name=Spring Boot), TagVO(id=8, name=Vue), TagVO(id=9, name=前后端联调), TagVO(id=16, name=博客), TagVO(id=3, name=后端开发), TagVO(id=15, name=学习复盘), TagVO(id=13, name=数据库设计), TagVO(id=11, name=版本管理), TagVO(id=17, name=生活记录), TagVO(id=7, name=登录认证), TagVO(id=5, name=问题排查)]
+2026-09-29T11:22:51.545+08:00  INFO 7556 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T11:22:51.547+08:00  INFO 7556 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-29T11:22:51.604+08:00  INFO 7556 --- [http-nio-8080-exec-4] o.t.m.controller.ArticleController       : ArticleCreateRequest(title=今日学习复盘, categoryId=2, tagIds=[15], visibility=PUBLIC, contentMarkdown=## 登录接口重构
+## 大模型接入
+## 流式显示
+, assetIds=[])
+2026-09-29T11:23:25.867+08:00  INFO 7556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T11:23:25.871+08:00  INFO 7556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T11:29:00.212+08:00  INFO 26324 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 26324 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T11:29:00.214+08:00  INFO 26324 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T11:29:00.896+08:00  INFO 26324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T11:29:00.903+08:00  INFO 26324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T11:29:00.904+08:00  INFO 26324 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T11:29:00.977+08:00  INFO 26324 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T11:29:00.977+08:00  INFO 26324 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 737 ms
+2026-09-29T11:29:01.353+08:00  INFO 26324 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T11:29:01.492+08:00  INFO 26324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T11:29:01.499+08:00  INFO 26324 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.606 seconds (process running for 2.026)
+2026-09-29T11:29:11.417+08:00  INFO 26324 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T11:29:11.417+08:00  INFO 26324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T11:29:11.418+08:00  INFO 26324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-29T11:29:11.442+08:00  WARN 26324 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T11:29:11.467+08:00  INFO 26324 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T11:29:11.603+08:00  INFO 26324 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@177d8d6a
+2026-09-29T11:29:11.604+08:00  INFO 26324 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T11:29:11.684+08:00  INFO 26324 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:29:11.704+08:00  INFO 26324 --- [http-nio-8080-exec-1] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
+2026-09-29T11:29:27.619+08:00  WARN 26324 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-29T11:29:27.621+08:00  INFO 26324 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T11:29:27.621+08:00  INFO 26324 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T11:29:27.938+08:00  INFO 26324 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T11:29:29.996+08:00  INFO 26324 --- [http-nio-8080-exec-4] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:29:30.017+08:00  INFO 26324 --- [http-nio-8080-exec-4] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T11:29:41.914+08:00  INFO 26324 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T11:29:41.916+08:00  INFO 26324 --- [http-nio-8080-exec-3] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/tag/list
+2026-09-29T11:29:41.918+08:00  INFO 26324 --- [http-nio-8080-exec-3] o.t.myblogsprinboot.service.TagService   : 获取作者的标签列表，作者的名字为：frank
+2026-09-29T11:29:41.927+08:00  INFO 26324 --- [http-nio-8080-exec-3] o.t.myblogsprinboot.service.TagService   : 作者的标签列表获取完成，标签列表为：
+2026-09-29T11:29:41.928+08:00  INFO 26324 --- [http-nio-8080-exec-3] o.t.myblogsprinboot.service.TagService   : [TagVO(id=10, name=Git), TagVO(id=1, name=Java), TagVO(id=14, name=Markdown), TagVO(id=4, name=MyBatis), TagVO(id=12, name=MySQL), TagVO(id=6, name=Session), TagVO(id=2, name=Spring Boot), TagVO(id=8, name=Vue), TagVO(id=9, name=前后端联调), TagVO(id=16, name=博客), TagVO(id=3, name=后端开发), TagVO(id=15, name=学习复盘), TagVO(id=13, name=数据库设计), TagVO(id=11, name=版本管理), TagVO(id=17, name=生活记录), TagVO(id=7, name=登录认证), TagVO(id=5, name=问题排查)]
+2026-09-29T11:30:37.667+08:00  INFO 26324 --- [http-nio-8080-exec-6] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T11:30:37.668+08:00  INFO 26324 --- [http-nio-8080-exec-6] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/asset/upload
+2026-09-29T11:30:39.786+08:00  INFO 26324 --- [http-nio-8080-exec-7] o.t.m.service.AssetService               : 资源公共id：3da17e94-195f-4906-b239-97351db47556
+2026-09-29T11:31:04.171+08:00  INFO 26324 --- [http-nio-8080-exec-9] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T11:31:04.172+08:00  INFO 26324 --- [http-nio-8080-exec-9] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T11:31:04.502+08:00  INFO 26324 --- [http-nio-8080-exec-9] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T11:31:06.558+08:00  INFO 26324 --- [http-nio-8080-exec-10] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T11:31:06.561+08:00  INFO 26324 --- [http-nio-8080-exec-10] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/tag/list
+2026-09-29T11:31:06.564+08:00  INFO 26324 --- [http-nio-8080-exec-10] o.t.myblogsprinboot.service.TagService   : 获取作者的标签列表，作者的名字为：frank
+2026-09-29T11:31:06.572+08:00  INFO 26324 --- [http-nio-8080-exec-10] o.t.myblogsprinboot.service.TagService   : 作者的标签列表获取完成，标签列表为：
+2026-09-29T11:31:06.572+08:00  INFO 26324 --- [http-nio-8080-exec-10] o.t.myblogsprinboot.service.TagService   : [TagVO(id=10, name=Git), TagVO(id=1, name=Java), TagVO(id=14, name=Markdown), TagVO(id=4, name=MyBatis), TagVO(id=12, name=MySQL), TagVO(id=6, name=Session), TagVO(id=2, name=Spring Boot), TagVO(id=8, name=Vue), TagVO(id=9, name=前后端联调), TagVO(id=16, name=博客), TagVO(id=3, name=后端开发), TagVO(id=15, name=学习复盘), TagVO(id=13, name=数据库设计), TagVO(id=11, name=版本管理), TagVO(id=17, name=生活记录), TagVO(id=7, name=登录认证), TagVO(id=5, name=问题排查)]
+2026-09-29T11:31:49.133+08:00  INFO 26324 --- [http-nio-8080-exec-2] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T11:31:49.134+08:00  INFO 26324 --- [http-nio-8080-exec-2] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/asset/upload
+2026-09-29T11:32:19.344+08:00  INFO 26324 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T11:32:19.347+08:00  INFO 26324 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/article/create
+2026-09-29T11:32:19.378+08:00  INFO 26324 --- [http-nio-8080-exec-4] o.t.m.controller.ArticleController       : ArticleCreateRequest(title=测试登录接口重构后的逻辑是否有问题, categoryId=1, tagIds=[15, 3], visibility=PRIVATE, contentMarkdown=## 1.大模型接入
+......
+
+![49dd9765e19747dda8c5af214463dcf4!400x400.jpg](/api/asset/content/3da17e94-195f-4906-b239-97351db47556)
+
+
+
+[附件：商务汇报.pptx](/api/asset/download/07b2a646-160a-407c-ab09-406835a1a95f)
+
+, assetIds=[24, 25])
+2026-09-29T11:32:19.408+08:00  INFO 26324 --- [http-nio-8080-exec-4] o.t.m.controller.ArticleController       : Article created:Article(id=null, authorId=1, categoryId=1, slug=null, title=测试登录接口重构后的逻辑是否有问题, summary=1.大模型接入
+......
+"49dd9765e19747dda8c5af214463dcf4!400x400.jpg" (/api/asset/content/3da17e94-195f-4906-b239-97351db47556)
+…, contentMarkdown=## 1.大模型接入
+......
+
+![49dd9765e19747dda8c5af214463dcf4!400x400.jpg](/api/asset/content/3da17e94-195f-4906-b239-97351db47556)
+
+
+
+[附件：商务汇报.pptx](/api/asset/download/07b2a646-160a-407c-ab09-406835a1a95f)
+
+, visibility=PRIVATE, status=PUBLISHED, wordCount=188, readingMinutes=188, publishedAt=2026-09-29T11:32:19.408314300, rowVersion=0, deletedAt=null, createdAt=null, updatedAt=2026-09-29T11:32:19.408314300)
+2026-09-29T11:32:21.494+08:00  INFO 26324 --- [http-nio-8080-exec-3] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T11:32:25.956+08:00  INFO 26324 --- [http-nio-8080-exec-5] o.t.m.service.AssetService               : 资源公共id：07b2a646-160a-407c-ab09-406835a1a95f
+2026-09-29T12:20:02.839+08:00  INFO 26324 --- [http-nio-8080-exec-6] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:20:02.841+08:00  INFO 26324 --- [http-nio-8080-exec-6] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T12:20:15.352+08:00  INFO 26324 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T12:20:15.355+08:00  INFO 26324 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T12:32:12.192+08:00  INFO 2220 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 2220 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T12:32:12.194+08:00  INFO 2220 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T12:32:13.071+08:00  INFO 2220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T12:32:13.083+08:00  INFO 2220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T12:32:13.083+08:00  INFO 2220 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T12:32:13.197+08:00  INFO 2220 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T12:32:13.198+08:00  INFO 2220 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 963 ms
+2026-09-29T12:32:13.616+08:00  INFO 2220 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T12:32:13.745+08:00  INFO 2220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T12:32:13.752+08:00  INFO 2220 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 2.008 seconds (process running for 2.503)
+2026-09-29T12:32:20.000+08:00  INFO 2220 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T12:32:20.000+08:00  INFO 2220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T12:32:20.001+08:00  INFO 2220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-29T12:32:20.021+08:00  WARN 2220 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T12:32:20.068+08:00  INFO 2220 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T12:32:20.285+08:00  INFO 2220 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@691b52df
+2026-09-29T12:32:20.289+08:00  INFO 2220 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T12:32:20.374+08:00  INFO 2220 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:32:20.388+08:00  INFO 2220 --- [http-nio-8080-exec-1] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
+2026-09-29T12:32:24.185+08:00  INFO 2220 --- [http-nio-8080-exec-2] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:32:24.216+08:00  INFO 2220 --- [http-nio-8080-exec-2] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T12:32:41.928+08:00  INFO 2220 --- [http-nio-8080-exec-4] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:32:41.955+08:00  INFO 2220 --- [http-nio-8080-exec-3] o.t.m.service.AssetService               : 资源公共id：3da17e94-195f-4906-b239-97351db47556
+2026-09-29T12:32:44.246+08:00  INFO 2220 --- [http-nio-8080-exec-5] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:32:44.248+08:00  INFO 2220 --- [http-nio-8080-exec-5] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T12:32:56.314+08:00  INFO 2220 --- [http-nio-8080-exec-6] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:32:56.326+08:00  INFO 2220 --- [http-nio-8080-exec-7] o.t.m.service.AssetService               : 资源公共id：3da17e94-195f-4906-b239-97351db47556
+2026-09-29T12:32:58.281+08:00  INFO 2220 --- [http-nio-8080-exec-8] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T12:32:58.283+08:00  INFO 2220 --- [http-nio-8080-exec-8] o.t.m.interceptor.LoginInterceptor       : 登录拦截检查完毕，放行接口：/tag/list
+2026-09-29T12:32:58.285+08:00  INFO 2220 --- [http-nio-8080-exec-8] o.t.myblogsprinboot.service.TagService   : 获取作者的标签列表，作者的名字为：frank
+2026-09-29T12:32:58.292+08:00  INFO 2220 --- [http-nio-8080-exec-8] o.t.myblogsprinboot.service.TagService   : 作者的标签列表获取完成，标签列表为：
+2026-09-29T12:32:58.293+08:00  INFO 2220 --- [http-nio-8080-exec-8] o.t.myblogsprinboot.service.TagService   : [TagVO(id=10, name=Git), TagVO(id=1, name=Java), TagVO(id=14, name=Markdown), TagVO(id=4, name=MyBatis), TagVO(id=12, name=MySQL), TagVO(id=6, name=Session), TagVO(id=2, name=Spring Boot), TagVO(id=8, name=Vue), TagVO(id=9, name=前后端联调), TagVO(id=16, name=博客), TagVO(id=3, name=后端开发), TagVO(id=15, name=学习复盘), TagVO(id=13, name=数据库设计), TagVO(id=11, name=版本管理), TagVO(id=17, name=生活记录), TagVO(id=7, name=登录认证), TagVO(id=5, name=问题排查)]
+2026-09-29T12:33:09.265+08:00  INFO 2220 --- [http-nio-8080-exec-10] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:33:16.153+08:00  INFO 2220 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:33:16.155+08:00  INFO 2220 --- [http-nio-8080-exec-1] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T12:33:18.598+08:00  INFO 2220 --- [http-nio-8080-exec-2] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:33:18.609+08:00  INFO 2220 --- [http-nio-8080-exec-4] o.t.m.service.AssetService               : 资源公共id：c3da72f9-861a-4da1-8e02-88fb2a6bd1a3
+2026-09-29T12:33:20.523+08:00  INFO 2220 --- [http-nio-8080-exec-3] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:33:20.524+08:00  INFO 2220 --- [http-nio-8080-exec-3] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T12:33:43.530+08:00  INFO 2220 --- [http-nio-8080-exec-5] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:33:47.403+08:00  INFO 2220 --- [http-nio-8080-exec-6] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T12:33:47.405+08:00  INFO 2220 --- [http-nio-8080-exec-6] o.t.m.controller.ArticleController       : UserType.AUTHOR(type=3, description=已经登录的作者)
+2026-09-29T12:45:15.252+08:00  INFO 2220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T12:45:15.257+08:00  INFO 2220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T13:22:04.759+08:00  INFO 21988 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 21988 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T13:22:04.760+08:00  INFO 21988 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T13:22:06.116+08:00  INFO 21988 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T13:22:06.252+08:00  INFO 21988 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.732 seconds (process running for 2.772)
+2026-09-29T13:24:59.966+08:00  INFO 19380 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 19380 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T13:24:59.967+08:00  INFO 19380 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T13:25:01.316+08:00  INFO 19380 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T13:25:01.474+08:00  INFO 19380 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.805 seconds (process running for 2.827)
+2026-09-29T13:25:01.913+08:00  INFO 19380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T13:25:02.112+08:00  INFO 19380 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ace919c
+2026-09-29T13:25:02.114+08:00  INFO 19380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T13:25:02.237+08:00  INFO 19380 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T13:25:02.249+08:00  INFO 19380 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T13:29:25.786+08:00  INFO 10060 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 10060 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T13:29:25.788+08:00  INFO 10060 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T13:29:26.532+08:00  INFO 10060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T13:29:26.547+08:00  INFO 10060 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T13:29:26.547+08:00  INFO 10060 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T13:29:26.626+08:00  INFO 10060 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T13:29:26.627+08:00  INFO 10060 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 806 ms
+2026-09-29T13:29:26.994+08:00  INFO 10060 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T13:29:27.111+08:00  INFO 10060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T13:29:27.117+08:00  INFO 10060 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.7 seconds (process running for 2.164)
+2026-09-29T13:30:45.833+08:00  INFO 23440 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 23440 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T13:30:45.835+08:00  INFO 23440 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T13:30:46.516+08:00  INFO 23440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T13:30:46.523+08:00  INFO 23440 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T13:30:46.523+08:00  INFO 23440 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T13:30:46.598+08:00  INFO 23440 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T13:30:46.599+08:00  INFO 23440 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 730 ms
+2026-09-29T13:30:46.924+08:00  INFO 23440 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T13:30:47.046+08:00  INFO 23440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T13:30:47.051+08:00  INFO 23440 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.548 seconds (process running for 2.025)
+2026-09-29T13:30:49.501+08:00  INFO 23440 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T13:30:49.501+08:00  INFO 23440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T13:30:49.502+08:00  INFO 23440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-29T13:30:49.516+08:00  INFO 23440 --- [http-nio-8080-exec-1] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T13:30:49.565+08:00 ERROR 23440 --- [http-nio-8080-exec-1] o.t.m.utils.JwtsTokenUtils               : JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2026-09-29T13:30:49.568+08:00 ERROR 23440 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: io.jsonwebtoken.JwtException: JwtToken验证失败, 无效的token.] with root cause
 
 io.jsonwebtoken.JwtException: JwtToken验证失败, 无效的token.
-	at org.txf.myblogsprinboot.utils.JwtsTokenUtils.parseJwtToken(JwtsTokenUtils.java:42) ~[classes/:na]
+	at org.txf.myblogsprinboot.utils.JwtsTokenUtils.parseJwtToken(JwtsTokenUtils.java:41) ~[classes/:na]
 	at org.txf.myblogsprinboot.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:23) ~[classes/:na]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.4.jar:6.0.4]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075) ~[spring-webmvc-6.0.4.jar:6.0.4]
@@ -145,72 +353,215 @@ io.jsonwebtoken.JwtException: JwtToken验证失败, 无效的token.
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2026-09-27T09:42:36.339+08:00  INFO 20788 --- [http-nio-8080-exec-4] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
-2026-09-27T09:42:36.340+08:00 ERROR 20788 --- [http-nio-8080-exec-4] o.t.m.utils.JwtsTokenUtils               : JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2026-09-27T09:53:38.541+08:00  INFO 20788 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-27T09:53:38.547+08:00  INFO 20788 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-09-27T10:01:43.621+08:00  INFO 25852 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 25852 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
-2026-09-27T10:01:43.626+08:00  INFO 25852 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-09-27T10:01:44.691+08:00  INFO 25852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-27T10:01:44.710+08:00  INFO 25852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-27T10:01:44.710+08:00  INFO 25852 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-27T10:01:44.822+08:00  INFO 25852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-27T10:01:44.823+08:00  INFO 25852 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1152 ms
-2026-09-27T10:01:45.352+08:00  INFO 25852 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-27T10:01:45.492+08:00  INFO 25852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-27T10:01:45.500+08:00  INFO 25852 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 2.388 seconds (process running for 3.044)
-2026-09-27T10:01:51.807+08:00  INFO 25852 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-27T10:01:51.807+08:00  INFO 25852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-27T10:01:51.808+08:00  INFO 25852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-27T10:01:51.828+08:00  WARN 25852 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
-2026-09-27T10:01:51.883+08:00  INFO 25852 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-27T10:01:52.037+08:00  INFO 25852 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c6f4303
-2026-09-27T10:01:52.038+08:00  INFO 25852 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-27T10:01:52.101+08:00  INFO 25852 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:01:52.102+08:00  INFO 25852 --- [http-nio-8080-exec-1] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:02:00.786+08:00  WARN 25852 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
-2026-09-27T10:02:00.787+08:00  INFO 25852 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T10:02:00.787+08:00  INFO 25852 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T10:02:01.111+08:00  INFO 25852 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录成功.
-2026-09-27T10:02:01.133+08:00  INFO 25852 --- [http-nio-8080-exec-3] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:02:01.133+08:00  INFO 25852 --- [http-nio-8080-exec-3] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:02:02.173+08:00  INFO 25852 --- [http-nio-8080-exec-4] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:02:04.987+08:00  INFO 25852 --- [http-nio-8080-exec-5] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:02:04.988+08:00  INFO 25852 --- [http-nio-8080-exec-5] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:02:31.524+08:00  INFO 25852 --- [http-nio-8080-exec-6] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:02:31.525+08:00  INFO 25852 --- [http-nio-8080-exec-6] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:02:33.336+08:00  INFO 25852 --- [http-nio-8080-exec-7] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:02:35.255+08:00  INFO 25852 --- [http-nio-8080-exec-8] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:02:35.255+08:00  INFO 25852 --- [http-nio-8080-exec-8] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:02:39.755+08:00  INFO 25852 --- [http-nio-8080-exec-9] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:02:39.755+08:00  INFO 25852 --- [http-nio-8080-exec-9] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:02:48.022+08:00  INFO 25852 --- [http-nio-8080-exec-10] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T10:02:48.022+08:00  INFO 25852 --- [http-nio-8080-exec-10] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T10:02:48.023+08:00  INFO 25852 --- [http-nio-8080-exec-10] o.t.m.controller.UserController          : 用户登录：查不到此用户.
-2026-09-27T10:02:49.203+08:00  INFO 25852 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T10:02:49.203+08:00  INFO 25852 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T10:02:49.204+08:00  INFO 25852 --- [http-nio-8080-exec-1] o.t.m.controller.UserController          : 用户登录：查不到此用户.
-2026-09-27T10:02:49.764+08:00  INFO 25852 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T10:02:49.765+08:00  INFO 25852 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T10:02:49.766+08:00  INFO 25852 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：查不到此用户.
-2026-09-27T10:02:50.191+08:00  INFO 25852 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T10:02:50.192+08:00  INFO 25852 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T10:02:50.193+08:00  INFO 25852 --- [http-nio-8080-exec-3] o.t.m.controller.UserController          : 用户登录：查不到此用户.
-2026-09-27T10:02:59.703+08:00  INFO 25852 --- [http-nio-8080-exec-4] o.t.m.controller.UserController          : 用户登录.
-2026-09-27T10:02:59.703+08:00  INFO 25852 --- [http-nio-8080-exec-4] o.t.m.controller.UserController          : 用户登录：校验参数成功.
-2026-09-27T10:03:00.016+08:00  INFO 25852 --- [http-nio-8080-exec-4] o.t.m.controller.UserController          : 用户登录成功.
-2026-09-27T10:03:00.034+08:00  INFO 25852 --- [http-nio-8080-exec-5] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:03:00.034+08:00  INFO 25852 --- [http-nio-8080-exec-5] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:03:08.723+08:00  INFO 25852 --- [http-nio-8080-exec-6] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:03:08.723+08:00  INFO 25852 --- [http-nio-8080-exec-6] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:03:12.920+08:00  INFO 25852 --- [http-nio-8080-exec-7] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:03:14.064+08:00  INFO 25852 --- [http-nio-8080-exec-8] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:03:14.064+08:00  INFO 25852 --- [http-nio-8080-exec-8] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:03:15.707+08:00  INFO 25852 --- [http-nio-8080-exec-9] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:03:16.625+08:00  INFO 25852 --- [http-nio-8080-exec-10] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:03:16.625+08:00  INFO 25852 --- [http-nio-8080-exec-10] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:03:17.311+08:00  INFO 25852 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:03:19.204+08:00  INFO 25852 --- [http-nio-8080-exec-2] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
-2026-09-27T10:03:19.204+08:00  INFO 25852 --- [http-nio-8080-exec-2] o.t.m.controller.ArticleController       : UserType.VISITOR_NOLOGIN(type=1, description=未登录的普通游客)
-2026-09-27T10:03:23.766+08:00  INFO 25852 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-09-27T10:03:23.774+08:00  INFO 25852 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T13:30:49.580+08:00  INFO 23440 --- [http-nio-8080-exec-1] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T13:30:49.582+08:00 ERROR 23440 --- [http-nio-8080-exec-1] o.t.m.utils.JwtsTokenUtils               : JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2026-09-29T13:31:10.156+08:00  INFO 23440 --- [http-nio-8080-exec-6] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T13:31:10.158+08:00 ERROR 23440 --- [http-nio-8080-exec-6] o.t.m.utils.JwtsTokenUtils               : JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2026-09-29T13:31:10.158+08:00 ERROR 23440 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: io.jsonwebtoken.JwtException: JwtToken验证失败, 无效的token.] with root cause
+
+io.jsonwebtoken.JwtException: JwtToken验证失败, 无效的token.
+	at org.txf.myblogsprinboot.utils.JwtsTokenUtils.parseJwtToken(JwtsTokenUtils.java:41) ~[classes/:na]
+	at org.txf.myblogsprinboot.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:23) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-09-29T13:31:10.160+08:00  INFO 23440 --- [http-nio-8080-exec-6] o.t.m.interceptor.LoginInterceptor       : 进行登录拦截...
+2026-09-29T13:31:10.162+08:00 ERROR 23440 --- [http-nio-8080-exec-6] o.t.m.utils.JwtsTokenUtils               : JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2026-09-29T13:32:03.238+08:00  WARN 23440 --- [http-nio-8080-exec-4] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T13:32:03.254+08:00  INFO 23440 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T13:32:03.372+08:00  INFO 23440 --- [http-nio-8080-exec-4] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f159272
+2026-09-29T13:32:03.375+08:00  INFO 23440 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T13:32:03.439+08:00  INFO 23440 --- [http-nio-8080-exec-4] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:33:10.048+08:00  INFO 23440 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T13:33:10.053+08:00  INFO 23440 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T13:41:45.537+08:00  INFO 13648 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 13648 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T13:41:45.539+08:00  INFO 13648 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T13:41:46.212+08:00  INFO 13648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T13:41:46.219+08:00  INFO 13648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T13:41:46.219+08:00  INFO 13648 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T13:41:46.296+08:00  INFO 13648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T13:41:46.296+08:00  INFO 13648 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 731 ms
+2026-09-29T13:41:46.648+08:00  INFO 13648 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T13:41:46.766+08:00  INFO 13648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T13:41:46.773+08:00  INFO 13648 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.563 seconds (process running for 2.006)
+2026-09-29T13:41:51.123+08:00  INFO 13648 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T13:41:51.123+08:00  INFO 13648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T13:41:51.124+08:00  INFO 13648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-29T13:41:51.144+08:00  WARN 13648 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T13:41:51.159+08:00  INFO 13648 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T13:41:51.293+08:00  INFO 13648 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70e2cb50
+2026-09-29T13:41:51.295+08:00  INFO 13648 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T13:41:51.357+08:00  INFO 13648 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:42:00.858+08:00  WARN 13648 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-29T13:42:00.859+08:00  INFO 13648 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T13:42:00.859+08:00  INFO 13648 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T13:42:01.175+08:00  INFO 13648 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T13:42:01.192+08:00  INFO 13648 --- [http-nio-8080-exec-3] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:42:08.329+08:00  INFO 13648 --- [http-nio-8080-exec-4] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:42:09.258+08:00  INFO 13648 --- [http-nio-8080-exec-5] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:42:10.068+08:00  INFO 13648 --- [http-nio-8080-exec-8] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:42:10.796+08:00  INFO 13648 --- [http-nio-8080-exec-7] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:42:11.494+08:00  INFO 13648 --- [http-nio-8080-exec-6] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:42:12.874+08:00  INFO 13648 --- [http-nio-8080-exec-9] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:42:14.366+08:00  INFO 13648 --- [http-nio-8080-exec-10] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:42:15.139+08:00  INFO 13648 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:42:46.125+08:00  INFO 13648 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T13:42:46.129+08:00  INFO 13648 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T13:53:51.173+08:00  INFO 16880 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 16880 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T13:53:51.175+08:00  INFO 16880 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T13:53:51.978+08:00  INFO 16880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T13:53:51.991+08:00  INFO 16880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T13:53:51.992+08:00  INFO 16880 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T13:53:52.065+08:00  INFO 16880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T13:53:52.066+08:00  INFO 16880 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 867 ms
+2026-09-29T13:53:52.403+08:00  INFO 16880 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T13:53:52.512+08:00  INFO 16880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T13:53:52.519+08:00  INFO 16880 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.659 seconds (process running for 2.09)
+2026-09-29T13:53:57.222+08:00  INFO 16880 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T13:53:57.222+08:00  INFO 16880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T13:53:57.223+08:00  INFO 16880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-29T13:53:57.243+08:00  WARN 16880 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T13:53:57.259+08:00  INFO 16880 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T13:53:57.369+08:00  INFO 16880 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70e2cb50
+2026-09-29T13:53:57.371+08:00  INFO 16880 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T13:53:57.425+08:00  INFO 16880 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:54:08.096+08:00  WARN 16880 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.UserController
+2026-09-29T13:54:08.097+08:00  INFO 16880 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录.
+2026-09-29T13:54:08.097+08:00  INFO 16880 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录：校验参数成功.
+2026-09-29T13:54:08.437+08:00  INFO 16880 --- [http-nio-8080-exec-2] o.t.m.controller.UserController          : 用户登录成功.
+2026-09-29T13:54:08.454+08:00  INFO 16880 --- [http-nio-8080-exec-3] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:54:22.772+08:00  INFO 16880 --- [http-nio-8080-exec-4] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:54:23.518+08:00  INFO 16880 --- [http-nio-8080-exec-5] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:54:24.190+08:00  INFO 16880 --- [http-nio-8080-exec-6] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:54:24.879+08:00  INFO 16880 --- [http-nio-8080-exec-7] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:54:25.460+08:00  INFO 16880 --- [http-nio-8080-exec-8] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:54:26.456+08:00  INFO 16880 --- [http-nio-8080-exec-9] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:54:27.783+08:00  INFO 16880 --- [http-nio-8080-exec-10] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T13:54:37.620+08:00  INFO 16880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T13:54:37.625+08:00  INFO 16880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T14:04:04.135+08:00  INFO 14312 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 14312 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T14:04:04.136+08:00  INFO 14312 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T14:04:05.383+08:00  INFO 14312 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T14:04:05.523+08:00  INFO 14312 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.643 seconds (process running for 2.592)
+2026-09-29T14:04:05.901+08:00  INFO 14312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T14:04:06.032+08:00  INFO 14312 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a04ca74
+2026-09-29T14:04:06.034+08:00  INFO 14312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T14:04:06.111+08:00  INFO 14312 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T14:04:06.118+08:00  INFO 14312 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T14:07:17.395+08:00  INFO 14808 --- [main] o.t.m.dao.ArticleMapperTest              : Starting ArticleMapperTest using Java 17.0.5 with PID 14808 (started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T14:07:17.397+08:00  INFO 14808 --- [main] o.t.m.dao.ArticleMapperTest              : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T14:07:18.751+08:00  INFO 14808 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T14:07:18.900+08:00  INFO 14808 --- [main] o.t.m.dao.ArticleMapperTest              : Started ArticleMapperTest in 1.766 seconds (process running for 2.65)
+2026-09-29T14:07:19.303+08:00  INFO 14808 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T14:07:19.473+08:00  INFO 14808 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e8b24a1
+2026-09-29T14:07:19.477+08:00  INFO 14808 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T14:07:19.573+08:00  INFO 14808 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T14:07:19.584+08:00  INFO 14808 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T14:07:30.274+08:00  INFO 21960 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 21960 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T14:07:30.277+08:00  INFO 21960 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T14:07:31.004+08:00  INFO 21960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T14:07:31.011+08:00  INFO 21960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T14:07:31.011+08:00  INFO 21960 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T14:07:31.089+08:00  INFO 21960 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T14:07:31.089+08:00  INFO 21960 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 782 ms
+2026-09-29T14:07:31.432+08:00  INFO 21960 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T14:07:31.549+08:00  INFO 21960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T14:07:31.555+08:00  INFO 21960 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.678 seconds (process running for 2.124)
+2026-09-29T14:07:37.351+08:00  INFO 21960 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T14:07:37.352+08:00  INFO 21960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T14:07:37.353+08:00  INFO 21960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-29T14:07:37.375+08:00  WARN 21960 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T14:07:37.393+08:00  INFO 21960 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T14:07:37.510+08:00  INFO 21960 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cf0f8e0
+2026-09-29T14:07:37.512+08:00  INFO 21960 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T14:07:37.568+08:00  INFO 21960 --- [http-nio-8080-exec-2] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:08:17.343+08:00  INFO 21960 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T14:08:17.348+08:00  INFO 21960 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T14:08:21.070+08:00  INFO 26452 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 26452 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T14:08:21.073+08:00  INFO 26452 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T14:08:21.735+08:00  INFO 26452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T14:08:21.742+08:00  INFO 26452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T14:08:21.743+08:00  INFO 26452 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T14:08:21.819+08:00  INFO 26452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T14:08:21.820+08:00  INFO 26452 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 719 ms
+2026-09-29T14:08:22.174+08:00  INFO 26452 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T14:08:22.307+08:00  INFO 26452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T14:08:22.313+08:00  INFO 26452 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.567 seconds (process running for 1.986)
+2026-09-29T14:08:24.489+08:00  INFO 26452 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T14:08:24.489+08:00  INFO 26452 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T14:08:24.490+08:00  INFO 26452 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-29T14:08:24.513+08:00  WARN 26452 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T14:08:24.530+08:00  INFO 26452 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T14:08:24.659+08:00  INFO 26452 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@625e62dc
+2026-09-29T14:08:24.661+08:00  INFO 26452 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T14:08:24.724+08:00  INFO 26452 --- [http-nio-8080-exec-2] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:11:38.122+08:00  INFO 26452 --- [http-nio-8080-exec-3] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:11:43.784+08:00  INFO 26452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T14:11:43.790+08:00  INFO 26452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-29T14:11:46.107+08:00  INFO 8548 --- [main] o.t.m.MyblogSprinbootApplication         : Starting MyblogSprinbootApplication using Java 17.0.5 with PID 8548 (E:\myblog\myblog-sprinboot\target\classes started by txf in E:\myblog\myblog-sprinboot)
+2026-09-29T14:11:46.110+08:00  INFO 8548 --- [main] o.t.m.MyblogSprinbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-29T14:11:46.827+08:00  INFO 8548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-29T14:11:46.840+08:00  INFO 8548 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-29T14:11:46.841+08:00  INFO 8548 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-29T14:11:46.916+08:00  INFO 8548 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-29T14:11:46.917+08:00  INFO 8548 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 773 ms
+2026-09-29T14:11:47.282+08:00  INFO 8548 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-29T14:11:47.399+08:00  INFO 8548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-29T14:11:47.406+08:00  INFO 8548 --- [main] o.t.m.MyblogSprinbootApplication         : Started MyblogSprinbootApplication in 1.725 seconds (process running for 2.532)
+2026-09-29T14:11:51.838+08:00  INFO 8548 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-29T14:11:51.838+08:00  INFO 8548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-29T14:11:51.839+08:00  INFO 8548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-29T14:11:51.862+08:00  WARN 8548 --- [http-nio-8080-exec-1] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.myblogsprinboot.controller.ArticleController
+2026-09-29T14:11:51.878+08:00  INFO 8548 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-29T14:11:51.996+08:00  INFO 8548 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6693a64b
+2026-09-29T14:11:51.998+08:00  INFO 8548 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-29T14:11:52.052+08:00  INFO 8548 --- [http-nio-8080-exec-1] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:11:54.790+08:00  INFO 8548 --- [http-nio-8080-exec-2] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:11:55.634+08:00  INFO 8548 --- [http-nio-8080-exec-3] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:11:56.848+08:00  INFO 8548 --- [http-nio-8080-exec-4] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:11:58.748+08:00  INFO 8548 --- [http-nio-8080-exec-5] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:12:01.898+08:00  INFO 8548 --- [http-nio-8080-exec-6] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:12:02.769+08:00  INFO 8548 --- [http-nio-8080-exec-7] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:12:03.205+08:00  INFO 8548 --- [http-nio-8080-exec-8] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:12:04.247+08:00  INFO 8548 --- [http-nio-8080-exec-9] o.txf.myblogsprinboot.utils.UserUtils    : 用户工具类getUserType方法判断用户类型.
+2026-09-29T14:12:19.024+08:00  INFO 8548 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-29T14:12:19.030+08:00  INFO 8548 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

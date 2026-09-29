@@ -1,7 +1,7 @@
 package org.txf.myblogsprinboot.controller;
 
 import com.zaxxer.hikari.HikariConfig;
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
@@ -19,13 +19,14 @@ import org.txf.myblogsprinboot.request.ArticleCreateRequest;
 import org.txf.myblogsprinboot.service.ArticleService;
 import org.txf.myblogsprinboot.service.UserService;
 import org.txf.myblogsprinboot.utils.ArticleContentUtils;
-import org.txf.myblogsprinboot.utils.SessionUtils;
 import org.txf.myblogsprinboot.utils.UserUtils;
 import org.txf.myblogsprinboot.vo.ArticleDetailVO;
 import org.txf.myblogsprinboot.vo.ArticleListVO;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 文章控制器类，定义和实现文章的各个接口
@@ -42,6 +43,35 @@ public class ArticleController {
     private HikariConfig hikariConfig;
 
 
+
+    @GetMapping("/pagelist")
+    public Result<Map<String, Object>> getArticleListByPage(Long authorId, Integer page, Integer pageSize, HttpServletRequest request) {
+        // 参数检查
+        if (authorId == null || authorId <= 0) {
+            log.error("获取一页文章列表时作者id错误");
+            throw new ParamErrorException("作者的id为空或者无效的作者id.");
+        }
+        if (page ==  null || page <= 0) {
+            log.error("获取一页文章列表时页码错误");
+            throw new ParamErrorException("页码为空或者无效的页码.");
+        }
+        if (pageSize ==  null || pageSize <= 0) {
+            log.error("获取一页文章列表时页面大小错误");
+            throw new ParamErrorException("页面大小为空或者无效的页面大小.");
+        }
+
+        // 调用service的方法获取这一页的数据
+        List<ArticleListVO> list = articleService.getArticleListByPage(authorId, page, pageSize, request);
+
+        // 分页接口需要作者的所有文章数量
+        int articleCnt = articleService.getArticleCnt(authorId);
+        Map<String, Object> map = new HashMap<>();
+        map.put("total", articleCnt);
+        map.put("articleList", list);
+        return Result.success("获取分页文章成功.", map);
+    }
+
+
     /**
      * 接口：/article/list
      * 方法：GET
@@ -54,7 +84,7 @@ public class ArticleController {
      *         成功时data为文章列表，空结果为[]，不为null
      */
     @GetMapping("/list")
-    public Result<List<ArticleListVO>> getArticleList(@RequestParam(required = false)String author, HttpSession session) {
+    public Result<List<ArticleListVO>> getArticleList(@RequestParam(required = false)String author, HttpServletRequest request) {
         // 校验前端传过来的参数
         if (!StringUtils.hasLength(author)) {
             Result.paramError("获取用户列表时参数校验错误.");
@@ -67,7 +97,7 @@ public class ArticleController {
         }
 
         // 获取Session并判断用户类型，这里用session来判断
-        UserType userType = UserUtils.getUserType(author, session);
+        UserType userType = UserUtils.getUserType(author, request);
         log.info(userType.toString());
 
         // 查询对应用户的文章列表，并判断是否需要展示私有文章
@@ -80,12 +110,12 @@ public class ArticleController {
     /**
      * 创建文章的接口逻辑，先从文章表中插入一篇文章，然后关联标签表，关联资源表
      * @param requestData      文章创建的时候规定的数据传输对象
-     * @param session          用户的会话，从会话可以拿到用户登录信息
+     * @param request          需要在请求中拿到token中的用户的信息
      * @return  返回统一返回对象，Result对象的data属性为新创建文章的id
      */
     @RequestMapping("/create")
     @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED)
-    public Result createArticle(@RequestBody ArticleCreateRequest requestData, HttpSession session) {
+    public Result createArticle(@RequestBody ArticleCreateRequest requestData, HttpServletRequest request) {
         log.info(requestData.toString());
         // 校验参数
         if (!StringUtils.hasLength(requestData.getTitle())) {
@@ -101,7 +131,7 @@ public class ArticleController {
         article.setContentMarkdown(requestData.getContentMarkdown());
         article.setCategoryId(requestData.getCategoryId());
         article.setVisibility(requestData.getVisibility());
-        User user = (User)session.getAttribute(SessionUtils.USER_SESSION_KEY);
+        User user = UserUtils.getUserFromToken(request);
         article.setAuthorId(user.getId());
         article.setStatus(ArticleStatus.PUBLISHED);
         String plainText = ArticleContentUtils.toPlainText(requestData.getContentMarkdown());
@@ -129,12 +159,12 @@ public class ArticleController {
 
 
     @RequestMapping("/detail")
-    public Result<ArticleDetailVO> showArticleDetail(@RequestParam(value = "id", required = true)Long articleId, HttpSession session) {
+    public Result<ArticleDetailVO> showArticleDetail(@RequestParam(value = "id", required = true)Long articleId, HttpServletRequest request) {
         // 校验文章id参数
         if (articleId == null || articleId <= 0) {
             throw new ParamErrorException("文章id参数错误.");
         }
-        ArticleDetailVO articleDetail = articleService.getArticleDetail(articleId, session);
+        ArticleDetailVO articleDetail = articleService.getArticleDetail(articleId, request);
         return Result.success("文章详情页信息获取成功.", articleDetail);
     }
 

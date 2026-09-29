@@ -4,8 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.txf.myblogsprinboot.model.Article;
+import org.txf.myblogsprinboot.vo.ArticleListVO;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @SpringBootTest
 class ArticleMapperTest {
@@ -35,5 +37,17 @@ class ArticleMapperTest {
     void selectArticleById() {
         Article article = articleMapper.selectArticleById(1L);
         System.out.println(article);
+    }
+
+    @Test
+    void selectArticleByPage() {
+        List<ArticleListVO> articleListVOS = articleMapper.selectArticleByPage(1, 1, 5);
+        articleListVOS.forEach(System.out::println);
+    }
+
+    @Test
+    void selectArticleCount() {
+        int cnt = articleMapper.selectArticleCount(1);
+        System.out.println(cnt);
     }
 }
