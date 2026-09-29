@@ -95,6 +95,48 @@ export async function loadPosts(author) {
   return remotePosts
 }
 
+export async function loadPostPage(authorId, page = 1, pageSize = 5) {
+  const id = String(authorId || '').trim()
+  if (!id) throw new Error('缺少作者 ID')
+
+  const query = new URLSearchParams({ authorId: id, page: String(page), pageSize: String(pageSize) })
+  const response = await apiFetch(`/api/article/pagelist?${query}`)
+  if (!response.ok) throw new Error(`文章请求失败（HTTP ${response.status}）`)
+
+  const result = await response.json()
+  if (!Array.isArray(result) && result?.code !== undefined && Number(result.code) !== 200) {
+    throw new Error(result.msg || '文章加载失败')
+  }
+
+  const payload = Array.isArray(result) ? result : (result?.data ?? result)
+  const pageData = Array.isArray(payload) ? null : payload
+  const posts = Array.isArray(payload)
+    ? payload
+    : (payload?.articleList || payload?.records || payload?.list || payload?.content || payload?.rows)
+  if (!Array.isArray(posts)) throw new Error('文章接口返回数据格式不正确')
+
+  const normalizedPosts = posts.map(normalizePost)
+  const totalValue = pageData?.total ?? pageData?.totalElements ?? pageData?.totalCount ?? pageData?.count
+  const total = Number(totalValue)
+  const totalPages = Number(pageData?.totalPages ?? pageData?.pages)
+  const hasNext = typeof pageData?.hasNext === 'boolean'
+    ? pageData.hasNext
+    : Number.isFinite(total) && totalValue !== undefined
+      ? page * pageSize < total
+      : Number.isFinite(totalPages) && totalPages > 0
+        ? page < totalPages
+        : normalizedPosts.length === pageSize
+
+  remotePosts = [...new Map([...(remotePosts || []), ...normalizedPosts].map((post) => [post.id, post])).values()]
+  refreshPosts()
+
+  return {
+    posts: normalizedPosts,
+    total: Number.isFinite(total) && totalValue !== undefined ? total : null,
+    hasNext,
+  }
+}
+
 export async function loadArticleDetail(articleId) {
   const id = String(articleId || '').trim()
   if (!id) throw new Error('缺少文章 ID')

@@ -23,14 +23,33 @@ function readUserToken() {
   try { return localStorage.getItem('user-token') || '' } catch { return '' }
 }
 
+function readTokenClaims(token = readUserToken()) {
+  try {
+    const payload = String(token).replace(/^Bearer\s+/i, '').split('.')[1]
+    if (!payload) return {}
+    const base64 = payload.replace(/-/g, '+').replace(/_/g, '/')
+    const binary = atob(base64.padEnd(Math.ceil(base64.length / 4) * 4, '='))
+    const bytes = Uint8Array.from(binary, (character) => character.charCodeAt(0))
+    const claims = JSON.parse(new TextDecoder().decode(bytes))
+    return claims && typeof claims === 'object' ? claims : {}
+  } catch {
+    return {}
+  }
+}
+
 // 首页请求文章列表需要知道当前登录用户的用户名。
 // 用户名和登录标记一样，只在当前浏览器标签页会话中保存。
 function readUsername() {
   try {
-    return sessionStorage.getItem('frank-owner-username') || localStorage.getItem('frank-owner-username') || ''
+    return sessionStorage.getItem('frank-owner-username') || localStorage.getItem('frank-owner-username') || readTokenClaims().username || ''
   } catch {
-    return ''
+    return readTokenClaims().username || ''
   }
+}
+
+function readUserId() {
+  const id = readTokenClaims().id
+  return id === null || id === undefined ? '' : String(id)
 }
 
 // reactive 会把普通对象变成响应式对象：属性变化时，使用这些属性的模板和 computed 会更新。
@@ -38,6 +57,7 @@ function readUsername() {
 export const appState = reactive({
   owner: readOwner(),
   username: readUsername(),
+  userId: readUserId(),
   theme: storage.get('frank-theme', 'light'),
   profile: { ...defaultProfile, ...storage.get('frank-profile', {}) },
   postsRevision: 0,
@@ -58,19 +78,23 @@ export function toast(message) {
 // 登录成功后保存 token 和用户名；token 是后续接口鉴权的唯一依据。
 export function loginOwner(username = '', token = '') {
   if (!token) return false
+  const claims = readTokenClaims(token)
+  const resolvedUsername = String(claims.username || username)
+  const userId = claims.id === null || claims.id === undefined ? '' : String(claims.id)
   try {
     localStorage.setItem('user-token', token)
-    localStorage.setItem('frank-owner-username', username)
+    localStorage.setItem('frank-owner-username', resolvedUsername)
   } catch {
     try { localStorage.removeItem('user-token') } catch {}
     return false
   }
   try {
     sessionStorage.setItem('frank-owner-session', '1')
-    sessionStorage.setItem('frank-owner-username', username)
+    sessionStorage.setItem('frank-owner-username', resolvedUsername)
   } catch {}
   appState.owner = true
-  appState.username = username
+  appState.username = resolvedUsername
+  appState.userId = userId
   return true
 }
 
@@ -85,6 +109,7 @@ export function logoutOwner() {
   try { localStorage.removeItem('frank-owner-username') } catch {}
   appState.owner = false
   appState.username = ''
+  appState.userId = ''
 }
 
 export function setTheme(theme) {

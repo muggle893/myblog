@@ -1,52 +1,52 @@
 <script setup>
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import AvatarView from '../components/AvatarView.vue'
 import Icon from '../components/Icon.vue'
 import { appState } from '../services/state'
-import { loadPosts, visiblePosts } from '../services/posts'
+import { loadPostPage } from '../services/posts'
 import { draftCount } from '../services/drafts'
 
 const route = useRoute()
 // ref 创建一个响应式引用。修改 loading.value 后，模板中的 v-if 会自动更新。
 const loading = ref(false)
 const loadError = ref('')
-// computed 会根据响应式依赖自动计算结果，并在依赖变化时重新计算。
-// 这里的优先级是：URL 中指定的作者 > 登录用户名 > 本地资料昵称。
-const author = computed(() => String(route.query.author || appState.username || appState.profile.nickname || '').trim())
-const available = computed(() => {
-  // 虽然这里只是读取函数返回值，但 allPosts() 内部依赖这个版本号。
-  // 明确读取一次可以让 Vue 建立“文章版本变化 -> available 更新”的依赖关系。
-  void appState.postsRevision
-  return visiblePosts()
-})
+const page = ref(1)
+const pageSize = 5
+const pagePosts = ref([])
+const totalPosts = ref(null)
+const hasNextPage = ref(false)
+const authorId = computed(() => String(route.query.authorId || (appState.owner && appState.userId) || 1).trim())
 
 async function refreshPostsFromServer() {
-  // author 为空时不发送请求，避免调用后端时违反 author 非空约束。
-  if (!author.value) return
   loading.value = true
   loadError.value = ''
   try {
-    // 后端会根据登录状态决定是否返回作者的私有文章。
-    await loadPosts(author.value)
+    const result = await loadPostPage(authorId.value, page.value, pageSize)
+    pagePosts.value = result.posts
+    totalPosts.value = result.total
+    hasNextPage.value = result.hasNext
   } catch (error) {
-    // 网络错误、HTTP 错误和 Result 业务错误都会进入这里。
     loadError.value = error instanceof Error ? error.message : '文章加载失败'
   } finally {
-    // 无论成功还是失败，都要结束加载状态，否则页面会一直显示加载中。
     loading.value = false
   }
 }
 
-// onMounted 只在组件首次挂载后执行一次，适合发起首次数据请求。
-onMounted(refreshPostsFromServer)
-// watch 监听 author 的变化，例如登录后用户名变化或 URL 切换作者。
-// 变化时重新请求列表，保证页面展示的是当前作者的数据。
-watch(author, refreshPostsFromServer)
 const filter = computed(() => String(route.query.category || ''))
-// 分类筛选只影响显示，不会重新请求后端。
+watch([authorId, page], (values, oldValues) => {
+  if (oldValues && values[0] !== oldValues[0] && page.value !== 1) {
+    page.value = 1
+    return
+  }
+  refreshPostsFromServer()
+}, { immediate: true })
+watch(filter, () => { page.value = 1 })
+const available = computed(() => pagePosts.value)
 const list = computed(() =>
-  available.value.filter((p) => !filter.value || p.category === filter.value)
+  available.value
+    .filter((p) => !filter.value || p.category === filter.value)
+    .sort((a, b) => Date.parse(b.publishedAt || b.date || '') - Date.parse(a.publishedAt || a.date || ''))
 )
 const categories = computed(() =>
   [...new Set(available.value.map((p) => p.category).filter(Boolean))]
@@ -64,6 +64,17 @@ const drafts = computed(() => {
   return draftCount()
 })
 const categoryCount = (cat) => available.value.filter((p) => p.category === cat).length
+const pageCount = computed(() => totalPosts.value === null ? null : Math.max(1, Math.ceil(totalPosts.value / pageSize)))
+const pageNumbers = computed(() => {
+  if (!pageCount.value) {
+    const start = Math.max(1, page.value - 3)
+    const end = page.value + (hasNextPage.value ? 1 : 0)
+    return Array.from({ length: end - start + 1 }, (_, index) => start + index)
+  }
+  const start = Math.min(page.value, Math.max(1, pageCount.value - 4))
+  const end = Math.min(pageCount.value, start + 4)
+  return Array.from({ length: end - start + 1 }, (_, index) => start + index)
+})
 </script>
 
 <template>
@@ -142,7 +153,8 @@ const categoryCount = (cat) => available.value.filter((p) => p.category === cat)
     <section>
       <div class="card feed-top">
         <h2>{{ filter || '最新文章' }}</h2>
-        <span>共 {{ list.length }} 篇文章</span>
+        <span v-if="totalPosts !== null">共 {{ totalPosts }} 篇文章</span>
+        <span v-else>本页 {{ list.length }} 篇文章</span>
       </div>
 
       <div v-if="loading" class="card empty">正在加载文章...</div>
@@ -184,8 +196,68 @@ const categoryCount = (cat) => available.value.filter((p) => p.category === cat)
       </template>
 
       <div v-else class="card empty">这个分类还没有可见文章</div>
+      <nav v-if="!loading && !loadError" class="pagination" aria-label="文章分页">
+        <button class="btn secondary" type="button" :disabled="page <= 1" @click="page = 1">首页</button>
+        <button class="btn secondary" type="button" :disabled="page <= 1" @click="page--">上一页</button>
+        <button
+          v-for="pageNumber in pageNumbers"
+          :key="pageNumber"
+          class="btn secondary page-number"
+          :class="{ 'page-current': page === pageNumber }"
+          type="button"
+          :aria-current="page === pageNumber ? 'page' : undefined"
+          @click="page = pageNumber"
+        >
+          {{ pageNumber }}
+        </button>
+        <button class="btn secondary" type="button" :disabled="!hasNextPage" @click="page++">下一页</button>
+        <button class="btn secondary" type="button" :disabled="!pageCount || page >= pageCount" @click="page = pageCount">尾页</button>
+      </nav>
       <div class="feed-end">每一次记录，都是一点进步。</div>
     </section>
   </main>
 </template>
+
+<style scoped>
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.pagination .btn {
+  min-width: 72px;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.pagination .page-number {
+  min-width: 40px;
+}
+
+.pagination .page-current {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .pagination {
+    gap: 6px;
+  }
+
+  .pagination .btn {
+    min-width: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .pagination .page-number {
+    min-width: 34px;
+  }
+}
+</style>
 
