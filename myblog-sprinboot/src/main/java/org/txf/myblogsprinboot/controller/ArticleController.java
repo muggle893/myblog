@@ -6,16 +6,19 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.txf.myblogsprinboot.advice.Result;
 import org.txf.myblogsprinboot.constant.ArticleStatus;
+import org.txf.myblogsprinboot.constant.ArticleVisiability;
+import org.txf.myblogsprinboot.dto.ArticleCreateDTO;
+import org.txf.myblogsprinboot.dto.ArticleUpdateDTO;
 import org.txf.myblogsprinboot.enums.UserType;
 import org.txf.myblogsprinboot.exception.ParamErrorException;
 import org.txf.myblogsprinboot.exception.SqlExecuteException;
 import org.txf.myblogsprinboot.model.Article;
 import org.txf.myblogsprinboot.model.User;
-import org.txf.myblogsprinboot.request.ArticleCreateRequest;
 import org.txf.myblogsprinboot.service.ArticleService;
 import org.txf.myblogsprinboot.service.UserService;
 import org.txf.myblogsprinboot.utils.ArticleContentUtils;
@@ -24,6 +27,7 @@ import org.txf.myblogsprinboot.vo.ArticleDetailVO;
 import org.txf.myblogsprinboot.vo.ArticleListVO;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,8 +46,62 @@ public class ArticleController {
     @Autowired
     private HikariConfig hikariConfig;
 
+    @RequestMapping("/delete")
+    public boolean deleteArticle(Long articleId) {
+        // 校验参数
+        Assert.notNull(articleId, "没有文章id.");
+        Assert.isTrue(articleId > 0, "文章id不合法.");
+        articleService.deleteArticle(articleId);
+        return true;
+    }
 
+    /**
+     * 文章删除
+     * @param dto   前端传递的数据对象
+     * @param request
+     * @return
+     */
+    @PostMapping("/edit")
+    public Result updateArticle(@RequestBody(required = true) ArticleUpdateDTO dto, HttpServletRequest request) {
 
+        // 参数校验与null参数处理
+        if (dto.getArticleId() == null || dto.getArticleId() <= 0) {
+            throw new ParamErrorException("文章id非法.");
+        }
+        if (!StringUtils.hasText(dto.getTitle())) {
+            throw new ParamErrorException("文章的标题为空.");
+        }
+        if (!StringUtils.hasText(dto.getContentMarkdown())) {
+            throw new ParamErrorException("文章的内容为空.");
+        }
+        if (dto.getRowVersion() == null || dto.getRowVersion() < 0) {
+            throw new ParamErrorException("文章的版本号错误.");
+        }
+        if (dto.getVisibility() == null) {
+            throw new ParamErrorException("没有文章权限参数.");
+        }
+        if (!dto.getVisibility().equals(ArticleVisiability.PUBLIC) && !dto.getVisibility().equals(ArticleVisiability.PRIVATE)){
+            throw new ParamErrorException("文章权限参数错误.");
+        }
+        if (dto.getTagIds() == null) {
+            dto.setTagIds(new ArrayList<>());
+        }
+        if (dto.getAssetIds() == null) {
+            dto.setAssetIds(new ArrayList<>());
+        }
+        // 调用service方法
+        articleService.updateArticle(dto, request);
+        return Result.success("更新文章成功.");
+    }
+
+    /**
+     * 获取对应页码的文章列表
+     * @param authorId  文章作者的id
+     * @param page      页码
+     * @param pageSize  返回的这一页的记录数量
+     * @param request
+     * @return  返回分页所需要的文章列表和总记录数
+     */
     @GetMapping("/pagelist")
     public Result<Map<String, Object>> getArticleListByPage(Long authorId, Integer page, Integer pageSize, HttpServletRequest request) {
         // 参数检查
@@ -115,7 +173,7 @@ public class ArticleController {
      */
     @RequestMapping("/create")
     @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED)
-    public Result createArticle(@RequestBody ArticleCreateRequest requestData, HttpServletRequest request) {
+    public Result createArticle(@RequestBody ArticleCreateDTO requestData, HttpServletRequest request) {
         log.info(requestData.toString());
         // 校验参数
         if (!StringUtils.hasLength(requestData.getTitle())) {
@@ -143,6 +201,7 @@ public class ArticleController {
         article.setUpdatedAt(LocalDateTime.now());
         article.setRowVersion(0L);
         log.info("Article created:{}", article);
+
         // 插入文章内容
         int rowCnt = articleService.insertArticle(article);
         if (rowCnt == 0) {

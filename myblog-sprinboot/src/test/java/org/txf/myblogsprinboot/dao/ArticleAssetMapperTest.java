@@ -3,6 +3,7 @@ package org.txf.myblogsprinboot.dao;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 import org.txf.myblogsprinboot.constant.ArticleAssetUsageType;
 import org.txf.myblogsprinboot.model.ArticleAsset;
 
@@ -24,5 +25,11 @@ class ArticleAssetMapperTest {
         articleAsset.setUsageType(ArticleAssetUsageType.ATTACHMENT);
         articleAssets.add(articleAsset);
         articleAssetMapper.batchInsertArticleAsset(articleAssets);
+    }
+
+    @Test
+    @Transactional
+    void batchDeleteArticleAsset() {
+        articleAssetMapper.batchDeleteArticleAsset(1L);
     }
 }

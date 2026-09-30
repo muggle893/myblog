@@ -8,4 +8,9 @@
             (#{articleAsset.articleId},  #{articleAsset.assetId}, #{articleAsset.usageType})
         </foreach>
     </insert>
+
+    <delete id = "batchDeleteArticleAsset">
+        delete from blog_article_asset
+        where article_id = #{articleId};
+    </delete>
 </mapper>

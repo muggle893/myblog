@@ -9,4 +9,6 @@ import java.util.List;
 @Mapper
 public interface ArticleAssetMapper {
     int batchInsertArticleAsset(@Param("articleAssets")List<ArticleAsset> articleAssets);
+
+    int batchDeleteArticleAsset(@Param("articleId")long articleId);
 }

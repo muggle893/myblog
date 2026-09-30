@@ -21,11 +21,20 @@ public class TagService {
     @Autowired
     private TagMapper tagMapper;
 
+    public List<TagVO> getArticleTags(Long articleId) {
+        List<Long> tagsByArticleIds = tagMapper.getTagsByArticleIds(Arrays.asList(articleId));
+        List<TagVO> ret = tagMapper.getTagsByIds(tagsByArticleIds);
+        return ret;
+    }
+
     public List<TagVO> getAuthorTags(User user) {
         // 从数据库中查询作者的文章列表，得到文章列表id集合
         log.info("获取作者的标签列表，作者的名字为：" + user.getUsername());
         List<ArticleListVO> articleListVOS = articleMapper.selectAllArticle(user.getUsername());
         List<Long> articleIds =  new ArrayList<>();;
+        if (articleIds.size() == 0) {
+            return new ArrayList<>();
+        }
         articleListVOS.forEach(articleListVO -> {
             articleIds.add(articleListVO.getId());
         });

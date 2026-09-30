@@ -1,16 +1,21 @@
 package org.txf.myblogsprinboot.service;
 
+import io.jsonwebtoken.Claims;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.txf.myblogsprinboot.constant.ArticleAssetUsageType;
 import org.txf.myblogsprinboot.dao.*;
+import org.txf.myblogsprinboot.dto.ArticleUpdateDTO;
 import org.txf.myblogsprinboot.enums.UserType;
 import org.txf.myblogsprinboot.model.Article;
 import org.txf.myblogsprinboot.model.ArticleAsset;
 import org.txf.myblogsprinboot.model.ArticleTag;
 import org.txf.myblogsprinboot.model.User;
 import org.txf.myblogsprinboot.utils.ArticleConstans;
+import org.txf.myblogsprinboot.utils.ArticleContentUtils;
+import org.txf.myblogsprinboot.utils.JwtsTokenUtils;
 import org.txf.myblogsprinboot.utils.UserUtils;
 import org.txf.myblogsprinboot.vo.ArticleDetailVO;
 import org.txf.myblogsprinboot.vo.ArticleListVO;
@@ -40,6 +45,76 @@ public class ArticleService {
     ArticleTagMapper articleTagMapper;
     @Autowired
     private UserMapper userMapper;
+
+    @Transactional
+    public void deleteArticle(long articleId) {
+        // 删除文章
+        articleMapper.deleteArticleById(articleId);
+        // 删除文章资源关联关系
+        // 删除文章标签关联关系
+        articleTagMapper.batchDeleteArticleTag(articleId);
+        articleAssetMapper.batchDeleteArticleAsset(articleId);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public void updateArticle(ArticleUpdateDTO dto, HttpServletRequest request) {
+        // 校验用户是否真的有权限修改
+        long authorId = articleMapper.selectArticleAuthorId(dto.getArticleId());
+        String token = request.getHeader("user-token");
+        Claims claims = JwtsTokenUtils.parseJwtToken(token);
+        if (!claims.get("id", Long.class).equals(authorId)) {
+            throw new RuntimeException("用户没有权限修改文章.");
+        }
+
+
+        // 设置文章的数据，更新文章
+        Article article = new Article();
+        article.setId(dto.getArticleId());
+        article.setTitle(dto.getTitle());
+        article.setContentMarkdown(dto.getContentMarkdown());
+        article.setCategoryId(dto.getCategoryId());
+        article.setRowVersion(dto.getRowVersion());
+        article.setVisibility(dto.getVisibility());
+        String plainText = ArticleContentUtils.toPlainText(dto.getContentMarkdown());
+        String summary = ArticleContentUtils.generateSummary(plainText);
+        article.setSummary(summary);
+        int wcnt = ArticleContentUtils.countWords(plainText);
+        article.setWordCount((long)(wcnt));
+        article.setReadingMinutes((long)ArticleContentUtils.estimateReadingMinutes(wcnt));
+        articleMapper.updateArticle(article);
+
+        // 删除文章与之前的资源关联关系
+        articleAssetMapper.batchDeleteArticleAsset(dto.getArticleId());
+        if (dto.getAssetIds().size() > 0) {
+            // 插入新的资源关联关系
+            List<ArticleAsset> articleAssets = new ArrayList<>();
+            for (long assetId : dto.getAssetIds()) {
+                ArticleAsset articleAsset = new ArticleAsset();
+                articleAsset.setArticleId(article.getId());
+                articleAsset.setAssetId(assetId);
+                // 这里先设置为ATTACHMENT，实际上是要根据assetkind来设置的
+                articleAsset.setUsageType(ArticleAssetUsageType.ATTACHMENT);
+                articleAssets.add(articleAsset);
+            }
+            articleAssetMapper.batchInsertArticleAsset(articleAssets);
+        }
+
+        // 删除文章之前的标签关联关系
+        articleTagMapper.batchDeleteArticleTag(dto.getArticleId());
+
+        // 插入新的标签关联关系
+        if (dto.getTagIds().size() > 0) {
+            List<ArticleTag> articleTags = new ArrayList<>();
+            for (long tagId : dto.getTagIds()) {
+                ArticleTag articleTag = new ArticleTag();
+                articleTag.setArticleId(article.getId());
+                articleTag.setTagId(tagId);
+                articleTag.setSortOrder(1);
+                articleTags.add(articleTag);
+            }
+            articleTagMapper.batchInsertArticleTag(articleTags);
+        }
+    }
 
 
     public int getArticleCnt(long authorId) {
@@ -92,6 +167,7 @@ public class ArticleService {
         articleDetailVO.setVisibility(article.getVisibility());
         articleDetailVO.setReadingMinutes(article.getReadingMinutes());
         articleDetailVO.setPublishedAt(article.getPublishedAt());
+        articleDetailVO.setRowVersion(article.getRowVersion());
 
         // 查询作者
         User author = userMapper.selectUserByUserId(article.getAuthorId());

@@ -9,6 +9,17 @@ import org.txf.myblogsprinboot.exception.ParamErrorException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    /**
+     * 处理断言参数失败的时候发生的异常
+     * @param e
+     * @return
+     */
+    @ExceptionHandler
+    public Result handleIllegalArgumentException(IllegalArgumentException e) {
+        return Result.paramError(e.getMessage());
+    }
+
     /**
      * 处理业务参数校验失败。
      */

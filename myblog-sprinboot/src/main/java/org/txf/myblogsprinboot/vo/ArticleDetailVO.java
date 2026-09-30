@@ -25,4 +25,5 @@ public class ArticleDetailVO {
     private List<TagVO> tags;
     private LocalDateTime publishedAt;
     private Long readingMinutes;
+    private Long rowVersion;
 }

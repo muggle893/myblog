@@ -1,4 +1,4 @@
-package org.txf.myblogsprinboot.request;
+package org.txf.myblogsprinboot.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ArticleCreateRequest {
+public class ArticleCreateDTO {
     /**
      * 标题，不能为空
      */
@@ -43,4 +43,5 @@ public class ArticleCreateRequest {
      * 正文引用的已上传资源 ID；没有则传 `[]`
      */
     private List<Long> assetIds;
+
 }

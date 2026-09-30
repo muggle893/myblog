@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.txf.myblogsprinboot.advice.Result;
 import org.txf.myblogsprinboot.dao.TagMapper;
+import org.txf.myblogsprinboot.exception.ParamErrorException;
 import org.txf.myblogsprinboot.model.User;
 import org.txf.myblogsprinboot.service.TagService;
 import org.txf.myblogsprinboot.utils.JwtsTokenUtils;
@@ -29,6 +30,17 @@ public class TagController {
    private TagService tagService;
     @Autowired
     private TagMapper tagMapper;
+
+
+    @RequestMapping("/articleTags")
+    public Result<List<TagVO>> getArticleTags(Long articleId) {
+       if (articleId == null || articleId <= 0) {
+          log.error("文章id非法.");
+          throw new ParamErrorException("文章的id错误.");
+       }
+       List<TagVO> tags = tagService.getArticleTags(articleId);
+       return Result.success("获取文章标签列表成功.", tags);
+    }
 
    /**
     * 这个方法用来获取作者对应的标签列表

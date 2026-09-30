@@ -13,6 +13,13 @@ public class Result<T> {
     private String msg;
     private T data;
 
+    public static <T> Result<T> data(T data) {
+        Result<T> ret = new Result<>();
+        ret.setCode(CodeEnums.SUCCESS.getCode());
+        ret.setData(data);
+        return ret;
+    }
+
     public static <T> Result<T> fail(String msg) {
         Result<T> ret = new Result<>();
         ret.setCode(CodeEnums.FAIL.getCode());

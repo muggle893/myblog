@@ -29,4 +29,10 @@ class ArticleTagMapperTest {
         articleTagMapper.batchInsertArticleTag(articleTags);
 
     }
+
+    @Test
+    @Transactional
+    void batchDeleteArticleTag() {
+        articleTagMapper.batchDeleteArticleTag(1L);
+    }
 }

@@ -9,4 +9,6 @@ import java.util.List;
 @Mapper
 public interface ArticleTagMapper {
     int batchInsertArticleTag(@Param("articleTagList")List<ArticleTag> list);
+
+    int batchDeleteArticleTag(@Param("articleId")long articleId);
 }

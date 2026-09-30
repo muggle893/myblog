@@ -3,6 +3,7 @@ package org.txf.myblogsprinboot.dao;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 import org.txf.myblogsprinboot.model.Article;
 import org.txf.myblogsprinboot.vo.ArticleListVO;
 
@@ -49,5 +50,28 @@ class ArticleMapperTest {
     void selectArticleCount() {
         int cnt = articleMapper.selectArticleCount(1);
         System.out.println(cnt);
+    }
+
+    @Test
+    @Transactional
+    void updateArticle() {
+        Article article = new Article();
+        article.setId(1L);
+        article.setTitle("测试");
+        article.setContentMarkdown("测试");
+        article.setRowVersion(0L);
+        articleMapper.updateArticle(article);
+    }
+
+    @Test
+    void selectArticleAuthorId() {
+        int ret = (int) articleMapper.selectArticleAuthorId(1L);
+        System.out.println(ret);
+    }
+
+    @Test
+    @Transactional
+    void deleteArticleById() {
+        articleMapper.deleteArticleById(31L);
     }
 }

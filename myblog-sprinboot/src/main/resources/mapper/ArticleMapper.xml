@@ -2,14 +2,51 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.txf.myblogsprinboot.dao.ArticleMapper">
 
+    <update id="deleteArticleById">
+        UPDATE blog_article
+        SET deleted_at = NOW(),
+            updated_at = NOW(),
+            row_version = row_version + 1
+        WHERE id = #{id}
+        AND deleted_at IS NULL
+    </update>
+
+    <update id = "updateArticle">
+        update blog_article
+        <set>
+            <if test = "authorId != null">author_id = #{authorId},</if>
+            <if test = "categoryId != null">category_id = #{categoryId},</if>
+            <if test = "slug != null">slug = #{slug},</if>
+            <if test = "title != null">title = #{title},</if>
+            <if test = "summary != null">summary = #{summary},</if>
+            <if test = "contentMarkdown != null">content_markdown = #{contentMarkdown},</if>
+            <if test = "visibility != null">visibility = #{visibility},</if>
+            <if test = "status != null">status = #{status},</if>
+            <if test = "wordCount != null">word_count = #{wordCount},</if>
+            <if test = "readingMinutes != null">reading_minutes = #{readingMinutes},</if>
+            <if test = "publishedAt != null">published_at = #{publishedAt},</if>
+            <if test = "rowVersion != null">row_version = #{rowVersion} + 1</if>
+            <if test = "deletedAt != null">deleted_at = #{deletedAt},</if>
+            <if test = "createdAt != null">created_at = #{createdAt},</if>
+            <if test = "updatedAt != null">updated_at = #{updatedAt},</if>
+        </set>
+        where id = #{id} and row_version = #{rowVersion}
+    </update>
+
+    <select id = "selectArticleAuthorId" resultType="java.lang.Long">
+        select author_id
+        from blog_article
+        where id = #{id} and deleted_at IS NULL;
+    </select>
+
     <select id="selectArticleCount" resultType="java.lang.Integer">
-        select count(1) from blog_article where author_id = #{authorId};
+        select count(1) from blog_article where author_id = #{authorId} and deleted_at IS NULL;
     </select>
 
     <select id = "selectArticleByPage" resultType="org.txf.myblogsprinboot.vo.ArticleListVO">
         SELECT id, category_id, visibility, published_at, reading_minutes, title, summary
         FROM blog_article
-        WHERE author_id = #{authorId}
+        WHERE author_id = #{authorId} and deleted_at IS NULL
         ORDER BY published_at DESC
         limit #{offset}, #{pageSize};
     </select>
@@ -19,7 +56,7 @@
         FROM blog_article AS a
             JOIN blog_user AS u
             ON a.author_id = u.id
-        WHERE u.username = #{author};
+        WHERE u.username = #{author} and a.deleted_at IS NULL;
     </select>
 
     <insert id = "insertArticle" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
@@ -63,6 +100,6 @@
 
     <select id = "selectArticleById" resultType="org.txf.myblogsprinboot.model.Article">
         select * from blog_article
-        where id = #{id};
+        where id = #{id} and deleted_at IS NULL;
     </select>
 </mapper>

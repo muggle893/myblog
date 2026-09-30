@@ -8,4 +8,9 @@
             (#{at.articleId},  #{at.tagId}, #{at.sortOrder})
         </foreach>
     </insert>
+
+    <delete id="batchDeleteArticleTag">
+        delete from blog_article_tag
+        where article_id = #{articleId}
+    </delete>
 </mapper>

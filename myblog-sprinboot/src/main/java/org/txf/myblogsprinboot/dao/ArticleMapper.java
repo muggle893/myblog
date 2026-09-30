@@ -9,6 +9,10 @@ import java.util.List;
 
 @Mapper
 public interface ArticleMapper {
+    int deleteArticleById(@Param("id")long articleId);
+
+    long selectArticleAuthorId(@Param("id")long articleId);
+
     List<ArticleListVO> selectAllArticle(String author);
 
     Article selectArticleById(Long id);
@@ -18,4 +22,6 @@ public interface ArticleMapper {
     List<ArticleListVO> selectArticleByPage(@Param("authorId")long authorId, @Param("offset") int offset, @Param("pageSize")int pageSize);
 
     int selectArticleCount(@Param("authorId")long authorId);
+
+    int updateArticle(Article article);
 }
