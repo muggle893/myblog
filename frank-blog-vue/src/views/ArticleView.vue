@@ -1,14 +1,16 @@
 <script setup>
 import { ref, watch, watchEffect } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 import Icon from '../components/Icon.vue'
 import MarkdownRenderer from '../components/MarkdownRenderer.vue'
-import { appState } from '../services/state'
-import { loadArticleDetail } from '../services/posts'
+import { appState, toast } from '../services/state'
+import { deleteArticle, loadArticleDetail } from '../services/posts'
 
 const route = useRoute()
+const router = useRouter()
 const post = ref(null)
 const loading = ref(false)
+const deleting = ref(false)
 const loadError = ref('')
 
 async function refreshArticle() {
@@ -31,6 +33,22 @@ async function refreshArticle() {
 }
 
 watch(() => route.params.id, refreshArticle, { immediate: true })
+
+async function removeArticle() {
+  if (!post.value || deleting.value) return
+  if (!confirm(`确定删除文章“${post.value.title}”吗？删除后无法恢复。`)) return
+
+  deleting.value = true
+  try {
+    await deleteArticle(post.value.id)
+    toast('文章已删除')
+    await router.push({ name: 'home' })
+  } catch (error) {
+    toast(error instanceof Error ? error.message : '文章删除失败')
+  } finally {
+    deleting.value = false
+  }
+}
 
 watchEffect(() => {
   if (post.value) {
@@ -77,14 +95,23 @@ watchEffect(() => {
 
           <div class="article-title-row">
             <h1>{{ post.title }}</h1>
-            <RouterLink
-              v-if="post.canEdit"
-              class="btn secondary article-edit-button"
-              :to="{ name: 'editor', query: { edit: post.id } }"
-            >
-              <Icon name="pen" />
-              编辑文章
-            </RouterLink>
+            <div v-if="post.canEdit" class="article-actions">
+              <RouterLink
+                class="btn secondary article-edit-button"
+                :to="{ name: 'editor', query: { edit: post.id } }"
+              >
+                <Icon name="pen" />
+                编辑文章
+              </RouterLink>
+              <button
+                class="btn secondary"
+                type="button"
+                :disabled="deleting"
+                @click="removeArticle"
+              >
+                {{ deleting ? '正在删除...' : '删除文章' }}
+              </button>
+            </div>
           </div>
 
           <div class="post-kicker">

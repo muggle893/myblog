@@ -177,6 +177,49 @@ export async function createArticle(data) {
   return String(id)
 }
 
+export async function updateArticle(data) {
+  const response = await apiFetch('/api/article/edit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  })
+
+  let result
+  try {
+    result = await response.json()
+  } catch {
+    throw new Error(`文章修改失败（HTTP ${response.status}）`)
+  }
+
+  if (!response.ok || Number(result.code) !== 200) {
+    throw new Error(result.msg || `文章修改失败（HTTP ${response.status}）`)
+  }
+}
+
+export async function deleteArticle(articleId) {
+  const id = String(articleId || '').trim()
+  if (!id) throw new Error('缺少文章 ID')
+
+  const query = new URLSearchParams({ articleId: id })
+  const response = await apiFetch(`/api/article/delete?${query}`, { method: 'POST' })
+
+  let result
+  try {
+    result = await response.json()
+  } catch {
+    throw new Error(`文章删除失败（HTTP ${response.status}）`)
+  }
+
+  if (!response.ok || Number(result.code) !== 200) {
+    throw new Error(result.msg || `文章删除失败（HTTP ${response.status}）`)
+  }
+
+  if (remotePosts) {
+    remotePosts = remotePosts.filter((post) => String(post.id) !== id)
+    refreshPosts()
+  }
+}
+
 export function saveNewPost(data) {
   const post = { ...data, id: 'local-' + Date.now(), date: new Date().toLocaleDateString('sv-SE') }
   const ok = storage.set('frank-posts', [post, ...storage.get('frank-posts', [])])

@@ -126,9 +126,9 @@ body[data-page="login"] .login-visual:before{
 /* 作者在文章详情页的编辑入口 */
 .article-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
 .article-title-row h1{flex:1;min-width:0}
-.article-edit-button{margin-top:10px;flex:none}
+.article-actions{display:flex;flex-direction:column;align-items:stretch;gap:8px;flex:none;margin-top:10px}
 .editor-editing-note{display:inline-flex;align-items:center;gap:6px;margin-top:6px;padding:4px 9px;border-radius:999px;background:var(--soft);color:var(--blue);font-size:11px;font-weight:700}
-@media(max-width:700px){.article-title-row{display:block}.article-edit-button{margin:0 0 8px}.article-title-row h1{margin-bottom:12px}}
+@media(max-width:700px){.article-title-row{display:block}.article-actions{align-items:flex-start;margin:0 0 8px}.article-title-row h1{margin-bottom:12px}}
 
 /* 2026-09-09: 草稿箱 */
 .draft-nav-link{display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:7px 10px;border-radius:10px;color:var(--muted);font-size:12px;font-weight:650;transition:.18s}

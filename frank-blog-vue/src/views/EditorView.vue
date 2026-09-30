@@ -3,7 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 import Icon from '../components/Icon.vue'
 import { appState, toast } from '../services/state'
-import { allPosts, createArticle, findPost, updatePost } from '../services/posts'
+import { allPosts, createArticle, findPost, loadArticleDetail, updateArticle } from '../services/posts'
 import { findEditDraft, getDraftRecord, removeDraftRecord, upsertDraftRecord } from '../services/drafts'
 import { enhanceContent, renderMarkdown } from '../services/markdown'
 import { uploadAsset } from '../services/assets'
@@ -16,14 +16,14 @@ const requestedDraftId = String(route.query.draft || '')
 
 let draftRecord = requestedDraftId ? getDraftRecord(requestedDraftId) : null
 const editId = String(route.query.edit || draftRecord?.postId || '')
-const editingPost = editId ? findPost(editId) : null
+let editingPost = editId ? findPost(editId) : null
 
 if (!draftRecord && editingPost) {
   draftRecord = findEditDraft(editingPost.id)
 }
 
-const invalid = ref(Boolean((requestedDraftId && !draftRecord) || (editId && !editingPost)))
-const source = draftRecord || editingPost || null
+const invalid = ref(Boolean(requestedDraftId && !draftRecord))
+let source = draftRecord || editingPost || null
 const title = ref(source?.title || '')
 const category = ref(source?.category || 'Java 学习')
 const visibility = ref(source?.visibility === 'private' ? 'private' : 'public')
@@ -491,7 +491,7 @@ function exportMarkdown() {
 }
 
 async function publish() {
-  if (pending.value || !editor) return
+  if (pending.value || publishing || !editor) return
   await commitTagInput(false)
 
   const data = getDraft()
@@ -513,10 +513,28 @@ async function publish() {
     .map((id) => Number(id))
     .filter((id) => Number.isInteger(id) && id > 0)
 
+  publishing = true
+
   try {
-    const articleId = editingPost
-      ? updatePost(editingPost, data)?.id
-      : await createArticle({
+    let articleId
+    if (editingPost) {
+      if (editingPost.rowVersion == null) {
+        throw new Error('缺少文章版本号，请重新加载文章后再试')
+      }
+
+      await updateArticle({
+        articleId: Number(editingPost.id),
+        title: data.title,
+        categoryId: categoryItem?.id ? Number(categoryItem.id) : null,
+        tagIds,
+        visibility: data.visibility === 'private' ? 'PRIVATE' : 'PUBLIC',
+        contentMarkdown: data.body,
+        assetIds: [...new Set(data.assetIds)].map(Number).filter((id) => Number.isInteger(id) && id > 0),
+        rowVersion: editingPost.rowVersion,
+      })
+      articleId = editingPost.id
+    } else {
+      articleId = await createArticle({
           title: data.title,
           categoryId: categoryItem?.id ? Number(categoryItem.id) : null,
           tagIds,
@@ -524,15 +542,16 @@ async function publish() {
           contentMarkdown: data.body,
           assetIds: [...new Set(data.assetIds)].map(Number).filter((id) => Number.isInteger(id) && id > 0),
         })
+    }
 
     if (!articleId) throw new Error('文章保存成功但未获得文章 ID')
 
-    publishing = true
     clearTimeout(timer)
     if (currentDraftId.value) removeDraftRecord(currentDraftId.value)
     router.push({ name: 'article', params: { id: String(articleId) } })
   } catch (error) {
-    toast(error.message || '文章保存失败')
+    publishing = false
+    toast(error.message || (editingPost ? '文章修改失败' : '文章保存失败'))
   }
 }
 
@@ -559,16 +578,51 @@ onMounted(async () => {
     return
   }
 
-  try {
-    availableTags.value = await loadTags()
-  } catch (error) {
-    toast(error.message || '标签加载失败')
+  const [tagsResult, categoriesResult] = await Promise.allSettled([
+    loadTags(),
+    loadCategories(),
+  ])
+
+  if (tagsResult.status === 'fulfilled') {
+    availableTags.value = tagsResult.value
+  } else {
+    toast(tagsResult.reason.message || '标签加载失败')
   }
 
-  try {
-    availableCategories.value = await loadCategories()
-  } catch (error) {
-    toast(error.message || '分类加载失败')
+  if (categoriesResult.status === 'fulfilled') {
+    availableCategories.value = categoriesResult.value
+  } else {
+    toast(categoriesResult.reason.message || '分类加载失败')
+  }
+
+  if (editId) {
+    try {
+      editingPost = await loadArticleDetail(editId)
+      if (!draftRecord) draftRecord = findEditDraft(editingPost.id)
+      source = draftRecord || editingPost
+      title.value = source.title || ''
+      category.value = source.category || 'Java 学习'
+      visibility.value = source.visibility === 'private' ? 'private' : 'public'
+      selectedTags.value = [
+        ...new Set(
+          (Array.isArray(source.tags) ? source.tags : [])
+            .map((value) => String(value).trim().replace(/^#+/, ''))
+            .filter(Boolean)
+        ),
+      ].slice(0, 10)
+      assetIds.value = Array.isArray(source.assetIds)
+        ? [...new Set(source.assetIds.map((id) => Number(id)).filter((id) => Number.isInteger(id) && id > 0))]
+        : []
+      wordCount.value = String(source.body || '').replace(/\s/g, '').length
+      saveState.value = draftRecord ? '已从草稿箱恢复文章修改' : '正在编辑原文章'
+    } catch (error) {
+      toast(error.message || '文章详情加载失败')
+      if (!editingPost) {
+        invalid.value = true
+        setTimeout(() => router.replace('/'), 700)
+        return
+      }
+    }
   }
 
   try {
