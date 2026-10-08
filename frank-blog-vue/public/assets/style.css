@@ -22,6 +22,13 @@ body[data-page="home"] .hero:before{inset:0;transform:none;background:linear-gra
 .advanced-editor .editor-preview pre{background:var(--bg)}
 .advanced-editor .editor-toolbar.fullscreen{z-index:51}.advanced-editor .CodeMirror-fullscreen,.advanced-editor .editor-preview-side:not(.EasyMDEContainer.sided--no-fullscreen .editor-preview-side){z-index:50}
 .markdown .hljs{color:var(--text);background:var(--bg)}
+.markdown pre code.hljs{overflow-x:visible}
+.markdown pre{position:relative;padding-top:52px}
+.markdown pre.is-collapsed{max-height:390px;overflow:auto}
+.markdown pre.is-expanded{max-height:none;overflow-x:auto;overflow-y:visible}
+.markdown .code-block-actions{position:absolute;top:8px;right:8px;z-index:1;display:flex;gap:6px}
+.markdown .code-block-button{padding:5px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--text);font-size:12px;line-height:1.4;white-space:nowrap}
+.markdown .code-block-button:hover{color:var(--blue);border-color:var(--blue)}
 .markdown .katex-display{overflow-x:auto;overflow-y:hidden;padding:10px 0}
 .attachment-link{display:inline-flex;align-items:center;padding:9px 14px;margin:5px 0;background:var(--soft);border:1px solid var(--line);border-radius:9px;color:var(--blue);font-size:14px;overflow-wrap:anywhere}
 .attachment-link:before{content:'↓';margin-right:9px;font-weight:700}

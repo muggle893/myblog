@@ -17,4 +17,59 @@ export async function enhanceContent(container) {
     })
   }
   if (window.hljs) container.querySelectorAll('pre code:not([data-highlighted])').forEach((el)=>window.hljs.highlightElement(el))
+  container.querySelectorAll('pre').forEach((pre) => {
+    const code = pre.querySelector('code')
+    if (!code || pre.dataset.enhanced) return
+
+    pre.dataset.enhanced = 'true'
+    const lines = code.textContent.split('\n').length
+    const collapsible = lines > 14
+    const actions = document.createElement('div')
+    actions.className = 'code-block-actions'
+
+    if (collapsible) pre.classList.add('is-collapsed')
+
+    const copyButton = document.createElement('button')
+    copyButton.className = 'code-block-button'
+    copyButton.type = 'button'
+    copyButton.textContent = '复制代码'
+    copyButton.setAttribute('aria-label', '复制代码')
+    copyButton.addEventListener('click', async () => {
+      let copied = false
+      try {
+        await navigator.clipboard.writeText(code.textContent)
+        copied = true
+      } catch {
+        const textarea = document.createElement('textarea')
+        textarea.value = code.textContent
+        textarea.setAttribute('readonly', '')
+        textarea.style.position = 'fixed'
+        textarea.style.opacity = '0'
+        document.body.append(textarea)
+        textarea.select()
+        copied = document.execCommand('copy')
+        textarea.remove()
+      }
+      copyButton.textContent = copied ? '已复制' : '复制失败'
+      setTimeout(() => { copyButton.textContent = '复制代码' }, 1500)
+    })
+    actions.append(copyButton)
+
+    if (collapsible) {
+      const toggleButton = document.createElement('button')
+      toggleButton.className = 'code-block-button'
+      toggleButton.type = 'button'
+      toggleButton.textContent = `展开代码（${lines} 行）`
+      toggleButton.setAttribute('aria-expanded', 'false')
+      toggleButton.addEventListener('click', () => {
+        const expanded = pre.classList.toggle('is-expanded')
+        pre.classList.toggle('is-collapsed', !expanded)
+        toggleButton.textContent = expanded ? '折叠代码' : `展开代码（${lines} 行）`
+        toggleButton.setAttribute('aria-expanded', String(expanded))
+      })
+      actions.append(toggleButton)
+    }
+
+    pre.prepend(actions)
+  })
 }
