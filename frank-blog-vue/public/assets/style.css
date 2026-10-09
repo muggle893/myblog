@@ -23,12 +23,30 @@ body[data-page="home"] .hero:before{inset:0;transform:none;background:linear-gra
 .advanced-editor .editor-toolbar.fullscreen{z-index:51}.advanced-editor .CodeMirror-fullscreen,.advanced-editor .editor-preview-side:not(.EasyMDEContainer.sided--no-fullscreen .editor-preview-side){z-index:50}
 .markdown .hljs{color:var(--text);background:var(--bg)}
 .markdown pre code.hljs{overflow-x:visible}
-.markdown pre{position:relative;padding-top:52px}
+.markdown pre{position:relative}
 .markdown pre.is-collapsed{max-height:390px;overflow:auto}
 .markdown pre.is-expanded{max-height:none;overflow-x:auto;overflow-y:visible}
-.markdown .code-block-actions{position:absolute;top:8px;right:8px;z-index:1;display:flex;gap:6px}
-.markdown .code-block-button{padding:5px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--text);font-size:12px;line-height:1.4;white-space:nowrap}
-.markdown .code-block-button:hover{color:var(--blue);border-color:var(--blue)}
+.markdown .code-block-actions{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin:14px 0 8px}
+.markdown .code-block-button{padding:6px 11px;border:1px solid var(--line);border-radius:8px;background:var(--surface);box-shadow:0 1px 3px #24344a12;color:var(--text);font-size:12px;font-weight:600;line-height:1.4;white-space:nowrap;cursor:pointer;transition:background .18s,border-color .18s,color .18s,box-shadow .18s}
+.markdown .code-block-button:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 2px 7px #3286c91f}
+.markdown .code-block-button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.markdown .code-block-toggle{border-color:#3286c933;background:var(--soft);color:var(--blue)}
+.markdown .code-block-color-picker{position:relative}
+.markdown .code-block-color-options{position:absolute;top:calc(100% + 7px);right:0;z-index:3;display:flex;gap:7px;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:0 5px 18px #24344a1c}
+.markdown .code-block-color-options[hidden]{display:none}
+.markdown .code-block-color-swatch{width:22px;height:22px;padding:0;border:2px solid var(--surface);border-radius:50%;box-shadow:0 0 0 1px var(--line);cursor:pointer}
+.markdown .code-block-color-swatch:hover,.markdown .code-block-color-swatch[aria-pressed="true"]{box-shadow:0 0 0 2px var(--blue)}
+.markdown .code-block-color-default{background:var(--bg)}
+.markdown .code-block-color-green{background:#eaf5ed}
+.markdown .code-block-color-blue{background:#eaf3fb}
+.markdown .code-block-color-purple{background:#f2edfa}
+.markdown .code-block-color-amber{background:#fbf3e4}
+.markdown .code-block-color-rose{background:#faecec}
+.markdown pre.code-bg-green,.markdown pre.code-bg-green code.hljs{background-color:#eaf5ed}
+.markdown pre.code-bg-blue,.markdown pre.code-bg-blue code.hljs{background-color:#eaf3fb}
+.markdown pre.code-bg-purple,.markdown pre.code-bg-purple code.hljs{background-color:#f2edfa}
+.markdown pre.code-bg-amber,.markdown pre.code-bg-amber code.hljs{background-color:#fbf3e4}
+.markdown pre.code-bg-rose,.markdown pre.code-bg-rose code.hljs{background-color:#faecec}
 .markdown .katex-display{overflow-x:auto;overflow-y:hidden;padding:10px 0}
 .attachment-link{display:inline-flex;align-items:center;padding:9px 14px;margin:5px 0;background:var(--soft);border:1px solid var(--line);border-radius:9px;color:var(--blue);font-size:14px;overflow-wrap:anywhere}
 .attachment-link:before{content:'↓';margin-right:9px;font-weight:700}

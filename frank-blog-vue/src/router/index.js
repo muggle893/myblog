@@ -20,6 +20,7 @@ const router = createRouter({
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
+    if (to.path === from.path && to.hash === from.hash) return false
     return { top:0 }
   },
 })

@@ -64,6 +64,13 @@ const importMarkdownInput = ref(null)
 let editor = null
 let cm = null
 let timer = null
+let previewElement = null
+let previewScrollHandler = null
+let previewResizeObserver = null
+let previewRenderVersion = 0
+let previewUpdating = false
+let expectedEditorScrollTop = null
+let expectedPreviewScrollTop = null
 let publishing = false
 let dirty = false
 const pending = ref(0)
@@ -260,6 +267,34 @@ function pick(refObj) {
   return () => refObj.value?.click()
 }
 
+function syncEditorToPreview() {
+  if (!cm || !previewElement?.classList.contains('editor-preview-active-side')) return
+
+  const editorScroll = cm.getScrollInfo()
+  const editorRange = editorScroll.height - editorScroll.clientHeight
+  const previewRange = previewElement.scrollHeight - previewElement.clientHeight
+  const ratio = editorRange > 0 ? editorScroll.top / editorRange : 0
+  const nextTop = ratio * Math.max(0, previewRange)
+
+  if (Math.abs(previewElement.scrollTop - nextTop) < 1) return
+  expectedPreviewScrollTop = nextTop
+  previewElement.scrollTop = nextTop
+}
+
+function syncPreviewToEditor() {
+  if (!cm || !previewElement?.classList.contains('editor-preview-active-side')) return
+
+  const editorScroll = cm.getScrollInfo()
+  const previewRange = previewElement.scrollHeight - previewElement.clientHeight
+  const editorRange = editorScroll.height - editorScroll.clientHeight
+  const ratio = previewRange > 0 ? previewElement.scrollTop / previewRange : 0
+  const nextTop = ratio * Math.max(0, editorRange)
+
+  if (Math.abs(editorScroll.top - nextTop) < 1) return
+  expectedEditorScrollTop = nextTop
+  cm.scrollTo(null, nextTop)
+}
+
 async function initEditor() {
   const EasyMDE = await waitForEasyMDE()
   const textarea = document.getElementById('markdown-input')
@@ -279,11 +314,24 @@ async function initEditor() {
     maxHeight: '65vh',
     status: false,
     sideBySideFullscreen: false,
+    syncSideBySidePreviewScroll: false,
     uploadImage: false,
     autofocus: false,
     previewClass: ['editor-preview', 'markdown'],
     previewRender: (text, preview) => {
-      setTimeout(() => enhanceContent(preview), 0)
+      const renderVersion = ++previewRenderVersion
+      previewUpdating = true
+      requestAnimationFrame(() => {
+        if (renderVersion !== previewRenderVersion) return
+
+        enhanceContent(preview)
+          .catch((error) => console.error('Markdown 预览增强失败', error))
+          .finally(() => {
+            if (renderVersion !== previewRenderVersion) return
+            previewUpdating = false
+            syncEditorToPreview()
+          })
+      })
       return renderMarkdown(text)
     },
     toolbar: [
@@ -351,6 +399,37 @@ async function initEditor() {
   }
 
   if (window.innerWidth > 760) editor.toggleSideBySide()
+
+  previewElement = cm.getWrapperElement()
+    .closest('.EasyMDEContainer')
+    ?.querySelector('.editor-preview-side')
+
+  cm.on('scroll', () => {
+    if (expectedEditorScrollTop !== null) {
+      const actualTop = cm.getScrollInfo().top
+      const expectedTop = expectedEditorScrollTop
+      expectedEditorScrollTop = null
+      if (Math.abs(actualTop - expectedTop) < 2) return
+    }
+    if (!previewUpdating) syncEditorToPreview()
+  })
+  if (previewElement) {
+    previewScrollHandler = () => {
+      if (expectedPreviewScrollTop !== null) {
+        const expectedTop = expectedPreviewScrollTop
+        expectedPreviewScrollTop = null
+        if (Math.abs(previewElement.scrollTop - expectedTop) < 2) return
+      }
+      if (!previewUpdating) syncPreviewToEditor()
+    }
+    previewElement.addEventListener('scroll', previewScrollHandler)
+
+    const previewContent = previewElement.querySelector('.editor-preview')
+    if (previewContent && window.ResizeObserver) {
+      previewResizeObserver = new window.ResizeObserver(syncEditorToPreview)
+      previewResizeObserver.observe(previewContent)
+    }
+  }
 
   cm.on('change', changed)
   cm.on('paste', (instance, event) => {
@@ -639,6 +718,11 @@ onBeforeUnmount(() => {
   clearTimeout(timer)
   window.removeEventListener('keydown', keyHandler)
   window.removeEventListener('beforeunload', unloadHandler)
+  previewRenderVersion++
+  previewResizeObserver?.disconnect()
+  if (previewElement && previewScrollHandler) {
+    previewElement.removeEventListener('scroll', previewScrollHandler)
+  }
 
   if (dirty && !publishing) saveDraft()
 
@@ -650,6 +734,8 @@ onBeforeUnmount(() => {
 
   editor = null
   cm = null
+  previewElement = null
+  previewScrollHandler = null
 })
 </script>
 
@@ -810,4 +896,3 @@ onBeforeUnmount(() => {
     </p>
   </main>
 </template>
-
